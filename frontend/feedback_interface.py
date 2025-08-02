@@ -1,15 +1,26 @@
 import json
 import os
+import sys
 from typing import Dict, List
 from fastapi import APIRouter, Request, Form
 from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.templating import Jinja2Templates
 
+# Dodaj ścieżkę do głównego katalogu projektu
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(BASE_DIR)
+
+# Import funkcji do automatycznego wyłapywania fraz
+try:
+    from phrase_discovery import find_new_phrases_from_reports
+except ImportError:
+    print("Ostrzeżenie: Nie można zaimportować phrase_discovery")
+    find_new_phrases_from_reports = None
+
 # Router dla interfejsu feedback
 router = APIRouter()
 
 # Konfiguracja szablonów
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 templates = Jinja2Templates(directory=os.path.join(BASE_DIR, "templates"))
 
 # Ścieżka do pliku z danymi treningowymi
@@ -64,13 +75,33 @@ def get_maybe_phrases() -> List[str]:
     return [phrase for phrase, value in data.items() if value == "MAYBE"]
 
 
+def auto_discover_new_phrases():
+    """
+    Automatycznie wyłapuje nowe frazy z raportów CSV.
+    """
+    if find_new_phrases_from_reports:
+        try:
+            print("Automatyczne wyłapywanie nowych fraz...")
+            stats = find_new_phrases_from_reports()
+            print(f"Znaleziono {stats['new_phrases_added']} nowych fraz z {stats['files_processed']} plików.")
+            return stats
+        except Exception as e:
+            print(f"Błąd podczas automatycznego wyłapywania fraz: {e}")
+            return None
+    return None
+
+
 @router.get("/annotate", response_class=HTMLResponse)
 async def annotate_interface(request: Request):
     """
     Interfejs do ręcznego oznaczania fraz.
+    Automatycznie wyłapuje nowe frazy z raportów CSV.
     """
     try:
-        # Pobierz frazy do oznaczenia
+        # Automatycznie wyłapuj nowe frazy przed wyświetleniem interfejsu
+        discovery_stats = auto_discover_new_phrases()
+        
+        # Pobierz frazy do oznaczenia (włącznie z nowo znalezionymi)
         maybe_phrases = get_maybe_phrases()
         
         # Pobierz statystyki
@@ -80,13 +111,19 @@ async def annotate_interface(request: Request):
         no_count = len([v for v in data.values() if v == "NO"])
         maybe_count = len(maybe_phrases)
         
+        # Przygotuj informacje o nowych frazach
+        new_phrases_info = ""
+        if discovery_stats and discovery_stats['new_phrases_added'] > 0:
+            new_phrases_info = f"Znaleziono {discovery_stats['new_phrases_added']} nowych fraz z {discovery_stats['files_processed']} plików."
+        
         return templates.TemplateResponse("annotate.html", {
             "request": request,
             "phrases": maybe_phrases,
             "total_phrases": total_phrases,
             "guest_count": guest_count,
             "no_count": no_count,
-            "maybe_count": maybe_count
+            "maybe_count": maybe_count,
+            "new_phrases_info": new_phrases_info
         })
     except Exception as e:
         return templates.TemplateResponse("annotate.html", {
@@ -96,7 +133,8 @@ async def annotate_interface(request: Request):
             "total_phrases": 0,
             "guest_count": 0,
             "no_count": 0,
-            "maybe_count": 0
+            "maybe_count": 0,
+            "new_phrases_info": ""
         })
 
 

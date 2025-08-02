@@ -8,6 +8,13 @@ import json
 from analysis.guest_trend_generator import generate_guest_summary_from_latest_report
 from frontend.feedback_interface import router as feedback_router
 
+# Import funkcji do automatycznego wyłapywania fraz
+try:
+    from phrase_discovery import find_new_phrases_from_reports
+except ImportError:
+    print("Ostrzeżenie: Nie można zaimportować phrase_discovery")
+    find_new_phrases_from_reports = None
+
 app = FastAPI()
 
 # Konfiguracja szablonów i plików statycznych
@@ -47,6 +54,15 @@ def status():
     return {"message": "Guest Trend Viewer is working!"}
 
 if __name__ == "__main__":
+    # Automatycznie wyłapuj nowe frazy przed uruchomieniem serwera
+    if find_new_phrases_from_reports:
+        try:
+            print("Automatyczne wyłapywanie nowych fraz z raportów...")
+            stats = find_new_phrases_from_reports()
+            print(f"Znaleziono {stats['new_phrases_added']} nowych fraz z {stats['files_processed']} plików.")
+        except Exception as e:
+            print(f"Błąd podczas automatycznego wyłapywania fraz: {e}")
+    
     # Generuj dane gości przed uruchomieniem serwera
     try:
         print("Generowanie danych gości z najnowszego raportu...")

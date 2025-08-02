@@ -158,6 +158,12 @@
         </div>
         {% endif %}
         
+        {% if new_phrases_info %}
+        <div style="background-color: #d4edda; border: 1px solid #c3e6cb; color: #155724; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+            <strong>🆕 Nowe frazy:</strong> {{ new_phrases_info }}
+        </div>
+        {% endif %}
+        
         <div class="stats">
             <div class="stat-item">
                 <div class="stat-number">{{ total_phrases }}</div>

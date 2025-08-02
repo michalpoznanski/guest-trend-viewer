@@ -34,11 +34,21 @@
             padding: 40px;
             color: #666;
         }
+        .btn:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+            transition: all 0.2s ease;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>👋 Guest Trend Viewer</h1>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+            <h1>👋 Guest Trend Viewer</h1>
+            <a href="/feedback/annotate" class="btn" style="background-color: #007bff; color: white; text-decoration: none; padding: 12px 24px; border-radius: 8px; font-weight: bold; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                🔎 Oznacz frazy: uruchom panel ręcznej adnotacji nazwisk
+            </a>
+        </div>
         
         {% if guests %}
         <table>

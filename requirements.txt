@@ -2,4 +2,5 @@ fastapi
 jinja2
 uvicorn
 watchdog
-pandas python-multipart
+pandas
+python-multipart

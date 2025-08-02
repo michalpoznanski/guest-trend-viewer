@@ -38,20 +38,36 @@ def load_guest_data():
         print(f"Błąd podczas ładowania danych: {e}")
         return []
 
+
+def get_maybe_phrases_count():
+    """Zwraca liczbę fraz do oznaczenia (MAYBE)"""
+    try:
+        from frontend.feedback_interface import get_maybe_phrases
+        maybe_phrases = get_maybe_phrases()
+        return len(maybe_phrases)
+    except Exception as e:
+        print(f"Błąd podczas pobierania liczby fraz do oznaczenia: {e}")
+        return 0
+
 @app.get("/", response_class=HTMLResponse)
 async def root(request: Request):
     """Główna strona z tabelą gości"""
     guests = load_guest_data()
+    maybe_count = get_maybe_phrases_count()
     
     return templates.TemplateResponse("index.html", {
         "request": request,
-        "guests": guests
+        "guests": guests,
+        "maybe_count": maybe_count
     })
 
 @app.get("/api/status")
 def status():
     """Endpoint API zwracający status aplikacji"""
     return {"message": "Guest Trend Viewer is working!"}
+
+
+
 
 if __name__ == "__main__":
     # Automatycznie wyłapuj nowe frazy przed uruchomieniem serwera

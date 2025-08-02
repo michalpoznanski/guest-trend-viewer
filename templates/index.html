@@ -45,8 +45,13 @@
     <div class="container">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
             <h1>👋 Guest Trend Viewer</h1>
-            <a href="/feedback/annotate" class="btn" style="background-color: #007bff; color: white; text-decoration: none; padding: 12px 24px; border-radius: 8px; font-weight: bold; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+            <a href="/feedback/annotate" class="btn" style="background-color: #007bff; color: white; text-decoration: none; padding: 12px 24px; border-radius: 8px; font-weight: bold; box-shadow: 0 2px 4px rgba(0,0,0,0.1); position: relative;">
                 🔎 Oznacz frazy: uruchom panel ręcznej adnotacji nazwisk
+                {% if maybe_count > 0 %}
+                <span style="position: absolute; top: -8px; right: -8px; background-color: #dc3545; color: white; border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: bold;">
+                    {{ maybe_count }}
+                </span>
+                {% endif %}
             </a>
         </div>
         

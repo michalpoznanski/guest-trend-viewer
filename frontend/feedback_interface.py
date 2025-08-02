@@ -142,6 +142,7 @@ async def annotate_interface(request: Request):
 async def update_annotation(phrase: str = Form(...), value: str = Form(...)):
     """
     Aktualizuje oznaczenie frazy.
+    Fraza natychmiast znika z listy do oznaczenia po zapisaniu.
     """
     try:
         # Walidacja wartości
@@ -156,7 +157,21 @@ async def update_annotation(phrase: str = Form(...), value: str = Form(...)):
         
         # Zapisz dane
         if save_training_data(data):
-            return {"success": True, "message": f"Zaktualizowano '{phrase}' na '{value}'"}
+            # Pobierz zaktualizowane statystyki
+            updated_maybe_phrases = get_maybe_phrases()
+            updated_stats = {
+                "total_phrases": len(data),
+                "guest_count": len([v for v in data.values() if v == "GUEST"]),
+                "no_count": len([v for v in data.values() if v == "NO"]),
+                "maybe_count": len(updated_maybe_phrases)
+            }
+            
+            return {
+                "success": True, 
+                "message": f"Zaktualizowano '{phrase}' na '{value}'",
+                "stats": updated_stats,
+                "remaining_phrases": updated_maybe_phrases
+            }
         else:
             return {"success": False, "error": "Błąd podczas zapisywania"}
             
@@ -180,6 +195,9 @@ async def get_annotation_stats():
         return stats
     except Exception as e:
         return {"error": str(e)}
+
+
+
 
 
 @router.post("/annotate/add")

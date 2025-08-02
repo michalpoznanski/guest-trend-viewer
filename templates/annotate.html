@@ -249,15 +249,18 @@
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
-                    // Odśwież statystyki
-                    refreshStats();
-                    
                     // Pokaż komunikat sukcesu
                     showMessage(data.message, 'success');
                     
-                    // Jeśli to nie MAYBE, usuń element z listy
-                    if (value !== 'MAYBE') {
-                        phraseElement.remove();
+                    // Usuń element z listy (wszystkie statusy)
+                    phraseElement.remove();
+                    
+                    // Odśwież statystyki
+                    updateStats(data.stats);
+                    
+                    // Sprawdź czy lista jest pusta
+                    if (data.remaining_phrases.length === 0) {
+                        showEmptyState();
                     }
                 } else {
                     showMessage(data.error, 'error');
@@ -303,8 +306,29 @@
             });
         }
         
+        function updateStats(stats) {
+            const statsElements = document.querySelectorAll('.stat-number');
+            if (statsElements.length >= 4) {
+                statsElements[0].textContent = stats.total_phrases;
+                statsElements[1].textContent = stats.guest_count;
+                statsElements[2].textContent = stats.no_count;
+                statsElements[3].textContent = stats.maybe_count;
+            }
+        }
+        
+        function showEmptyState() {
+            const phraseList = document.querySelector('.phrase-list');
+            phraseList.innerHTML = `
+                <h3>📝 Frazy do oznaczenia</h3>
+                <div class="no-phrases">
+                    <h3>🎉 Brak fraz do oznaczenia!</h3>
+                    <p>Wszystkie frazy zostały już oznaczone lub dodaj nowe frazy powyżej.</p>
+                </div>
+            `;
+        }
+        
         function refreshStats() {
-            fetch('/annotate/stats')
+            fetch('/feedback/annotate/stats')
             .then(response => response.json())
             .then(data => {
                 if (!data.error) {

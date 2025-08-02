@@ -145,7 +145,7 @@ async def update_annotation(phrase: str = Form(...), value: str = Form(...)):
     """
     try:
         # Walidacja wartości
-        if value not in ["GUEST", "NO"]:
+        if value not in ["GUEST", "NO", "MAYBE"]:
             return {"success": False, "error": "Nieprawidłowa wartość"}
         
         # Wczytaj aktualne dane

@@ -1,0 +1,3244 @@
+[
+  {
+    "title": "Prof. Włodzisław Duch o elektrycznych owcach #shorts",
+    "detected_names": [
+      "Włodzisław Duch",
+      "elektrycznych owcach"
+    ],
+    "names_count": 2,
+    "names_details": [
+      {
+        "text": "Włodzisław Duch",
+        "start": 6,
+        "end": 21,
+        "confidence": 1.0
+      },
+      {
+        "text": "elektrycznych owcach",
+        "start": 24,
+        "end": 44,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Prof. Włodzisław Duch o dyskusji dwóch botów #shorts",
+    "detected_names": [
+      "Włodzisław Duch",
+      "o dyskusji dwóch botów #shorts"
+    ],
+    "names_count": 2,
+    "names_details": [
+      {
+        "text": "Włodzisław Duch",
+        "start": 6,
+        "end": 21,
+        "confidence": 1.0
+      },
+      {
+        "text": "o dyskusji dwóch botów #shorts",
+        "start": 22,
+        "end": 52,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "04 Najgorszy Moment w Mauretanii – ft. Piotr Pająk",
+    "detected_names": [
+      "Najgorszy Moment",
+      "w Mauretanii",
+      "Piotr Pająk"
+    ],
+    "names_count": 3,
+    "names_details": [
+      {
+        "text": "Najgorszy Moment",
+        "start": 3,
+        "end": 19,
+        "confidence": 1.0
+      },
+      {
+        "text": "w Mauretanii",
+        "start": 20,
+        "end": 32,
+        "confidence": 1.0
+      },
+      {
+        "text": "Piotr Pająk",
+        "start": 39,
+        "end": 50,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "10 Gdzie Nauczyć Się Rozmawiać z Ludźmi? – ft. Piotr Pająk",
+    "detected_names": [
+      "Gdzie Nauczyć",
+      "Się Rozmawiać",
+      "Ludźmi? – ft. Piotr"
+    ],
+    "names_count": 3,
+    "names_details": [
+      {
+        "text": "Gdzie Nauczyć",
+        "start": 3,
+        "end": 16,
+        "confidence": 1.0
+      },
+      {
+        "text": "Się Rozmawiać",
+        "start": 17,
+        "end": 30,
+        "confidence": 1.0
+      },
+      {
+        "text": "Ludźmi? – ft. Piotr",
+        "start": 33,
+        "end": 52,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "09 Jak Rosjanie Reagują Na Polaków? – ft. Piotr Pająk",
+    "detected_names": [
+      "Jak Rosjanie",
+      "Reagują Na Polaków",
+      "? – ft. Piotr"
+    ],
+    "names_count": 3,
+    "names_details": [
+      {
+        "text": "Jak Rosjanie",
+        "start": 3,
+        "end": 15,
+        "confidence": 1.0
+      },
+      {
+        "text": "Reagują Na Polaków",
+        "start": 16,
+        "end": 34,
+        "confidence": 1.0
+      },
+      {
+        "text": "? – ft. Piotr",
+        "start": 34,
+        "end": 47,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "08 Tam Ludzie Są Uzbrojeni Strasznie – ft. Piotr Pająk",
+    "detected_names": [
+      "08 Tam",
+      "Ludzie Są",
+      "Uzbrojeni Strasznie",
+      "Piotr Pająk"
+    ],
+    "names_count": 4,
+    "names_details": [
+      {
+        "text": "08 Tam",
+        "start": 0,
+        "end": 6,
+        "confidence": 1.0
+      },
+      {
+        "text": "Ludzie Są",
+        "start": 7,
+        "end": 16,
+        "confidence": 1.0
+      },
+      {
+        "text": "Uzbrojeni Strasznie",
+        "start": 17,
+        "end": 36,
+        "confidence": 1.0
+      },
+      {
+        "text": "Piotr Pająk",
+        "start": 43,
+        "end": 54,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "07 Jak Działa Izraelska Agencja Wywiadowcza? – ft. Piotr Pająk",
+    "detected_names": [
+      "07 Jak",
+      "Działa Izraelska",
+      "Agencja Wywiadowcza",
+      "Piotr Pająk"
+    ],
+    "names_count": 4,
+    "names_details": [
+      {
+        "text": "07 Jak",
+        "start": 0,
+        "end": 6,
+        "confidence": 1.0
+      },
+      {
+        "text": "Działa Izraelska",
+        "start": 7,
+        "end": 23,
+        "confidence": 1.0
+      },
+      {
+        "text": "Agencja Wywiadowcza",
+        "start": 24,
+        "end": 43,
+        "confidence": 1.0
+      },
+      {
+        "text": "Piotr Pająk",
+        "start": 51,
+        "end": 62,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "06 Najbrudniejsze Kraje Świata – ft. Piotr Pająk",
+    "detected_names": [
+      "Najbrudniejsze Kraje",
+      "Świata – ft.",
+      "Piotr Pająk"
+    ],
+    "names_count": 3,
+    "names_details": [
+      {
+        "text": "Najbrudniejsze Kraje",
+        "start": 3,
+        "end": 23,
+        "confidence": 1.0
+      },
+      {
+        "text": "Świata – ft.",
+        "start": 24,
+        "end": 36,
+        "confidence": 1.0
+      },
+      {
+        "text": "Piotr Pająk",
+        "start": 37,
+        "end": 48,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "05 Spokojnie, Ja Nie Jestem Bezdomny – ft. Piotr Pająk",
+    "detected_names": [
+      "05 Spokojnie",
+      ", Ja",
+      "Nie Jestem",
+      "Bezdomny – ft. Piotr"
+    ],
+    "names_count": 4,
+    "names_details": [
+      {
+        "text": "05 Spokojnie",
+        "start": 0,
+        "end": 12,
+        "confidence": 1.0
+      },
+      {
+        "text": ", Ja",
+        "start": 12,
+        "end": 16,
+        "confidence": 1.0
+      },
+      {
+        "text": "Nie Jestem",
+        "start": 17,
+        "end": 27,
+        "confidence": 1.0
+      },
+      {
+        "text": "Bezdomny – ft. Piotr",
+        "start": 28,
+        "end": 48,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "03 Dlaczego Hostel Jest Lepszy Od Hotelu? – ft. Piotr Pająk",
+    "detected_names": [
+      "03 Dlaczego",
+      "Hostel Jest",
+      "Lepszy Od",
+      "Hotelu? –",
+      "Piotr Pająk"
+    ],
+    "names_count": 5,
+    "names_details": [
+      {
+        "text": "03 Dlaczego",
+        "start": 0,
+        "end": 11,
+        "confidence": 1.0
+      },
+      {
+        "text": "Hostel Jest",
+        "start": 12,
+        "end": 23,
+        "confidence": 1.0
+      },
+      {
+        "text": "Lepszy Od",
+        "start": 24,
+        "end": 33,
+        "confidence": 1.0
+      },
+      {
+        "text": "Hotelu? –",
+        "start": 34,
+        "end": 43,
+        "confidence": 1.0
+      },
+      {
+        "text": "Piotr Pająk",
+        "start": 48,
+        "end": 59,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "02 Błagałem, Żebym Przetrwał Do Rana – ft. Piotr Pająk",
+    "detected_names": [
+      "02 Błagałem",
+      ", Żebym",
+      "Przetrwał Do",
+      "Rana –",
+      "Piotr Pająk"
+    ],
+    "names_count": 5,
+    "names_details": [
+      {
+        "text": "02 Błagałem",
+        "start": 0,
+        "end": 11,
+        "confidence": 1.0
+      },
+      {
+        "text": ", Żebym",
+        "start": 11,
+        "end": 18,
+        "confidence": 1.0
+      },
+      {
+        "text": "Przetrwał Do",
+        "start": 19,
+        "end": 31,
+        "confidence": 1.0
+      },
+      {
+        "text": "Rana –",
+        "start": 32,
+        "end": 38,
+        "confidence": 1.0
+      },
+      {
+        "text": "Piotr Pająk",
+        "start": 43,
+        "end": 54,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "#476 Jak Rosjanie Reagują Na Polaków? Jak Naprawdę Wygląda Życie w Korei Północnej? - Piotr Pająk",
+    "detected_names": [
+      "Jak Rosjanie",
+      "Reagują Na Polaków",
+      "Jak Naprawdę",
+      "Wygląda Życie",
+      "w Korei",
+      "Północnej?",
+      "- Piotr"
+    ],
+    "names_count": 7,
+    "names_details": [
+      {
+        "text": "Jak Rosjanie",
+        "start": 5,
+        "end": 17,
+        "confidence": 1.0
+      },
+      {
+        "text": "Reagują Na Polaków",
+        "start": 18,
+        "end": 36,
+        "confidence": 1.0
+      },
+      {
+        "text": "Jak Naprawdę",
+        "start": 38,
+        "end": 50,
+        "confidence": 1.0
+      },
+      {
+        "text": "Wygląda Życie",
+        "start": 51,
+        "end": 64,
+        "confidence": 1.0
+      },
+      {
+        "text": "w Korei",
+        "start": 65,
+        "end": 72,
+        "confidence": 1.0
+      },
+      {
+        "text": "Północnej?",
+        "start": 73,
+        "end": 83,
+        "confidence": 1.0
+      },
+      {
+        "text": "- Piotr",
+        "start": 84,
+        "end": 91,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "07 Pomysły Na Biznes w Polsce – ft. Bartosz Majewski",
+    "detected_names": [
+      "07 Pomysły",
+      "Biznes w Polsce",
+      "Bartosz Majewski"
+    ],
+    "names_count": 3,
+    "names_details": [
+      {
+        "text": "07 Pomysły",
+        "start": 0,
+        "end": 10,
+        "confidence": 1.0
+      },
+      {
+        "text": "Biznes w Polsce",
+        "start": 14,
+        "end": 29,
+        "confidence": 1.0
+      },
+      {
+        "text": "Bartosz Majewski",
+        "start": 36,
+        "end": 52,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "01 Jak Naprawdę Wygląda Korea Północna? – ft. Piotr Pająk (premiera we wtorek o 19:00)",
+    "detected_names": [
+      "Jak Naprawdę",
+      "Wygląda Korea",
+      "Północna? –",
+      "Piotr Pająk",
+      "(premiera"
+    ],
+    "names_count": 5,
+    "names_details": [
+      {
+        "text": "Jak Naprawdę",
+        "start": 3,
+        "end": 15,
+        "confidence": 1.0
+      },
+      {
+        "text": "Wygląda Korea",
+        "start": 16,
+        "end": 29,
+        "confidence": 1.0
+      },
+      {
+        "text": "Północna? –",
+        "start": 30,
+        "end": 41,
+        "confidence": 1.0
+      },
+      {
+        "text": "Piotr Pająk",
+        "start": 46,
+        "end": 57,
+        "confidence": 1.0
+      },
+      {
+        "text": "(premiera",
+        "start": 58,
+        "end": 67,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "06 Czy To Dlatego Trump Wygrał Wybory? – ft. Bartosz Majewski",
+    "detected_names": [
+      "06 Czy",
+      "To Dlatego",
+      "Trump Wygrał",
+      "Wybory? –",
+      "Bartosz Majewski"
+    ],
+    "names_count": 5,
+    "names_details": [
+      {
+        "text": "06 Czy",
+        "start": 0,
+        "end": 6,
+        "confidence": 1.0
+      },
+      {
+        "text": "To Dlatego",
+        "start": 7,
+        "end": 17,
+        "confidence": 1.0
+      },
+      {
+        "text": "Trump Wygrał",
+        "start": 18,
+        "end": 30,
+        "confidence": 1.0
+      },
+      {
+        "text": "Wybory? –",
+        "start": 31,
+        "end": 40,
+        "confidence": 1.0
+      },
+      {
+        "text": "Bartosz Majewski",
+        "start": 45,
+        "end": 61,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "05 Moja Rada Dla Młodych Ludzi – ft. Bartosz Majewski",
+    "detected_names": [
+      "05 Moja",
+      "Rada Dla",
+      "Młodych Ludzi",
+      "Bartosz Majewski"
+    ],
+    "names_count": 4,
+    "names_details": [
+      {
+        "text": "05 Moja",
+        "start": 0,
+        "end": 7,
+        "confidence": 1.0
+      },
+      {
+        "text": "Rada Dla",
+        "start": 8,
+        "end": 16,
+        "confidence": 1.0
+      },
+      {
+        "text": "Młodych Ludzi",
+        "start": 17,
+        "end": 30,
+        "confidence": 1.0
+      },
+      {
+        "text": "Bartosz Majewski",
+        "start": 37,
+        "end": 53,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Jakie produkty naprawdę wspierają długowieczność? - dr Tadeusz Oleszczuk",
+    "detected_names": [
+      "Jakie produkty naprawdę wspierają długowieczność? -",
+      "Tadeusz Oleszczuk"
+    ],
+    "names_count": 2,
+    "names_details": [
+      {
+        "text": "Jakie produkty naprawdę wspierają długowieczność? -",
+        "start": 0,
+        "end": 51,
+        "confidence": 1.0
+      },
+      {
+        "text": "Tadeusz Oleszczuk",
+        "start": 55,
+        "end": 72,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Banki kontra klienci. Kto tu naprawdę dba o twój interes? - Trader21",
+    "detected_names": [
+      "Banki kontra klienci. Kto",
+      "tu naprawdę dba o twój interes? -"
+    ],
+    "names_count": 2,
+    "names_details": [
+      {
+        "text": "Banki kontra klienci. Kto",
+        "start": 0,
+        "end": 25,
+        "confidence": 1.0
+      },
+      {
+        "text": "tu naprawdę dba o twój interes? -",
+        "start": 26,
+        "end": 59,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Koniec wolności: jak system chce pozbawić cię pieniędzy? Trader21",
+    "detected_names": [
+      "Koniec wolności: jak"
+    ],
+    "names_count": 1,
+    "names_details": [
+      {
+        "text": "Koniec wolności: jak",
+        "start": 0,
+        "end": 20,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Czy po 50. roku życia mężczyzna potrzebuje terapii testosteronem? - dr Tadeusz Oleszczuk",
+    "detected_names": [
+      "Czy po 50",
+      "roku życia mężczyzna potrzebuje terapii testosteronem? - dr Tadeusz"
+    ],
+    "names_count": 2,
+    "names_details": [
+      {
+        "text": "Czy po 50",
+        "start": 0,
+        "end": 9,
+        "confidence": 1.0
+      },
+      {
+        "text": "roku życia mężczyzna potrzebuje terapii testosteronem? - dr Tadeusz",
+        "start": 11,
+        "end": 78,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Czy filtry SPF naprawdę są bezpieczne? - dr Tadeusz Oleszczuk",
+    "detected_names": [
+      "Czy filtry SPF naprawdę są bezpieczne? - dr",
+      "Tadeusz Oleszczuk"
+    ],
+    "names_count": 2,
+    "names_details": [
+      {
+        "text": "Czy filtry SPF naprawdę są bezpieczne? - dr",
+        "start": 0,
+        "end": 43,
+        "confidence": 1.0
+      },
+      {
+        "text": "Tadeusz Oleszczuk",
+        "start": 44,
+        "end": 61,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Myślisz, że jesz zdrowo? Sprawdź skład jogurtu i chleba - dr Tadeusz Oleszczuk",
+    "detected_names": [
+      "Myślisz,",
+      "Sprawdź skład jogurtu i chleba -",
+      "Tadeusz Oleszczuk"
+    ],
+    "names_count": 3,
+    "names_details": [
+      {
+        "text": "Myślisz,",
+        "start": 0,
+        "end": 8,
+        "confidence": 1.0
+      },
+      {
+        "text": "Sprawdź skład jogurtu i chleba -",
+        "start": 25,
+        "end": 57,
+        "confidence": 1.0
+      },
+      {
+        "text": "Tadeusz Oleszczuk",
+        "start": 61,
+        "end": 78,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Kiedyś 170 dodatków do żywności. Dziś? Ponad 10 tysięcy - dr Tadeusz Oleszczuk",
+    "detected_names": [
+      "Kiedyś 170 dodatków",
+      "Dziś? Ponad",
+      "Tadeusz Oleszczuk"
+    ],
+    "names_count": 3,
+    "names_details": [
+      {
+        "text": "Kiedyś 170 dodatków",
+        "start": 0,
+        "end": 19,
+        "confidence": 1.0
+      },
+      {
+        "text": "Dziś? Ponad",
+        "start": 33,
+        "end": 44,
+        "confidence": 1.0
+      },
+      {
+        "text": "Tadeusz Oleszczuk",
+        "start": 61,
+        "end": 78,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "To już nie jest jedzenie. To tylko dobrze opakowany syf - dr Tadeusz Oleszczuk",
+    "detected_names": [
+      "już nie jest jedzenie. To tylko dobrze opakowany syf - dr Tadeusz"
+    ],
+    "names_count": 1,
+    "names_details": [
+      {
+        "text": "już nie jest jedzenie. To tylko dobrze opakowany syf - dr Tadeusz",
+        "start": 3,
+        "end": 68,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Najważniejszym narządem w s3ksie jest... mózg - dr Tadeusz Oleszczuk",
+    "detected_names": [
+      "Najważniejszym narządem w s3ksie",
+      "Tadeusz Oleszczuk"
+    ],
+    "names_count": 2,
+    "names_details": [
+      {
+        "text": "Najważniejszym narządem w s3ksie",
+        "start": 0,
+        "end": 32,
+        "confidence": 1.0
+      },
+      {
+        "text": "Tadeusz Oleszczuk",
+        "start": 51,
+        "end": 68,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Masz niski testosteron? To może być przez stres i brak ruchu - dr Tadeusz Oleszczuk",
+    "detected_names": [
+      "Masz niski testosteron",
+      "być przez stres i brak ruchu - dr Tadeusz"
+    ],
+    "names_count": 2,
+    "names_details": [
+      {
+        "text": "Masz niski testosteron",
+        "start": 0,
+        "end": 22,
+        "confidence": 1.0
+      },
+      {
+        "text": "być przez stres i brak ruchu - dr Tadeusz",
+        "start": 32,
+        "end": 73,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Odrobaczasz psa, ale siebie nigdy? 45% z nas ma pasożyty - dr Tadeusz Oleszczuk",
+    "detected_names": [
+      "Odrobaczasz psa",
+      ", ale siebie nigdy? 45",
+      "nas ma pasożyty - dr Tadeusz"
+    ],
+    "names_count": 3,
+    "names_details": [
+      {
+        "text": "Odrobaczasz psa",
+        "start": 0,
+        "end": 15,
+        "confidence": 1.0
+      },
+      {
+        "text": ", ale siebie nigdy? 45",
+        "start": 15,
+        "end": 37,
+        "confidence": 1.0
+      },
+      {
+        "text": "nas ma pasożyty - dr Tadeusz",
+        "start": 41,
+        "end": 69,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Lekarz mówi: \"Proszę o siebie dbać\". Ale co to właściwie znaczy? - dr Tadeusz Oleszczuk",
+    "detected_names": [
+      "Lekarz mówi: \"",
+      "Proszę o",
+      "Ale co to właściwie znaczy? - dr Tadeusz"
+    ],
+    "names_count": 3,
+    "names_details": [
+      {
+        "text": "Lekarz mówi: \"",
+        "start": 0,
+        "end": 14,
+        "confidence": 1.0
+      },
+      {
+        "text": "Proszę o",
+        "start": 14,
+        "end": 22,
+        "confidence": 1.0
+      },
+      {
+        "text": "Ale co to właściwie znaczy? - dr Tadeusz",
+        "start": 37,
+        "end": 77,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Po co pytać o dietę, skoro łatwiej wypisać lek? - dr Tadeusz Oleszczuk",
+    "detected_names": [
+      "Po co pytać o dietę,",
+      "Tadeusz Oleszczuk"
+    ],
+    "names_count": 2,
+    "names_details": [
+      {
+        "text": "Po co pytać o dietę,",
+        "start": 0,
+        "end": 20,
+        "confidence": 1.0
+      },
+      {
+        "text": "Tadeusz Oleszczuk",
+        "start": 53,
+        "end": 70,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "To nie twoja wina. System zarabia na twojej chorobie - dr Tadeusz Oleszczuk",
+    "detected_names": [
+      "To nie twoja wina. System",
+      "Tadeusz Oleszczuk"
+    ],
+    "names_count": 2,
+    "names_details": [
+      {
+        "text": "To nie twoja wina. System",
+        "start": 0,
+        "end": 25,
+        "confidence": 1.0
+      },
+      {
+        "text": "Tadeusz Oleszczuk",
+        "start": 58,
+        "end": 75,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Pacjentki krążą między lekarzami, a nikt nie mówi dlaczego - dr Tadeusz Oleszczuk",
+    "detected_names": [
+      "Pacjentki krążą między lekarzami,",
+      "Tadeusz Oleszczuk"
+    ],
+    "names_count": 2,
+    "names_details": [
+      {
+        "text": "Pacjentki krążą między lekarzami,",
+        "start": 0,
+        "end": 33,
+        "confidence": 1.0
+      },
+      {
+        "text": "Tadeusz Oleszczuk",
+        "start": 64,
+        "end": 81,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "\"FETYSZE JAPONEK: DLACZEGO SIĘ TAM NIE GOLĄ  - POWIEM JAK JEST\" PÓŁ POLAK PÓŁ JAPOŃCZYK SZCZERZE ",
+    "detected_names": [
+      "\"FETYSZE",
+      "JAPONEK: DLACZEGO",
+      "SIĘ TAM",
+      "NIE GOLĄ",
+      "POWIEM JAK",
+      "JEST\"",
+      "PÓŁ POLAK",
+      "PÓŁ JAPOŃCZYK"
+    ],
+    "names_count": 8,
+    "names_details": [
+      {
+        "text": "\"FETYSZE",
+        "start": 0,
+        "end": 8,
+        "confidence": 1.0
+      },
+      {
+        "text": "JAPONEK: DLACZEGO",
+        "start": 9,
+        "end": 26,
+        "confidence": 1.0
+      },
+      {
+        "text": "SIĘ TAM",
+        "start": 27,
+        "end": 34,
+        "confidence": 1.0
+      },
+      {
+        "text": "NIE GOLĄ",
+        "start": 35,
+        "end": 43,
+        "confidence": 1.0
+      },
+      {
+        "text": "POWIEM JAK",
+        "start": 47,
+        "end": 57,
+        "confidence": 1.0
+      },
+      {
+        "text": "JEST\"",
+        "start": 58,
+        "end": 63,
+        "confidence": 1.0
+      },
+      {
+        "text": "PÓŁ POLAK",
+        "start": 64,
+        "end": 73,
+        "confidence": 1.0
+      },
+      {
+        "text": "PÓŁ JAPOŃCZYK",
+        "start": 74,
+        "end": 87,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "POWRÓT DO SPRAWY ANDRZEJA LEPPERA #podcast #shorts",
+    "detected_names": [
+      "POWRÓT DO",
+      "SPRAWY ANDRZEJA"
+    ],
+    "names_count": 2,
+    "names_details": [
+      {
+        "text": "POWRÓT DO",
+        "start": 0,
+        "end": 9,
+        "confidence": 1.0
+      },
+      {
+        "text": "SPRAWY ANDRZEJA",
+        "start": 10,
+        "end": 25,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "ZAINTERESOWANIE SPRAWĄ ANDRZEJA LEPPERA #podcast #shorts",
+    "detected_names": [
+      "ZAINTERESOWANIE SPRAWĄ",
+      "ANDRZEJA LEPPERA"
+    ],
+    "names_count": 2,
+    "names_details": [
+      {
+        "text": "ZAINTERESOWANIE SPRAWĄ",
+        "start": 0,
+        "end": 22,
+        "confidence": 1.0
+      },
+      {
+        "text": "ANDRZEJA LEPPERA",
+        "start": 23,
+        "end": 39,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "PRAWDA PONAD WSZYSTKO #podcast #shorts",
+    "detected_names": [
+      "PRAWDA PONAD",
+      "WSZYSTKO #"
+    ],
+    "names_count": 2,
+    "names_details": [
+      {
+        "text": "PRAWDA PONAD",
+        "start": 0,
+        "end": 12,
+        "confidence": 1.0
+      },
+      {
+        "text": "WSZYSTKO #",
+        "start": 13,
+        "end": 23,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "KTO POWINIEN RZĄDZIĆ POLSKĄ #podcast #shorts",
+    "detected_names": [
+      "KTO POWINIEN",
+      "RZĄDZIĆ POLSKĄ"
+    ],
+    "names_count": 2,
+    "names_details": [
+      {
+        "text": "KTO POWINIEN",
+        "start": 0,
+        "end": 12,
+        "confidence": 1.0
+      },
+      {
+        "text": "RZĄDZIĆ POLSKĄ",
+        "start": 13,
+        "end": 27,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "INWIGILACJA ANDRZEJA LEPPERA #podcast #shorts",
+    "detected_names": [
+      "ANDRZEJA LEPPERA"
+    ],
+    "names_count": 1,
+    "names_details": [
+      {
+        "text": "ANDRZEJA LEPPERA",
+        "start": 12,
+        "end": 28,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "ZWIĄZKI DONALDA TUSKA #podcast #shorts",
+    "detected_names": [
+      "ZWIĄZKI DONALDA"
+    ],
+    "names_count": 1,
+    "names_details": [
+      {
+        "text": "ZWIĄZKI DONALDA",
+        "start": 0,
+        "end": 15,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Czego boi się Putin? #putin #rosja #arletabojke",
+    "detected_names": [
+      "Czego boi się Putin"
+    ],
+    "names_count": 1,
+    "names_details": [
+      {
+        "text": "Czego boi się Putin",
+        "start": 0,
+        "end": 19,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "PUTIN się nie cofnie. Czy Polska jest następna? Mocne słowa Arlety Bojke.",
+    "detected_names": [
+      "PUTIN się nie cofnie. Czy",
+      "Polska jest następna? Mocne",
+      "Arlety Bojke"
+    ],
+    "names_count": 3,
+    "names_details": [
+      {
+        "text": "PUTIN się nie cofnie. Czy",
+        "start": 0,
+        "end": 25,
+        "confidence": 1.0
+      },
+      {
+        "text": "Polska jest następna? Mocne",
+        "start": 26,
+        "end": 53,
+        "confidence": 1.0
+      },
+      {
+        "text": "Arlety Bojke",
+        "start": 60,
+        "end": 72,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Jakie plany miał Minister Ziobro vs Rozwodów? #rozwód",
+    "detected_names": [
+      "Jakie plany miał Minister",
+      "Ziobro vs",
+      "Rozwodów? #rozwód"
+    ],
+    "names_count": 3,
+    "names_details": [
+      {
+        "text": "Jakie plany miał Minister",
+        "start": 0,
+        "end": 25,
+        "confidence": 1.0
+      },
+      {
+        "text": "Ziobro vs",
+        "start": 26,
+        "end": 35,
+        "confidence": 1.0
+      },
+      {
+        "text": "Rozwodów? #rozwód",
+        "start": 36,
+        "end": 53,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Czym jest alienacja rodzicielska? #rozwód #alienacja",
+    "detected_names": [
+      "Czym jest alienacja rodzicielska? #rozwód #alienacja"
+    ],
+    "names_count": 1,
+    "names_details": [
+      {
+        "text": "Czym jest alienacja rodzicielska? #rozwód #alienacja",
+        "start": 0,
+        "end": 52,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Koniec z płaceniem alimentów? #alimenty #rozwód",
+    "detected_names": [
+      "Koniec z płaceniem alimentów? #alimenty #rozwód"
+    ],
+    "names_count": 1,
+    "names_details": [
+      {
+        "text": "Koniec z płaceniem alimentów? #alimenty #rozwód",
+        "start": 0,
+        "end": 47,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Koniec ALIMENTÓW? Rewolucja w rozwodach! Prawnik tłumaczy!",
+    "detected_names": [
+      "Koniec ALIMENTÓW",
+      "? Rewolucja",
+      "Prawnik tłumaczy"
+    ],
+    "names_count": 3,
+    "names_details": [
+      {
+        "text": "Koniec ALIMENTÓW",
+        "start": 0,
+        "end": 16,
+        "confidence": 1.0
+      },
+      {
+        "text": "? Rewolucja",
+        "start": 16,
+        "end": 27,
+        "confidence": 1.0
+      },
+      {
+        "text": "Prawnik tłumaczy",
+        "start": 41,
+        "end": 57,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Czy wstyd to najsilniejsza emocja?",
+    "detected_names": [
+      "Czy wstyd to najsilniejsza emocja?"
+    ],
+    "names_count": 1,
+    "names_details": [
+      {
+        "text": "Czy wstyd to najsilniejsza emocja?",
+        "start": 0,
+        "end": 34,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Czy osiągnięcie celu naprawdę może coś zmienić? Piotr Polo Przywarski",
+    "detected_names": [
+      "Czy osiągnięcie celu naprawdę może coś zmienić?",
+      "Piotr Polo"
+    ],
+    "names_count": 2,
+    "names_details": [
+      {
+        "text": "Czy osiągnięcie celu naprawdę może coś zmienić?",
+        "start": 0,
+        "end": 47,
+        "confidence": 1.0
+      },
+      {
+        "text": "Piotr Polo",
+        "start": 48,
+        "end": 58,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Piotr Polo Przywarski i jego \"chora historia\"",
+    "detected_names": [
+      "Piotr Polo",
+      "Przywarski i jego"
+    ],
+    "names_count": 2,
+    "names_details": [
+      {
+        "text": "Piotr Polo",
+        "start": 0,
+        "end": 10,
+        "confidence": 1.0
+      },
+      {
+        "text": "Przywarski i jego",
+        "start": 11,
+        "end": 28,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Ekstremalna przestępczość, bieda i brud. Jak podróżuje Piotr Polo Przywarski",
+    "detected_names": [
+      "Ekstremalna przestępczość,",
+      "Jak podróżuje",
+      "Piotr Polo"
+    ],
+    "names_count": 3,
+    "names_details": [
+      {
+        "text": "Ekstremalna przestępczość,",
+        "start": 0,
+        "end": 26,
+        "confidence": 1.0
+      },
+      {
+        "text": "Jak podróżuje",
+        "start": 41,
+        "end": 54,
+        "confidence": 1.0
+      },
+      {
+        "text": "Piotr Polo",
+        "start": 55,
+        "end": 65,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Włodzimierz Czarzasty o różnicy miedzy Konfederacją a Lewicą",
+    "detected_names": [
+      "Włodzimierz Czarzasty",
+      "Konfederacją a"
+    ],
+    "names_count": 2,
+    "names_details": [
+      {
+        "text": "Włodzimierz Czarzasty",
+        "start": 0,
+        "end": 21,
+        "confidence": 1.0
+      },
+      {
+        "text": "Konfederacją a",
+        "start": 39,
+        "end": 53,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Haiti: brud, syf i bieda – Piotr Polo Przywarski",
+    "detected_names": [
+      "Haiti: brud,",
+      "Piotr Polo"
+    ],
+    "names_count": 2,
+    "names_details": [
+      {
+        "text": "Haiti: brud,",
+        "start": 0,
+        "end": 12,
+        "confidence": 1.0
+      },
+      {
+        "text": "Piotr Polo",
+        "start": 27,
+        "end": 37,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Piotr Polo Przywarski – czy kiedykolwiek bał się o przetrwanie kanału?",
+    "detected_names": [
+      "Piotr Polo",
+      "Przywarski –",
+      "bał się o"
+    ],
+    "names_count": 3,
+    "names_details": [
+      {
+        "text": "Piotr Polo",
+        "start": 0,
+        "end": 10,
+        "confidence": 1.0
+      },
+      {
+        "text": "Przywarski –",
+        "start": 11,
+        "end": 23,
+        "confidence": 1.0
+      },
+      {
+        "text": "bał się o",
+        "start": 41,
+        "end": 50,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Włodzimierz Czarzasty: Populizm w Polsce? To się nazywa Konfederacja",
+    "detected_names": [
+      "Włodzimierz Czarzasty",
+      "Polsce?"
+    ],
+    "names_count": 2,
+    "names_details": [
+      {
+        "text": "Włodzimierz Czarzasty",
+        "start": 0,
+        "end": 21,
+        "confidence": 1.0
+      },
+      {
+        "text": "Polsce?",
+        "start": 34,
+        "end": 41,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "\"Od dekady nie uprawiam s3ksu bez zabezpieczenia\" Piotr Polo Przywarski",
+    "detected_names": [
+      "\"Od",
+      "bez zabezpieczenia\"",
+      "Piotr Polo"
+    ],
+    "names_count": 3,
+    "names_details": [
+      {
+        "text": "\"Od",
+        "start": 0,
+        "end": 3,
+        "confidence": 1.0
+      },
+      {
+        "text": "bez zabezpieczenia\"",
+        "start": 30,
+        "end": 49,
+        "confidence": 1.0
+      },
+      {
+        "text": "Piotr Polo",
+        "start": 50,
+        "end": 60,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Piotr Polo Przywarski i afera o odcisk palca w Chinach",
+    "detected_names": [
+      "Piotr Polo",
+      "Przywarski i afera o odcisk palca w Chinach"
+    ],
+    "names_count": 2,
+    "names_details": [
+      {
+        "text": "Piotr Polo",
+        "start": 0,
+        "end": 10,
+        "confidence": 1.0
+      },
+      {
+        "text": "Przywarski i afera o odcisk palca w Chinach",
+        "start": 11,
+        "end": 54,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Wyobrażacie sobie świat bez podatków? Włodzimierz Czarzasty",
+    "detected_names": [
+      "Wyobrażacie sobie świat bez",
+      "Włodzimierz Czarzasty"
+    ],
+    "names_count": 2,
+    "names_details": [
+      {
+        "text": "Wyobrażacie sobie świat bez",
+        "start": 0,
+        "end": 27,
+        "confidence": 1.0
+      },
+      {
+        "text": "Włodzimierz Czarzasty",
+        "start": 38,
+        "end": 59,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Piotr Polo Przywarski – dlaczego nie lubił się z Cashem?",
+    "detected_names": [
+      "Piotr Polo",
+      "Przywarski –",
+      "dlaczego nie lubił się z",
+      "Cashem?"
+    ],
+    "names_count": 4,
+    "names_details": [
+      {
+        "text": "Piotr Polo",
+        "start": 0,
+        "end": 10,
+        "confidence": 1.0
+      },
+      {
+        "text": "Przywarski –",
+        "start": 11,
+        "end": 23,
+        "confidence": 1.0
+      },
+      {
+        "text": "dlaczego nie lubił się z",
+        "start": 24,
+        "end": 48,
+        "confidence": 1.0
+      },
+      {
+        "text": "Cashem?",
+        "start": 49,
+        "end": 56,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Piotr Polo Przywarski – czy podróżujące kobiety czują się w Afganistanie bezpieczniej niż mężczyźni?",
+    "detected_names": [
+      "Piotr Polo",
+      "Przywarski –",
+      "Afganistanie bezpieczniej niż mężczyźni?"
+    ],
+    "names_count": 3,
+    "names_details": [
+      {
+        "text": "Piotr Polo",
+        "start": 0,
+        "end": 10,
+        "confidence": 1.0
+      },
+      {
+        "text": "Przywarski –",
+        "start": 11,
+        "end": 23,
+        "confidence": 1.0
+      },
+      {
+        "text": "Afganistanie bezpieczniej niż mężczyźni?",
+        "start": 60,
+        "end": 100,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Włodzimierz Czarzasty: nikt z nas nie znał Magdaleny Ogórek",
+    "detected_names": [
+      "Włodzimierz Czarzasty",
+      "nas nie znał Magdaleny"
+    ],
+    "names_count": 2,
+    "names_details": [
+      {
+        "text": "Włodzimierz Czarzasty",
+        "start": 0,
+        "end": 21,
+        "confidence": 1.0
+      },
+      {
+        "text": "nas nie znał Magdaleny",
+        "start": 30,
+        "end": 52,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Włodzimierz Czarzasty: każda poważna formacja powinna wystawić kandydata na prezydenta",
+    "detected_names": [
+      "Włodzimierz Czarzasty"
+    ],
+    "names_count": 1,
+    "names_details": [
+      {
+        "text": "Włodzimierz Czarzasty",
+        "start": 0,
+        "end": 21,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Prawda o historii? Trzeba ją mówić, nawet jeśli boli – Włodzimierz Czarzasty",
+    "detected_names": [
+      "Prawda o historii? Trzeba",
+      "mówić,",
+      "Włodzimierz Czarzasty"
+    ],
+    "names_count": 3,
+    "names_details": [
+      {
+        "text": "Prawda o historii? Trzeba",
+        "start": 0,
+        "end": 25,
+        "confidence": 1.0
+      },
+      {
+        "text": "mówić,",
+        "start": 29,
+        "end": 35,
+        "confidence": 1.0
+      },
+      {
+        "text": "Włodzimierz Czarzasty",
+        "start": 55,
+        "end": 76,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Włodzimierz Czarzasty: Spotkanie z Morawieckim? Tak, to była głupota.",
+    "detected_names": [
+      "Włodzimierz Czarzasty",
+      ": Spotkanie",
+      "Morawieckim?",
+      "Tak,"
+    ],
+    "names_count": 4,
+    "names_details": [
+      {
+        "text": "Włodzimierz Czarzasty",
+        "start": 0,
+        "end": 21,
+        "confidence": 1.0
+      },
+      {
+        "text": ": Spotkanie",
+        "start": 21,
+        "end": 32,
+        "confidence": 1.0
+      },
+      {
+        "text": "Morawieckim?",
+        "start": 35,
+        "end": 47,
+        "confidence": 1.0
+      },
+      {
+        "text": "Tak,",
+        "start": 48,
+        "end": 52,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Włodzimierz Czarzasty – kto naprawdę uratował KPO?",
+    "detected_names": [
+      "Włodzimierz Czarzasty",
+      "– kto naprawdę uratował KPO?"
+    ],
+    "names_count": 2,
+    "names_details": [
+      {
+        "text": "Włodzimierz Czarzasty",
+        "start": 0,
+        "end": 21,
+        "confidence": 1.0
+      },
+      {
+        "text": "– kto naprawdę uratował KPO?",
+        "start": 22,
+        "end": 50,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Włodzimierz Czarzasty o wystąpieniu Trzaskowskiego w Końskich",
+    "detected_names": [
+      "Włodzimierz Czarzasty",
+      "wystąpieniu Trzaskowskiego"
+    ],
+    "names_count": 2,
+    "names_details": [
+      {
+        "text": "Włodzimierz Czarzasty",
+        "start": 0,
+        "end": 21,
+        "confidence": 1.0
+      },
+      {
+        "text": "wystąpieniu Trzaskowskiego",
+        "start": 24,
+        "end": 50,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Włodzimierz Czarzasty: Polska nie jest krajem lewicowym",
+    "detected_names": [
+      "Włodzimierz Czarzasty",
+      ": Polska"
+    ],
+    "names_count": 2,
+    "names_details": [
+      {
+        "text": "Włodzimierz Czarzasty",
+        "start": 0,
+        "end": 21,
+        "confidence": 1.0
+      },
+      {
+        "text": ": Polska",
+        "start": 21,
+        "end": 29,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Łatwo być bohaterem w dobrych czasach – Włodzimierz Czarzasty",
+    "detected_names": [
+      "Łatwo być",
+      "dobrych czasach –",
+      "Włodzimierz Czarzasty"
+    ],
+    "names_count": 3,
+    "names_details": [
+      {
+        "text": "Łatwo być",
+        "start": 0,
+        "end": 9,
+        "confidence": 1.0
+      },
+      {
+        "text": "dobrych czasach –",
+        "start": 22,
+        "end": 39,
+        "confidence": 1.0
+      },
+      {
+        "text": "Włodzimierz Czarzasty",
+        "start": 40,
+        "end": 61,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Włodzimierz Czarzasty: polityka jest mądrą sztuką kompromisu",
+    "detected_names": [
+      "Włodzimierz Czarzasty"
+    ],
+    "names_count": 1,
+    "names_details": [
+      {
+        "text": "Włodzimierz Czarzasty",
+        "start": 0,
+        "end": 21,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Prawdziwi mężczyźni nie płaczą | Debata o depresji mężczyzn",
+    "detected_names": [
+      "Prawdziwi mężczyźni nie płaczą | Debata"
+    ],
+    "names_count": 1,
+    "names_details": [
+      {
+        "text": "Prawdziwi mężczyźni nie płaczą | Debata",
+        "start": 0,
+        "end": 39,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Depresja u mężczyzn to porażka męskości? Przyczyny, objawy i diagnoza | Debata",
+    "detected_names": [
+      "Depresja u mężczyzn",
+      "to porażka męskości? Przyczyny"
+    ],
+    "names_count": 2,
+    "names_details": [
+      {
+        "text": "Depresja u mężczyzn",
+        "start": 0,
+        "end": 19,
+        "confidence": 1.0
+      },
+      {
+        "text": "to porażka męskości? Przyczyny",
+        "start": 20,
+        "end": 50,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Lek na raka nie istnieje i nigdy istnieć nie będzie | dr inż. Adam Mirek",
+    "detected_names": [
+      "Lek na",
+      "Adam Mirek"
+    ],
+    "names_count": 2,
+    "names_details": [
+      {
+        "text": "Lek na",
+        "start": 0,
+        "end": 6,
+        "confidence": 1.0
+      },
+      {
+        "text": "Adam Mirek",
+        "start": 62,
+        "end": 72,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "3 sposoby na nieśmiertelność - jak przedłużyć sobie życie? | dr inż. Adam Mirek",
+    "detected_names": [
+      "3 sposoby na nieśmiertelność -",
+      "jak przedłużyć",
+      "Adam Mirek"
+    ],
+    "names_count": 3,
+    "names_details": [
+      {
+        "text": "3 sposoby na nieśmiertelność -",
+        "start": 0,
+        "end": 30,
+        "confidence": 1.0
+      },
+      {
+        "text": "jak przedłużyć",
+        "start": 31,
+        "end": 45,
+        "confidence": 1.0
+      },
+      {
+        "text": "Adam Mirek",
+        "start": 69,
+        "end": 79,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Jak Wam się podoba nasza rozmowa?🙌 Co myślicie? #podcast #kasianast #duchowość #energia",
+    "detected_names": [
+      "Jak Wam",
+      "🙌 Co"
+    ],
+    "names_count": 2,
+    "names_details": [
+      {
+        "text": "Jak Wam",
+        "start": 0,
+        "end": 7,
+        "confidence": 1.0
+      },
+      {
+        "text": "🙌 Co",
+        "start": 33,
+        "end": 37,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Przemoc➡️PRZE-MOC! Piękna historia♥️ #podcast #kasianast #siłakobiet #przemoc",
+    "detected_names": [
+      "Przemoc➡",
+      "! Piękna",
+      "♥️ #podcast #kasianast #siłakobiet #przemoc"
+    ],
+    "names_count": 3,
+    "names_details": [
+      {
+        "text": "Przemoc➡",
+        "start": 0,
+        "end": 8,
+        "confidence": 1.0
+      },
+      {
+        "text": "! Piękna",
+        "start": 17,
+        "end": 25,
+        "confidence": 1.0
+      },
+      {
+        "text": "♥️ #podcast #kasianast #siłakobiet #przemoc",
+        "start": 34,
+        "end": 77,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "To, co jest niewygodne, może być piękne!✨👐 #podcast #kasianast #medycynanaturalna #rytuały",
+    "detected_names": [
+      "To,",
+      "niewygodne,",
+      "być piękne!✨👐"
+    ],
+    "names_count": 3,
+    "names_details": [
+      {
+        "text": "To,",
+        "start": 0,
+        "end": 3,
+        "confidence": 1.0
+      },
+      {
+        "text": "niewygodne,",
+        "start": 12,
+        "end": 23,
+        "confidence": 1.0
+      },
+      {
+        "text": "być piękne!✨👐",
+        "start": 29,
+        "end": 42,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Rodziny międzygatunkowe. Kamil Prabucki",
+    "detected_names": [
+      "Rodziny międzygatunkowe. Kamil"
+    ],
+    "names_count": 1,
+    "names_details": [
+      {
+        "text": "Rodziny międzygatunkowe. Kamil",
+        "start": 0,
+        "end": 30,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Polacy są bardziej tolerancyjni niż Zachód? Kamil Prabucki",
+    "detected_names": [
+      "Polacy są bardziej tolerancyjni niż Zachód",
+      "? Kamil"
+    ],
+    "names_count": 2,
+    "names_details": [
+      {
+        "text": "Polacy są bardziej tolerancyjni niż Zachód",
+        "start": 0,
+        "end": 42,
+        "confidence": 1.0
+      },
+      {
+        "text": "? Kamil",
+        "start": 42,
+        "end": 49,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Promowana na siłę poprawność. Kamil Prabucki",
+    "detected_names": [
+      "Promowana na siłę poprawność. Kamil"
+    ],
+    "names_count": 1,
+    "names_details": [
+      {
+        "text": "Promowana na siłę poprawność. Kamil",
+        "start": 0,
+        "end": 35,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Eksperyment z myszami. Igor Witkowski",
+    "detected_names": [
+      "Eksperyment z myszami. Igor"
+    ],
+    "names_count": 1,
+    "names_details": [
+      {
+        "text": "Eksperyment z myszami. Igor",
+        "start": 0,
+        "end": 27,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Promują Ideologie, Seksualizują Dzieci i Mówią, Że To Postęp!",
+    "detected_names": [
+      "Promują Ideologie",
+      ", Seksualizują",
+      "Dzieci i Mówią",
+      "To Postęp"
+    ],
+    "names_count": 4,
+    "names_details": [
+      {
+        "text": "Promują Ideologie",
+        "start": 0,
+        "end": 17,
+        "confidence": 1.0
+      },
+      {
+        "text": ", Seksualizują",
+        "start": 17,
+        "end": 31,
+        "confidence": 1.0
+      },
+      {
+        "text": "Dzieci i Mówią",
+        "start": 32,
+        "end": 46,
+        "confidence": 1.0
+      },
+      {
+        "text": "To Postęp",
+        "start": 51,
+        "end": 60,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Leki na ADHD ograniczają wolę? Igor Witkowski",
+    "detected_names": [
+      "Leki na ADHD"
+    ],
+    "names_count": 1,
+    "names_details": [
+      {
+        "text": "Leki na ADHD",
+        "start": 0,
+        "end": 12,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Rozpad cywilizacji w najbliższych miesiącach? Igor Witkowski",
+    "detected_names": [
+      "Rozpad cywilizacji w najbliższych"
+    ],
+    "names_count": 1,
+    "names_details": [
+      {
+        "text": "Rozpad cywilizacji w najbliższych",
+        "start": 0,
+        "end": 33,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Depresja poporodowa  #balans #podcast #psychoterapia",
+    "detected_names": [
+      "Depresja poporodowa"
+    ],
+    "names_count": 1,
+    "names_details": [
+      {
+        "text": "Depresja poporodowa",
+        "start": 0,
+        "end": 19,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Pracowałam podczas PORODU  #balans #podcast #psychoterapia",
+    "detected_names": [
+      "Pracowałam podczas PORODU"
+    ],
+    "names_count": 1,
+    "names_details": [
+      {
+        "text": "Pracowałam podczas PORODU",
+        "start": 0,
+        "end": 25,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Najbliżej mnie ZBRODNIA była ...  #balans #podcast",
+    "detected_names": [
+      "Najbliżej mnie ZBRODNIA była ...  #balans #podcast"
+    ],
+    "names_count": 1,
+    "names_details": [
+      {
+        "text": "Najbliżej mnie ZBRODNIA była ...  #balans #podcast",
+        "start": 0,
+        "end": 50,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Rymanowski, Gawkowski: Gabinet wojenny?",
+    "detected_names": [
+      "Rymanowski,",
+      "Gawkowski: Gabinet"
+    ],
+    "names_count": 2,
+    "names_details": [
+      {
+        "text": "Rymanowski,",
+        "start": 0,
+        "end": 11,
+        "confidence": 1.0
+      },
+      {
+        "text": "Gawkowski: Gabinet",
+        "start": 12,
+        "end": 30,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "KONTRA #9 Rymanowski, Giełzak, Ziemkiewicz: Co z tą Polską i Europą?",
+    "detected_names": [
+      "KONTRA #9",
+      "Rymanowski,",
+      "Giełzak, Ziemkiewicz",
+      "tą Polską",
+      "Europą?"
+    ],
+    "names_count": 5,
+    "names_details": [
+      {
+        "text": "KONTRA #9",
+        "start": 0,
+        "end": 9,
+        "confidence": 1.0
+      },
+      {
+        "text": "Rymanowski,",
+        "start": 10,
+        "end": 21,
+        "confidence": 1.0
+      },
+      {
+        "text": "Giełzak, Ziemkiewicz",
+        "start": 22,
+        "end": 42,
+        "confidence": 1.0
+      },
+      {
+        "text": "tą Polską",
+        "start": 49,
+        "end": 58,
+        "confidence": 1.0
+      },
+      {
+        "text": "Europą?",
+        "start": 61,
+        "end": 68,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Żurek i sprawiedliwość – czy PiS ma się czego bać?  #senyszyn #jakubiak #żurek #rząd #polityka",
+    "detected_names": [
+      "Żurek i sprawiedliwość –",
+      "?  #senyszyn #jakubiak #żurek #rząd #polityka"
+    ],
+    "names_count": 2,
+    "names_details": [
+      {
+        "text": "Żurek i sprawiedliwość –",
+        "start": 0,
+        "end": 24,
+        "confidence": 1.0
+      },
+      {
+        "text": "?  #senyszyn #jakubiak #żurek #rząd #polityka",
+        "start": 49,
+        "end": 94,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Koniec Bodnara w rządzie. Co na to Senyszyn i Jakubiak?  #rząd #bodnar #tusk #polityka #prawo",
+    "detected_names": [
+      "Koniec Bodnara",
+      "rządzie. Co na to Senyszyn",
+      "Jakubiak?",
+      "tusk #polityka #prawo"
+    ],
+    "names_count": 4,
+    "names_details": [
+      {
+        "text": "Koniec Bodnara",
+        "start": 0,
+        "end": 14,
+        "confidence": 1.0
+      },
+      {
+        "text": "rządzie. Co na to Senyszyn",
+        "start": 17,
+        "end": 43,
+        "confidence": 1.0
+      },
+      {
+        "text": "Jakubiak?",
+        "start": 46,
+        "end": 55,
+        "confidence": 1.0
+      },
+      {
+        "text": "tusk #polityka #prawo",
+        "start": 72,
+        "end": 93,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Kto rano wstaje, ten co?  #senyszyn #jakubiak #hołownia #polityka #śmieszne #przysłowia #rymanowski",
+    "detected_names": [
+      "Kto rano wstaje,",
+      "ten co?  #senyszyn #jakubiak #hołownia #polityka #śmieszne #przysłowia #rymanowski"
+    ],
+    "names_count": 2,
+    "names_details": [
+      {
+        "text": "Kto rano wstaje,",
+        "start": 0,
+        "end": 16,
+        "confidence": 1.0
+      },
+      {
+        "text": "ten co?  #senyszyn #jakubiak #hołownia #polityka #śmieszne #przysłowia #rymanowski",
+        "start": 17,
+        "end": 99,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Rymanowski, Bosak: Z kim Konfederacji po drodze?",
+    "detected_names": [
+      "Rymanowski,",
+      "Bosak: Z kim",
+      "Konfederacji po drodze?"
+    ],
+    "names_count": 3,
+    "names_details": [
+      {
+        "text": "Rymanowski,",
+        "start": 0,
+        "end": 11,
+        "confidence": 1.0
+      },
+      {
+        "text": "Bosak: Z kim",
+        "start": 12,
+        "end": 24,
+        "confidence": 1.0
+      },
+      {
+        "text": "Konfederacji po drodze?",
+        "start": 25,
+        "end": 48,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Jerzy Brzęczek miał wrócić do kadry?  #kołtoń #brzęczek #trener #urban #polska #piłkanożna #pzpn",
+    "detected_names": [
+      "Jerzy Brzęczek",
+      "kadry?  #kołtoń #brzęczek #trener"
+    ],
+    "names_count": 2,
+    "names_details": [
+      {
+        "text": "Jerzy Brzęczek",
+        "start": 0,
+        "end": 14,
+        "confidence": 1.0
+      },
+      {
+        "text": "kadry?  #kołtoń #brzęczek #trener",
+        "start": 30,
+        "end": 63,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Jakim prezesem jest Cezary Kulesza?  #kołtoń #opinia #kulesza #pzpn #piłkanożna #sport #polska",
+    "detected_names": [
+      "Jakim prezesem jest Cezary",
+      "Kulesza?  #kołtoń",
+      "kulesza #pzpn #piłkanożna #sport #polska"
+    ],
+    "names_count": 3,
+    "names_details": [
+      {
+        "text": "Jakim prezesem jest Cezary",
+        "start": 0,
+        "end": 26,
+        "confidence": 1.0
+      },
+      {
+        "text": "Kulesza?  #kołtoń",
+        "start": 27,
+        "end": 44,
+        "confidence": 1.0
+      },
+      {
+        "text": "kulesza #pzpn #piłkanożna #sport #polska",
+        "start": 54,
+        "end": 94,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Tajemniczy kontrakt Urbana – ile naprawdę potrwa?  #kołtoń #urban #pzpn #kulesza #piłkanożna",
+    "detected_names": [
+      "Tajemniczy kontrakt Urbana",
+      "– ile naprawdę potrwa?  #kołtoń #urban #pzpn #kulesza #piłkanożna"
+    ],
+    "names_count": 2,
+    "names_details": [
+      {
+        "text": "Tajemniczy kontrakt Urbana",
+        "start": 0,
+        "end": 26,
+        "confidence": 1.0
+      },
+      {
+        "text": "– ile naprawdę potrwa?  #kołtoń #urban #pzpn #kulesza #piłkanożna",
+        "start": 27,
+        "end": 92,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Czy Lewy dogada się z Urbanem? Komentuje Roman Kołtoń  #lewandowski #urban #polska #piłkanożna",
+    "detected_names": [
+      "Czy Lewy",
+      "dogada się z Urbanem",
+      "? Komentuje",
+      "Roman Kołtoń"
+    ],
+    "names_count": 4,
+    "names_details": [
+      {
+        "text": "Czy Lewy",
+        "start": 0,
+        "end": 8,
+        "confidence": 1.0
+      },
+      {
+        "text": "dogada się z Urbanem",
+        "start": 9,
+        "end": 29,
+        "confidence": 1.0
+      },
+      {
+        "text": "? Komentuje",
+        "start": 29,
+        "end": 40,
+        "confidence": 1.0
+      },
+      {
+        "text": "Roman Kołtoń",
+        "start": 41,
+        "end": 53,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "VIOLA \"FROGSZOPOSTING\": Granica między inspiracją a kradzieżą - ŻABKA, NETLIFX, ANIELA | WINI",
+    "detected_names": [
+      "VIOLA \"FROGSZOPOSTING",
+      "Granica między inspiracją a kradzieżą - ŻABKA",
+      ", NETLIFX",
+      ", ANIELA"
+    ],
+    "names_count": 4,
+    "names_details": [
+      {
+        "text": "VIOLA \"FROGSZOPOSTING",
+        "start": 0,
+        "end": 21,
+        "confidence": 1.0
+      },
+      {
+        "text": "Granica między inspiracją a kradzieżą - ŻABKA",
+        "start": 24,
+        "end": 69,
+        "confidence": 1.0
+      },
+      {
+        "text": ", NETLIFX",
+        "start": 69,
+        "end": 78,
+        "confidence": 1.0
+      },
+      {
+        "text": ", ANIELA",
+        "start": 78,
+        "end": 86,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Czwarte prawo robotyki odmieni sztuczną inteligencję | prof. Dariusz Jemielniak",
+    "detected_names": [
+      "Czwarte prawo robotyki odmieni sztuczną inteligencję | prof. Dariusz"
+    ],
+    "names_count": 1,
+    "names_details": [
+      {
+        "text": "Czwarte prawo robotyki odmieni sztuczną inteligencję | prof. Dariusz",
+        "start": 0,
+        "end": 68,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Sarmaci i potomkowie Chama",
+    "detected_names": [
+      "Sarmaci i potomkowie Chama"
+    ],
+    "names_count": 1,
+    "names_details": [
+      {
+        "text": "Sarmaci i potomkowie Chama",
+        "start": 0,
+        "end": 26,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Co naprawdę Cię blokuje? #przywództwo #rozwójosobisty #mentalność #biznes",
+    "detected_names": [
+      "Co naprawdę Cię blokuje? #przywództwo #rozwójosobisty #mentalność #biznes"
+    ],
+    "names_count": 1,
+    "names_details": [
+      {
+        "text": "Co naprawdę Cię blokuje? #przywództwo #rozwójosobisty #mentalność #biznes",
+        "start": 0,
+        "end": 73,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Co naprawdę Cię blokuje? przywództwo #rozwójosobisty #mentalność #biznes",
+    "detected_names": [
+      "Co naprawdę Cię blokuje? przywództwo #rozwójosobisty #mentalność #biznes"
+    ],
+    "names_count": 1,
+    "names_details": [
+      {
+        "text": "Co naprawdę Cię blokuje? przywództwo #rozwójosobisty #mentalność #biznes",
+        "start": 0,
+        "end": 72,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "„Nie wiem, ale spróbuj” – to najcenniejsza lekcja od mojego ojca. #odwaga #działanie #biznes",
+    "detected_names": [
+      "„Nie",
+      "wiem,",
+      "” –",
+      "lekcja od mojego ojca. #odwaga #działanie #biznes"
+    ],
+    "names_count": 4,
+    "names_details": [
+      {
+        "text": "„Nie",
+        "start": 0,
+        "end": 4,
+        "confidence": 1.0
+      },
+      {
+        "text": "wiem,",
+        "start": 5,
+        "end": 10,
+        "confidence": 1.0
+      },
+      {
+        "text": "” –",
+        "start": 22,
+        "end": 25,
+        "confidence": 1.0
+      },
+      {
+        "text": "lekcja od mojego ojca. #odwaga #działanie #biznes",
+        "start": 43,
+        "end": 92,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Facet idealny – Katarzyna Miller Gosia Ohme",
+    "detected_names": [
+      "Facet idealny –",
+      "Katarzyna Miller",
+      "Gosia Ohme"
+    ],
+    "names_count": 3,
+    "names_details": [
+      {
+        "text": "Facet idealny –",
+        "start": 0,
+        "end": 15,
+        "confidence": 1.0
+      },
+      {
+        "text": "Katarzyna Miller",
+        "start": 16,
+        "end": 32,
+        "confidence": 1.0
+      },
+      {
+        "text": "Gosia Ohme",
+        "start": 33,
+        "end": 43,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Odzyskaj siłę i odrzuć toksyczne relacje – Gosia Ohme",
+    "detected_names": [
+      "Odzyskaj siłę",
+      "odrzuć toksyczne relacje –",
+      "Gosia Ohme"
+    ],
+    "names_count": 3,
+    "names_details": [
+      {
+        "text": "Odzyskaj siłę",
+        "start": 0,
+        "end": 13,
+        "confidence": 1.0
+      },
+      {
+        "text": "odrzuć toksyczne relacje –",
+        "start": 16,
+        "end": 42,
+        "confidence": 1.0
+      },
+      {
+        "text": "Gosia Ohme",
+        "start": 43,
+        "end": 53,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Samotność, strata i rodzina – Piotr Latała Gosia Ohme",
+    "detected_names": [
+      "Samotność,",
+      "Piotr Latała"
+    ],
+    "names_count": 2,
+    "names_details": [
+      {
+        "text": "Samotność,",
+        "start": 0,
+        "end": 10,
+        "confidence": 1.0
+      },
+      {
+        "text": "Piotr Latała",
+        "start": 30,
+        "end": 42,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Wolność to decyzja - Gosia Ohme | Kafka odc. 444",
+    "detected_names": [
+      "Wolność to",
+      "Gosia Ohme",
+      "Kafka odc"
+    ],
+    "names_count": 3,
+    "names_details": [
+      {
+        "text": "Wolność to",
+        "start": 0,
+        "end": 10,
+        "confidence": 1.0
+      },
+      {
+        "text": "Gosia Ohme",
+        "start": 21,
+        "end": 31,
+        "confidence": 1.0
+      },
+      {
+        "text": "Kafka odc",
+        "start": 34,
+        "end": 43,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Babcia i trudne decyzje – Piotr Latała Gosia Ohme",
+    "detected_names": [
+      "Babcia i trudne",
+      "Piotr Latała"
+    ],
+    "names_count": 2,
+    "names_details": [
+      {
+        "text": "Babcia i trudne",
+        "start": 0,
+        "end": 15,
+        "confidence": 1.0
+      },
+      {
+        "text": "Piotr Latała",
+        "start": 26,
+        "end": 38,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Dlaczego chorujemy latem? Kasia Arkuszyńska Gosia Ohme | Kafka Odc. 443",
+    "detected_names": [
+      "Dlaczego chorujemy latem? Kasia",
+      "Arkuszyńska Gosia",
+      "Kafka Odc"
+    ],
+    "names_count": 3,
+    "names_details": [
+      {
+        "text": "Dlaczego chorujemy latem? Kasia",
+        "start": 0,
+        "end": 31,
+        "confidence": 1.0
+      },
+      {
+        "text": "Arkuszyńska Gosia",
+        "start": 32,
+        "end": 49,
+        "confidence": 1.0
+      },
+      {
+        "text": "Kafka Odc",
+        "start": 57,
+        "end": 66,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "TO KOBIETA WYBIERA MĘŻCZYZNĘ #podcast #wzwiązku #psychoterapia",
+    "detected_names": [
+      "TO KOBIETA",
+      "MĘŻCZYZNĘ #podcast #wzwiązku #psychoterapia"
+    ],
+    "names_count": 2,
+    "names_details": [
+      {
+        "text": "TO KOBIETA",
+        "start": 0,
+        "end": 10,
+        "confidence": 1.0
+      },
+      {
+        "text": "MĘŻCZYZNĘ #podcast #wzwiązku #psychoterapia",
+        "start": 19,
+        "end": 62,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "#67 \"Jakie BŁĘDY kobiety popełniają w związku?\" – gość: Maya Ori",
+    "detected_names": [
+      "67 \"Jakie",
+      "kobiety popełniają w związku?\" –",
+      "Maya Ori"
+    ],
+    "names_count": 3,
+    "names_details": [
+      {
+        "text": "67 \"Jakie",
+        "start": 1,
+        "end": 10,
+        "confidence": 1.0
+      },
+      {
+        "text": "kobiety popełniają w związku?\" –",
+        "start": 17,
+        "end": 49,
+        "confidence": 1.0
+      },
+      {
+        "text": "Maya Ori",
+        "start": 56,
+        "end": 64,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "TO PRZYSZŁOŚĆ POLSKIEGO RAPU?",
+    "detected_names": [
+      "PRZYSZŁOŚĆ POLSKIEGO",
+      "RAPU?"
+    ],
+    "names_count": 2,
+    "names_details": [
+      {
+        "text": "PRZYSZŁOŚĆ POLSKIEGO",
+        "start": 3,
+        "end": 23,
+        "confidence": 1.0
+      },
+      {
+        "text": "RAPU?",
+        "start": 24,
+        "end": 29,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "5 NAJLEPSZYCH SOLOWYCH PŁYT LUDZI Z WU-TANG CLANU",
+    "detected_names": [
+      "NAJLEPSZYCH SOLOWYCH",
+      "PŁYT LUDZI",
+      "-TANG"
+    ],
+    "names_count": 3,
+    "names_details": [
+      {
+        "text": "NAJLEPSZYCH SOLOWYCH",
+        "start": 2,
+        "end": 22,
+        "confidence": 1.0
+      },
+      {
+        "text": "PŁYT LUDZI",
+        "start": 23,
+        "end": 33,
+        "confidence": 1.0
+      },
+      {
+        "text": "-TANG",
+        "start": 38,
+        "end": 43,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Hity polskich auto komisów",
+    "detected_names": [
+      "Hity polskich auto komisów"
+    ],
+    "names_count": 1,
+    "names_details": [
+      {
+        "text": "Hity polskich auto komisów",
+        "start": 0,
+        "end": 26,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Dlaczego wszystkie kraje mają CEPIKI, Niemcy nie?",
+    "detected_names": [
+      "Dlaczego wszystkie kraje mają CEPIKI",
+      ", Niemcy"
+    ],
+    "names_count": 2,
+    "names_details": [
+      {
+        "text": "Dlaczego wszystkie kraje mają CEPIKI",
+        "start": 0,
+        "end": 36,
+        "confidence": 1.0
+      },
+      {
+        "text": ", Niemcy",
+        "start": 36,
+        "end": 44,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Serialowa Mariolka wspomina ostatnie chwile Marzeny Kipiel-Sztuki. \"Była bardzo skrzywdzona\"",
+    "detected_names": [
+      "Serialowa Mariolka",
+      "Marzeny Kipiel",
+      "-Sztuki",
+      "\"Była"
+    ],
+    "names_count": 4,
+    "names_details": [
+      {
+        "text": "Serialowa Mariolka",
+        "start": 0,
+        "end": 18,
+        "confidence": 1.0
+      },
+      {
+        "text": "Marzeny Kipiel",
+        "start": 44,
+        "end": 58,
+        "confidence": 1.0
+      },
+      {
+        "text": "-Sztuki",
+        "start": 58,
+        "end": 65,
+        "confidence": 1.0
+      },
+      {
+        "text": "\"Była",
+        "start": 67,
+        "end": 72,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Wzruszający widok na grobie Joanny Kołaczkowskiej. Fani zostawiają listy i prezenty",
+    "detected_names": [
+      "Wzruszający widok na grobie Joanny",
+      "Kołaczkowskiej. Fani"
+    ],
+    "names_count": 2,
+    "names_details": [
+      {
+        "text": "Wzruszający widok na grobie Joanny",
+        "start": 0,
+        "end": 34,
+        "confidence": 1.0
+      },
+      {
+        "text": "Kołaczkowskiej. Fani",
+        "start": 35,
+        "end": 55,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Jest dziewczyną do towarzystwa polskich gwiazd. Ujawnia: znana medialna rodzina korzysta z jej usług",
+    "detected_names": [
+      "Jest dziewczyną do towarzystwa polskich gwiazd. Ujawnia",
+      "jej usług"
+    ],
+    "names_count": 2,
+    "names_details": [
+      {
+        "text": "Jest dziewczyną do towarzystwa polskich gwiazd. Ujawnia",
+        "start": 0,
+        "end": 55,
+        "confidence": 1.0
+      },
+      {
+        "text": "jej usług",
+        "start": 91,
+        "end": 100,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Został porażony i sparaliżowany. Szymon Wydra pierwszy raz opowiada, co przeżył",
+    "detected_names": [
+      "Został porażony i sparaliżowany. Szymon",
+      "Wydra pierwszy raz opowiada,"
+    ],
+    "names_count": 2,
+    "names_details": [
+      {
+        "text": "Został porażony i sparaliżowany. Szymon",
+        "start": 0,
+        "end": 39,
+        "confidence": 1.0
+      },
+      {
+        "text": "Wydra pierwszy raz opowiada,",
+        "start": 40,
+        "end": 68,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Dariusz Kamys z kabaretu Hrabi przemówił tak, że cała sala zamarła. Ludzie płakali",
+    "detected_names": [
+      "Dariusz Kamys",
+      "kabaretu Hrabi",
+      "tak,",
+      "Ludzie płakali"
+    ],
+    "names_count": 4,
+    "names_details": [
+      {
+        "text": "Dariusz Kamys",
+        "start": 0,
+        "end": 13,
+        "confidence": 1.0
+      },
+      {
+        "text": "kabaretu Hrabi",
+        "start": 16,
+        "end": 30,
+        "confidence": 1.0
+      },
+      {
+        "text": "tak,",
+        "start": 41,
+        "end": 45,
+        "confidence": 1.0
+      },
+      {
+        "text": "Ludzie płakali",
+        "start": 68,
+        "end": 82,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Ostatnie pożegnanie Joanny Kołaczkowskiej. Wzruszające chwile, tłum i muzyka, którą kochała",
+    "detected_names": [
+      "Ostatnie pożegnanie Joanny",
+      "Kołaczkowskiej. Wzruszające",
+      ", którą"
+    ],
+    "names_count": 3,
+    "names_details": [
+      {
+        "text": "Ostatnie pożegnanie Joanny",
+        "start": 0,
+        "end": 26,
+        "confidence": 1.0
+      },
+      {
+        "text": "Kołaczkowskiej. Wzruszające",
+        "start": 27,
+        "end": 54,
+        "confidence": 1.0
+      },
+      {
+        "text": ", którą",
+        "start": 76,
+        "end": 83,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Tak wyglądały ostatnie chwile życia Joanny Kołaczkowskiej. Jej siostra przerwała milczenie",
+    "detected_names": [
+      "Tak wyglądały ostatnie chwile życia Joanny",
+      "Kołaczkowskiej. Jej siostra przerwała milczenie"
+    ],
+    "names_count": 2,
+    "names_details": [
+      {
+        "text": "Tak wyglądały ostatnie chwile życia Joanny",
+        "start": 0,
+        "end": 42,
+        "confidence": 1.0
+      },
+      {
+        "text": "Kołaczkowskiej. Jej siostra przerwała milczenie",
+        "start": 43,
+        "end": 90,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Edyta Bartosiewicz weszła z gitarą na pogrzeb Kołaczkowskiej. Zrobiła coś niesamowitego",
+    "detected_names": [
+      "Edyta Bartosiewicz",
+      "Kołaczkowskiej. Zrobiła"
+    ],
+    "names_count": 2,
+    "names_details": [
+      {
+        "text": "Edyta Bartosiewicz",
+        "start": 0,
+        "end": 18,
+        "confidence": 1.0
+      },
+      {
+        "text": "Kołaczkowskiej. Zrobiła",
+        "start": 46,
+        "end": 69,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Zalany łzami Szymon Majewski żegna Joannę Kołaczkowską na pogrzebie. Słowa rozdzierają serca",
+    "detected_names": [
+      "Zalany łzami Szymon",
+      "Majewski żegna Joannę",
+      "Kołaczkowską na pogrzebie. Słowa"
+    ],
+    "names_count": 3,
+    "names_details": [
+      {
+        "text": "Zalany łzami Szymon",
+        "start": 0,
+        "end": 19,
+        "confidence": 1.0
+      },
+      {
+        "text": "Majewski żegna Joannę",
+        "start": 20,
+        "end": 41,
+        "confidence": 1.0
+      },
+      {
+        "text": "Kołaczkowską na pogrzebie. Słowa",
+        "start": 42,
+        "end": 74,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Pogrzeb Joanny Kołaczkowskiej 💔💔💔",
+    "detected_names": [
+      "Pogrzeb Joanny",
+      "Kołaczkowskiej 💔"
+    ],
+    "names_count": 2,
+    "names_details": [
+      {
+        "text": "Pogrzeb Joanny",
+        "start": 0,
+        "end": 14,
+        "confidence": 1.0
+      },
+      {
+        "text": "Kołaczkowskiej 💔",
+        "start": 15,
+        "end": 31,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Joanna Kołaczkowska. Na zawsze w naszych sercach 💔",
+    "detected_names": [
+      "Joanna Kołaczkowska",
+      "Na zawsze w naszych sercach 💔"
+    ],
+    "names_count": 2,
+    "names_details": [
+      {
+        "text": "Joanna Kołaczkowska",
+        "start": 0,
+        "end": 19,
+        "confidence": 1.0
+      },
+      {
+        "text": "Na zawsze w naszych sercach 💔",
+        "start": 21,
+        "end": 50,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "KOBIETA W MĘSKIM GRANIU? JAK CZUJE SIĘ Z TYM NATALIA PRZYBYSZ?!",
+    "detected_names": [
+      "KOBIETA W",
+      "MĘSKIM GRANIU",
+      "JAK CZUJE",
+      "SIĘ Z",
+      "TYM NATALIA"
+    ],
+    "names_count": 5,
+    "names_details": [
+      {
+        "text": "KOBIETA W",
+        "start": 0,
+        "end": 9,
+        "confidence": 1.0
+      },
+      {
+        "text": "MĘSKIM GRANIU",
+        "start": 10,
+        "end": 23,
+        "confidence": 1.0
+      },
+      {
+        "text": "JAK CZUJE",
+        "start": 25,
+        "end": 34,
+        "confidence": 1.0
+      },
+      {
+        "text": "SIĘ Z",
+        "start": 35,
+        "end": 40,
+        "confidence": 1.0
+      },
+      {
+        "text": "TYM NATALIA",
+        "start": 41,
+        "end": 52,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "O HISTORII DZIWNEGO PSEUDONIMU ORNETTE!",
+    "detected_names": [
+      "O HISTORII",
+      "DZIWNEGO PSEUDONIMU"
+    ],
+    "names_count": 2,
+    "names_details": [
+      {
+        "text": "O HISTORII",
+        "start": 0,
+        "end": 10,
+        "confidence": 1.0
+      },
+      {
+        "text": "DZIWNEGO PSEUDONIMU",
+        "start": 11,
+        "end": 30,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "NATALIA PRZYBYSZ O SISTARS I MĘSKIM GRANIU!",
+    "detected_names": [
+      "NATALIA PRZYBYSZ",
+      "O SISTARS",
+      "MĘSKIM GRANIU"
+    ],
+    "names_count": 3,
+    "names_details": [
+      {
+        "text": "NATALIA PRZYBYSZ",
+        "start": 0,
+        "end": 16,
+        "confidence": 1.0
+      },
+      {
+        "text": "O SISTARS",
+        "start": 17,
+        "end": 26,
+        "confidence": 1.0
+      },
+      {
+        "text": "MĘSKIM GRANIU",
+        "start": 29,
+        "end": 42,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "JOHN PORTER O AKTUALNEJ SYTUACJI NA ŚWIECIE!",
+    "detected_names": [
+      "JOHN PORTER",
+      "O AKTUALNEJ",
+      "ŚWIECIE!"
+    ],
+    "names_count": 3,
+    "names_details": [
+      {
+        "text": "JOHN PORTER",
+        "start": 0,
+        "end": 11,
+        "confidence": 1.0
+      },
+      {
+        "text": "O AKTUALNEJ",
+        "start": 12,
+        "end": 23,
+        "confidence": 1.0
+      },
+      {
+        "text": "ŚWIECIE!",
+        "start": 36,
+        "end": 44,
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "title": "O PRZYGOTOWANIACH PRZED KONCERTEM! 👀",
+    "detected_names": [
+      "O PRZYGOTOWANIACH",
+      "PRZED KONCERTEM"
+    ],
+    "names_count": 2,
+    "names_details": [
+      {
+        "text": "O PRZYGOTOWANIACH",
+        "start": 0,
+        "end": 17,
+        "confidence": 1.0
+      },
+      {
+        "text": "PRZED KONCERTEM",
+        "start": 18,
+        "end": 33,
+        "confidence": 1.0
+      }
+    ]
+  }
+]

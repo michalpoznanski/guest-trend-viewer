@@ -1,0 +1,557 @@
+{
+  "Piotr Polo": {
+    "total_count": 45,
+    "daily_counts": {
+      "2025-07-29": 3,
+      "2025-07-30": 9,
+      "2025-07-31": 15,
+      "2025-08-01": 18
+    }
+  },
+  "Włodzimierz Czarzasty": {
+    "total_count": 37,
+    "daily_counts": {
+      "2025-07-29": 11,
+      "2025-07-30": 12,
+      "2025-07-31": 7,
+      "2025-08-01": 7
+    }
+  },
+  "Piotr Pająk": {
+    "total_count": 26,
+    "daily_counts": {
+      "2025-07-29": 4,
+      "2025-07-30": 7,
+      "2025-07-31": 9,
+      "2025-08-01": 6
+    }
+  },
+  "Tadeusz Oleszczuk": {
+    "total_count": 22,
+    "daily_counts": {
+      "2025-07-29": 8,
+      "2025-07-30": 8,
+      "2025-07-31": 5,
+      "2025-08-01": 1
+    }
+  },
+  "Bartosz Majewski": {
+    "total_count": 11,
+    "daily_counts": {
+      "2025-07-29": 7,
+      "2025-07-30": 3,
+      "2025-07-31": 1
+    }
+  },
+  "Gosia Ohme": {
+    "total_count": 11,
+    "daily_counts": {
+      "2025-07-29": 1,
+      "2025-07-30": 3,
+      "2025-07-31": 3,
+      "2025-08-01": 4
+    }
+  },
+  "Adam Mirek": {
+    "total_count": 9,
+    "daily_counts": {
+      "2025-07-29": 3,
+      "2025-07-30": 2,
+      "2025-07-31": 2,
+      "2025-08-01": 2
+    }
+  },
+  "Reagują Na": {
+    "total_count": 6,
+    "daily_counts": {
+      "2025-07-29": 1,
+      "2025-07-30": 2,
+      "2025-07-31": 2,
+      "2025-08-01": 1
+    }
+  },
+  "Piotr Latała": {
+    "total_count": 6,
+    "daily_counts": {
+      "2025-07-29": 3,
+      "2025-07-30": 2,
+      "2025-07-31": 1
+    }
+  },
+  "Włodzisław Duch": {
+    "total_count": 5,
+    "daily_counts": {
+      "2025-07-29": 1,
+      "2025-07-30": 2,
+      "2025-07-31": 1,
+      "2025-08-01": 1
+    }
+  },
+  "Kafka Odc": {
+    "total_count": 4,
+    "daily_counts": {
+      "2025-07-29": 1,
+      "2025-07-30": 1,
+      "2025-07-31": 1,
+      "2025-08-01": 1
+    }
+  },
+  "Lepszy Od": {
+    "total_count": 3,
+    "daily_counts": {
+      "2025-07-29": 1,
+      "2025-07-30": 1,
+      "2025-07-31": 1
+    }
+  },
+  "Przetrwał Do": {
+    "total_count": 3,
+    "daily_counts": {
+      "2025-07-29": 1,
+      "2025-07-30": 1,
+      "2025-07-31": 1
+    }
+  },
+  "Wygląda Życie": {
+    "total_count": 3,
+    "daily_counts": {
+      "2025-07-29": 1,
+      "2025-07-30": 1,
+      "2025-07-31": 1
+    }
+  },
+  "Młodych Ludzi": {
+    "total_count": 3,
+    "daily_counts": {
+      "2025-07-29": 2,
+      "2025-07-30": 1
+    }
+  },
+  "Najgorszy Moment": {
+    "total_count": 3,
+    "daily_counts": {
+      "2025-07-29": 1,
+      "2025-07-30": 1,
+      "2025-07-31": 1
+    }
+  },
+  "Dziś  Ponad": {
+    "total_count": 3,
+    "daily_counts": {
+      "2025-07-29": 1,
+      "2025-07-30": 1,
+      "2025-07-31": 1
+    }
+  },
+  "Promują Ideologie": {
+    "total_count": 3,
+    "daily_counts": {
+      "2025-07-29": 1,
+      "2025-07-30": 1,
+      "2025-07-31": 1
+    }
+  },
+  "Jerzy Brzęczek": {
+    "total_count": 3,
+    "daily_counts": {
+      "2025-07-29": 1,
+      "2025-07-30": 1,
+      "2025-07-31": 1
+    }
+  },
+  "Maya Ori": {
+    "total_count": 3,
+    "daily_counts": {
+      "2025-07-29": 1,
+      "2025-07-30": 1,
+      "2025-07-31": 1
+    }
+  },
+  "Dariusz Kamys": {
+    "total_count": 3,
+    "daily_counts": {
+      "2025-07-29": 1,
+      "2025-07-30": 1,
+      "2025-07-31": 1
+    }
+  },
+  "Się Rozmawiać": {
+    "total_count": 3,
+    "daily_counts": {
+      "2025-07-30": 1,
+      "2025-07-31": 1,
+      "2025-08-01": 1
+    }
+  },
+  "Ludzie Są": {
+    "total_count": 3,
+    "daily_counts": {
+      "2025-07-30": 1,
+      "2025-07-31": 1,
+      "2025-08-01": 1
+    }
+  },
+  "Uzbrojeni Strasznie": {
+    "total_count": 3,
+    "daily_counts": {
+      "2025-07-30": 1,
+      "2025-07-31": 1,
+      "2025-08-01": 1
+    }
+  },
+  "Działa Izraelska": {
+    "total_count": 3,
+    "daily_counts": {
+      "2025-07-30": 1,
+      "2025-07-31": 1,
+      "2025-08-01": 1
+    }
+  },
+  "Najbrudniejsze Kraje": {
+    "total_count": 3,
+    "daily_counts": {
+      "2025-07-30": 1,
+      "2025-07-31": 1,
+      "2025-08-01": 1
+    }
+  },
+  "Arlety Bojke": {
+    "total_count": 3,
+    "daily_counts": {
+      "2025-07-30": 1,
+      "2025-07-31": 1,
+      "2025-08-01": 1
+    }
+  },
+  "Gawkowski  Gabinet": {
+    "total_count": 3,
+    "daily_counts": {
+      "2025-07-30": 1,
+      "2025-07-31": 1,
+      "2025-08-01": 1
+    }
+  },
+  "Giełzak  Ziemkiewicz": {
+    "total_count": 3,
+    "daily_counts": {
+      "2025-07-30": 1,
+      "2025-07-31": 1,
+      "2025-08-01": 1
+    }
+  },
+  "Koniec Bodnara": {
+    "total_count": 3,
+    "daily_counts": {
+      "2025-07-30": 1,
+      "2025-07-31": 1,
+      "2025-08-01": 1
+    }
+  },
+  "Katarzyna Miller": {
+    "total_count": 3,
+    "daily_counts": {
+      "2025-07-30": 1,
+      "2025-07-31": 1,
+      "2025-08-01": 1
+    }
+  },
+  "Serialowa Mariolka": {
+    "total_count": 3,
+    "daily_counts": {
+      "2025-07-30": 1,
+      "2025-07-31": 1,
+      "2025-08-01": 1
+    }
+  },
+  "Marzeny Kipiel": {
+    "total_count": 3,
+    "daily_counts": {
+      "2025-07-30": 1,
+      "2025-07-31": 1,
+      "2025-08-01": 1
+    }
+  },
+  "Kołaczkowskiej  Fani": {
+    "total_count": 3,
+    "daily_counts": {
+      "2025-07-30": 1,
+      "2025-07-31": 1,
+      "2025-08-01": 1
+    }
+  },
+  "Wygląda Korea": {
+    "total_count": 2,
+    "daily_counts": {
+      "2025-07-29": 1,
+      "2025-07-30": 1
+    }
+  },
+  "Trump Wygrał": {
+    "total_count": 2,
+    "daily_counts": {
+      "2025-07-29": 1,
+      "2025-07-30": 1
+    }
+  },
+  "Rada Dla": {
+    "total_count": 2,
+    "daily_counts": {
+      "2025-07-29": 1,
+      "2025-07-30": 1
+    }
+  },
+  "Roman Kołtoń": {
+    "total_count": 2,
+    "daily_counts": {
+      "2025-07-29": 1,
+      "2025-07-30": 1
+    }
+  },
+  "Arkuszyńska Gosia": {
+    "total_count": 2,
+    "daily_counts": {
+      "2025-07-29": 1,
+      "2025-07-30": 1
+    }
+  },
+  "Kołaczkowskiej  Wzruszające": {
+    "total_count": 2,
+    "daily_counts": {
+      "2025-07-29": 1,
+      "2025-07-30": 1
+    }
+  },
+  "Kołaczkowskiej  Jej": {
+    "total_count": 2,
+    "daily_counts": {
+      "2025-07-29": 1,
+      "2025-07-30": 1
+    }
+  },
+  "Edyta Bartosiewicz": {
+    "total_count": 2,
+    "daily_counts": {
+      "2025-07-29": 1,
+      "2025-07-30": 1
+    }
+  },
+  "Kołaczkowskiej  Zrobiła": {
+    "total_count": 2,
+    "daily_counts": {
+      "2025-07-29": 1,
+      "2025-07-30": 1
+    }
+  },
+  "Pogrzeb Joanny": {
+    "total_count": 2,
+    "daily_counts": {
+      "2025-07-29": 1,
+      "2025-07-30": 1
+    }
+  },
+  "Joanna Kołaczkowska": {
+    "total_count": 2,
+    "daily_counts": {
+      "2025-07-29": 1,
+      "2025-07-30": 1
+    }
+  },
+  "Zawinęło Mnie": {
+    "total_count": 2,
+    "daily_counts": {
+      "2025-07-31": 1,
+      "2025-08-01": 1
+    }
+  },
+  "Chińskie Wojsko": {
+    "total_count": 2,
+    "daily_counts": {
+      "2025-07-31": 1,
+      "2025-08-01": 1
+    }
+  },
+  "Polacy Na": {
+    "total_count": 2,
+    "daily_counts": {
+      "2025-07-31": 1,
+      "2025-08-01": 1
+    }
+  },
+  "Piotrka Pająka": {
+    "total_count": 2,
+    "daily_counts": {
+      "2025-07-31": 1,
+      "2025-08-01": 1
+    }
+  },
+  "Powstaniu Warszawskim": {
+    "total_count": 2,
+    "daily_counts": {
+      "2025-07-31": 1,
+      "2025-08-01": 1
+    }
+  },
+  "Leszek Żebrowski": {
+    "total_count": 2,
+    "daily_counts": {
+      "2025-07-31": 1,
+      "2025-08-01": 1
+    }
+  },
+  "Długołęcka Gosia": {
+    "total_count": 2,
+    "daily_counts": {
+      "2025-07-31": 1,
+      "2025-08-01": 1
+    }
+  },
+  "Miller Gosia": {
+    "total_count": 2,
+    "daily_counts": {
+      "2025-07-31": 1,
+      "2025-08-01": 1
+    }
+  },
+  "Garg Gosia": {
+    "total_count": 2,
+    "daily_counts": {
+      "2025-07-31": 1,
+      "2025-08-01": 1
+    }
+  },
+  "Reakcja Agnieszki": {
+    "total_count": 2,
+    "daily_counts": {
+      "2025-07-31": 1,
+      "2025-08-01": 1
+    }
+  },
+  "Joanny Kołaczkowskiej": {
+    "total_count": 2,
+    "daily_counts": {
+      "2025-07-31": 1,
+      "2025-08-01": 1
+    }
+  },
+  "Joannę Kołaczkowską": {
+    "total_count": 2,
+    "daily_counts": {
+      "2025-07-31": 1,
+      "2025-08-01": 1
+    }
+  },
+  "Zarabiać Więcej": {
+    "total_count": 1,
+    "daily_counts": {
+      "2025-07-29": 1
+    }
+  },
+  "Sobie Więcej": {
+    "total_count": 1,
+    "daily_counts": {
+      "2025-07-29": 1
+    }
+  },
+  "Jakim Kierunku": {
+    "total_count": 1,
+    "daily_counts": {
+      "2025-07-29": 1
+    }
+  },
+  "Idzie Polskie": {
+    "total_count": 1,
+    "daily_counts": {
+      "2025-07-29": 1
+    }
+  },
+  "Ama Dablam": {
+    "total_count": 1,
+    "daily_counts": {
+      "2025-07-29": 1
+    }
+  },
+  "Marcin Majewski": {
+    "total_count": 1,
+    "daily_counts": {
+      "2025-07-29": 1
+    }
+  },
+  "Europejską  Odpowiada": {
+    "total_count": 1,
+    "daily_counts": {
+      "2025-07-29": 1
+    }
+  },
+  "Zbyszek Nowak": {
+    "total_count": 1,
+    "daily_counts": {
+      "2025-07-29": 1
+    }
+  },
+  "Lech Kaniuk": {
+    "total_count": 1,
+    "daily_counts": {
+      "2025-07-29": 1
+    }
+  },
+  "Tatiana Mindewicz": {
+    "total_count": 1,
+    "daily_counts": {
+      "2025-07-29": 1
+    }
+  },
+  "Latała Gosia": {
+    "total_count": 1,
+    "daily_counts": {
+      "2025-07-29": 1
+    }
+  },
+  "Biznes Klasie": {
+    "total_count": 1,
+    "daily_counts": {
+      "2025-07-29": 1
+    }
+  },
+  "Krzysztof Bosak": {
+    "total_count": 1,
+    "daily_counts": {
+      "2025-08-01": 1
+    }
+  },
+  "Alicja Długołęcka": {
+    "total_count": 1,
+    "daily_counts": {
+      "2025-08-01": 1
+    }
+  },
+  "Barbara Bursztynowicz": {
+    "total_count": 1,
+    "daily_counts": {
+      "2025-08-01": 1
+    }
+  },
+  "Agnieszkę Kaczorowską": {
+    "total_count": 1,
+    "daily_counts": {
+      "2025-08-01": 1
+    }
+  },
+  "Karolina Gilon": {
+    "total_count": 1,
+    "daily_counts": {
+      "2025-08-01": 1
+    }
+  },
+  "Iwona Pavlović": {
+    "total_count": 1,
+    "daily_counts": {
+      "2025-08-01": 1
+    }
+  },
+  "Ewa Kasprzyk": {
+    "total_count": 1,
+    "daily_counts": {
+      "2025-08-01": 1
+    }
+  }
+}

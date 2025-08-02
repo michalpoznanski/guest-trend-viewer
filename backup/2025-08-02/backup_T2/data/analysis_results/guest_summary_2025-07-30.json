@@ -1,0 +1,17 @@
+{
+  "data_date": "2025-07-30",
+  "guest_ranking": [
+    {
+      "name": "Piotr Pająk",
+      "strength": 425025.0,
+      "total_views": 345274,
+      "mentions": 15
+    },
+    {
+      "name": "Bartosz Majewski",
+      "strength": 69816.75,
+      "total_views": 73095,
+      "mentions": 2
+    }
+  ]
+}

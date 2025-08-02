@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Wywiad z Jakubem Żulczykiem o nowej książce",
+    "original_detected": [
+      "Wywiad z Jakubem",
+      "Żulczykiem o nowej książce"
+    ],
+    "improved_names": [],
+    "names_count": 0,
+    "improvement_applied": true
+  },
+  {
+    "title": "Anna Kowalska i Piotr Nowak dyskutują o polityce",
+    "original_detected": [
+      "Anna Kowalska",
+      "Piotr Nowak"
+    ],
+    "improved_names": [
+      "Anna Kowalska",
+      "Piotr Nowak"
+    ],
+    "names_count": 2,
+    "improvement_applied": true
+  },
+  {
+    "title": "Program z Kubą Wojewódzkim - special edition",
+    "original_detected": [
+      "Program z Kubą",
+      "Wojewódzkim -"
+    ],
+    "improved_names": [],
+    "names_count": 0,
+    "improvement_applied": true
+  },
+  {
+    "title": "Rozmowa z dr. Marią Zawadzką o medycynie",
+    "original_detected": [
+      "Rozmowa z dr",
+      "Marią Zawadzką"
+    ],
+    "improved_names": [
+      "Marią Zawadzką"
+    ],
+    "names_count": 1,
+    "improvement_applied": true
+  },
+  {
+    "title": "Marcin Prokop prowadzi show z celebrytami",
+    "original_detected": [
+      "Marcin Prokop"
+    ],
+    "improved_names": [
+      "Marcin Prokop"
+    ],
+    "names_count": 1,
+    "improvement_applied": true
+  }
+]

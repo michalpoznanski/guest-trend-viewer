@@ -1,0 +1,3 @@
+Backup projektu podcast_trend
+Data: 2025-08-02 08:20:56
+Lokalizacja: /Users/maczek/Desktop/podcast_trend/backup/2025-08-02

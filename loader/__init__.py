@@ -1,0 +1,1 @@
+# Moduł loader - ładowanie danych z raportów 

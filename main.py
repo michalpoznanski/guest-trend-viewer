@@ -99,3 +99,10 @@ async def get_stats():
             "success": False,
             "error": str(e)
         }) 
+
+import os
+
+if __name__ == "__main__":
+    import uvicorn
+    port = int(os.environ.get("PORT", 8080))
+    uvicorn.run("main:app", host="0.0.0.0", port=port) 

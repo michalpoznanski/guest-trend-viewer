@@ -3,6 +3,7 @@ import os
 import pandas as pd
 from typing import Dict, List
 from loader.report_loader import load_latest_podcast_report
+from analysis.name_filter import is_likely_person
 
 
 def generate_guest_summary_from_latest_report(report_dir: str = "/mnt/volume/reports/", output_path: str = "data/guest_trend_summary.json"):
@@ -33,9 +34,10 @@ def generate_guest_summary_from_latest_report(report_dir: str = "/mnt/volume/rep
         if 'guest' not in df.columns:
             raise ValueError("Kolumna 'guest' nie istnieje w raporcie")
         
-        # 4. Oblicz statystyki dla każdego gościa
-        print("Obliczanie statystyk gości...")
-        guest_stats = {}
+        # 4. Filtruj nazwiska gości używając is_likely_person
+        print("Filtrowanie nazwisk gości...")
+        filtered_guest_stats = {}
+        rejected_names = []
         
         for _, row in df.iterrows():
             guest_name = row['guest']
@@ -43,15 +45,33 @@ def generate_guest_summary_from_latest_report(report_dir: str = "/mnt/volume/rep
             
             if pd.isna(guest_name) or guest_name == '':
                 continue
-                
-            if guest_name not in guest_stats:
-                guest_stats[guest_name] = {
-                    'total_mentions': 0,
-                    'total_views': 0
-                }
             
-            guest_stats[guest_name]['total_mentions'] += 1
-            guest_stats[guest_name]['total_views'] += int(views) if pd.notna(views) else 0
+            # Sprawdź czy nazwa wygląda na imię i nazwisko osoby
+            is_person, reason = is_likely_person(guest_name)
+            
+            if is_person:
+                if guest_name not in filtered_guest_stats:
+                    filtered_guest_stats[guest_name] = {
+                        'total_mentions': 0,
+                        'total_views': 0
+                    }
+                
+                filtered_guest_stats[guest_name]['total_mentions'] += 1
+                filtered_guest_stats[guest_name]['total_views'] += int(views) if pd.notna(views) else 0
+            else:
+                rejected_names.append((guest_name, reason))
+        
+        # Wyświetl statystyki filtrowania
+        print(f"Przefiltrowane nazwiska: {len(filtered_guest_stats)}")
+        if rejected_names:
+            print(f"Odrzucone nazwiska: {len(rejected_names)}")
+            print("Przykłady odrzuconych nazwisk:")
+            for name, reason in rejected_names[:5]:
+                print(f"  - {name}: {reason}")
+            if len(rejected_names) > 5:
+                print(f"  ... i {len(rejected_names) - 5} więcej")
+        
+        guest_stats = filtered_guest_stats
         
         # 5. Konwertuj na listę słowników z wymaganymi kolumnami
         guests_list = []

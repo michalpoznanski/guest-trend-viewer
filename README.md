@@ -31,6 +31,66 @@ python -m uvicorn main:app --reload --host 0.0.0.0 --port 8000
 http://localhost:8000
 ```
 
+## 🔧 Backend i analiza danych
+
+### Struktura backend
+```
+backend/
+├── store.py          # Zarządzanie danymi gości (JSON)
+├── analyze.py        # Parser CSV/JSON do analizy
+├── watchdog.py       # Monitorowanie folderu raportów
+└── __init__.py       # Inicjalizacja modułu
+```
+
+### Jak uruchomić backend lokalnie
+
+1. **Analiza danych:**
+```bash
+# Uruchom analizę z przykładowymi danymi
+python3 backend/analyze.py
+
+# Lub z konkretnym katalogiem raportów
+python3 backend/analyze.py /path/to/reports
+```
+
+2. **Monitorowanie folderu raportów:**
+```bash
+# Uruchom watchdog (monitorowanie automatyczne)
+python3 backend/watchdog.py
+
+# Lub z konkretnym katalogiem
+python3 backend/watchdog.py /path/to/reports
+```
+
+### Jak trenować dane
+
+1. **Przygotuj pliki CSV** z raportami w folderze `/mnt/volume/reports/`
+2. **Format plików:** `report_{KATEGORIA}_{YYYY-MM-DD}.csv`
+3. **Wymagane kolumny:** `title`, `description`, `tags`, `views`, `video_type`
+4. **Uruchom analizę:**
+```bash
+python3 backend/analyze.py
+```
+
+### Automatyczna analiza z folderu `/mnt/volume/reports/`
+
+1. **Watchdog monitoruje** folder `/mnt/volume/reports/` w czasie rzeczywistym
+2. **Gdy pojawi się nowy plik CSV:**
+   - Automatycznie wyciąga nazwiska gości z pól `title`, `description`, `tags`
+   - Oblicza siłę gościa na podstawie:
+     - Wystąpień w różnych polach (title: 1.5x, description: 1.0x, tags: 0.5x)
+     - Typu filmu (shorts: 0.5x, longs: 1.0x)
+     - Wyświetleń (normalizacja)
+   - Agreguje dane z wszystkich plików
+   - Zapisuje ranking do `data/guest_trend_summary.json`
+3. **Dane są automatycznie** wyświetlane na stronie głównej
+
+### API Endpoints
+
+- **`/`** - Główna strona z listą gości
+- **`/api/guest-list`** - Lista gości w formacie JSON
+- **`/api/stats`** - Statystyki gości w formacie JSON
+
 ## 🐳 Uruchomienie z Docker
 
 ```bash
@@ -67,10 +127,16 @@ guest-trend-viewer/
 ├── Dockerfile                # Konfiguracja Docker
 ├── README.md                 # Ten plik
 ├── templates/                # Szablony HTML
-│   └── index.html           # Główna strona
+│   └── index.html           # Główna strona z listą gości
 ├── static/                   # Pliki statyczne
 │   └── style.css            # Style CSS
-└── backend/                  # Pliki backendowe (nie używane w deployment)
+├── backend/                  # Moduły backendowe
+│   ├── store.py             # Zarządzanie danymi gości
+│   ├── analyze.py           # Parser CSV/JSON
+│   ├── watchdog.py          # Monitorowanie folderu raportów
+│   └── __init__.py          # Inicjalizacja modułu
+└── data/                     # Dane aplikacji
+    └── guest_trend_summary.json  # Ranking gości
 ```
 
 ## 🔧 Pliki konfiguracyjne
@@ -92,6 +158,8 @@ guest-trend-viewer/
 fastapi
 jinja2
 uvicorn
+watchdog
+pandas
 ```
 
 ### `Dockerfile`

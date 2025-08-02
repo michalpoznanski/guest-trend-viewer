@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Jan Kowalski",
+    "total_strength": 123456.78,
+    "total_views": 98765,
+    "total_mentions": 12,
+    "active_days": 3
+  },
+  {
+    "name": "Anna Nowak",
+    "total_strength": 98765.43,
+    "total_views": 54321,
+    "total_mentions": 8,
+    "active_days": 2
+  },
+  {
+    "name": "Piotr Wiśniewski",
+    "total_strength": 65432.1,
+    "total_views": 32109,
+    "total_mentions": 5,
+    "active_days": 1
+  }
+]

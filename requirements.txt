@@ -1,3 +1,5 @@
 fastapi
 jinja2
-uvicorn 
+uvicorn
+watchdog
+pandas 

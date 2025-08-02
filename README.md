@@ -122,4 +122,4 @@ Po wdrożeniu sprawdź:
 W przypadku problemów z deploymentem:
 1. Sprawdź logi w Railway
 2. Zweryfikuj konfigurację w `railway.json`
-3. Upewnij się, że wszystkie pliki są zacommitowane 
+3. Upewnij się, że wszystkie pliki są zacommitowane

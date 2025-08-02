@@ -153,6 +153,13 @@
             opacity: 0.5;
             pointer-events: none;
         }
+        .phrase-item {
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+        .phrase-item.fade-out {
+            opacity: 0;
+            transform: translateX(-20px);
+        }
     </style>
 </head>
 <body>
@@ -242,7 +249,7 @@
             const phraseElement = document.querySelector(`[onclick*="${phrase}"]`).closest('.phrase-item');
             phraseElement.classList.add('loading');
             
-            fetch('/annotate/update', {
+            fetch('/feedback/annotate/update', {
                 method: 'POST',
                 body: formData
             })
@@ -252,21 +259,25 @@
                     // Pokaż komunikat sukcesu
                     showMessage(data.message, 'success');
                     
-                    // Usuń element z listy (wszystkie statusy)
-                    phraseElement.remove();
+                    // Animacja fade-out przed usunięciem
+                    phraseElement.style.transition = 'opacity 0.5s ease-out, transform 0.5s ease-out';
+                    phraseElement.style.opacity = '0';
+                    phraseElement.style.transform = 'translateX(-20px)';
+                    
+                    // Usuń element po animacji
+                    setTimeout(() => {
+                        phraseElement.remove();
+                        checkEmptyList();
+                    }, 500);
                     
                     // Odśwież statystyki
                     updateStats(data.stats);
-                    
-                    // Sprawdź czy lista jest pusta
-                    if (data.remaining_phrases.length === 0) {
-                        showEmptyState();
-                    }
                 } else {
                     showMessage(data.error, 'error');
                 }
             })
             .catch(error => {
+                console.error('Błąd AJAX:', error);
                 showMessage('Błąd podczas aktualizacji: ' + error, 'error');
             })
             .finally(() => {
@@ -286,7 +297,7 @@
             const formData = new FormData();
             formData.append('phrase', phrase);
             
-            fetch('/annotate/add', {
+            fetch('/feedback/annotate/add', {
                 method: 'POST',
                 body: formData
             })
@@ -309,10 +320,10 @@
         function updateStats(stats) {
             const statsElements = document.querySelectorAll('.stat-number');
             if (statsElements.length >= 4) {
-                statsElements[0].textContent = stats.total_phrases;
-                statsElements[1].textContent = stats.guest_count;
-                statsElements[2].textContent = stats.no_count;
-                statsElements[3].textContent = stats.maybe_count;
+                statsElements[0].textContent = stats.total_phrases || stats.total || 0;
+                statsElements[1].textContent = stats.guest_count || stats.guest || 0;
+                statsElements[2].textContent = stats.no_count || stats.no || 0;
+                statsElements[3].textContent = stats.maybe_count || stats.maybe || 0;
             }
         }
         
@@ -325,6 +336,13 @@
                     <p>Wszystkie frazy zostały już oznaczone lub dodaj nowe frazy powyżej.</p>
                 </div>
             `;
+        }
+        
+        function checkEmptyList() {
+            const remainingPhrases = document.querySelectorAll('.phrase-item');
+            if (remainingPhrases.length === 0) {
+                showEmptyState();
+            }
         }
         
         function refreshStats() {

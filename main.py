@@ -6,6 +6,7 @@ import uvicorn
 import os
 import json
 from analysis.guest_trend_generator import generate_guest_summary_from_latest_report
+from frontend.feedback_interface import router as feedback_router
 
 app = FastAPI()
 
@@ -13,6 +14,9 @@ app = FastAPI()
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 templates = Jinja2Templates(directory=os.path.join(BASE_DIR, "templates"))
 app.mount("/static", StaticFiles(directory=os.path.join(BASE_DIR, "static")), name="static")
+
+# Dodaj router dla interfejsu feedback
+app.include_router(feedback_router, prefix="/feedback", tags=["feedback"])
 
 def load_guest_data():
     """Ładuje dane gości z pliku guest_trend_summary.json"""

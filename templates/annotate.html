@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interfejs Oznaczania Fraz - Guest Trend Viewer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+        .stat-item {
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 24px;
+            font-weight: bold;
+            color: #007bff;
+        }
+        .stat-label {
+            color: #666;
+            font-size: 14px;
+        }
+        .phrase-list {
+            margin-top: 30px;
+        }
+        .phrase-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            margin-bottom: 10px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #007bff;
+        }
+        .phrase-text {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+        .button-group {
+            display: flex;
+            gap: 10px;
+        }
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .btn-guest {
+            background-color: #28a745;
+            color: white;
+        }
+        .btn-guest:hover {
+            background-color: #218838;
+        }
+        .btn-no {
+            background-color: #dc3545;
+            color: white;
+        }
+        .btn-no:hover {
+            background-color: #c82333;
+        }
+        .add-phrase {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #e9ecef;
+            border-radius: 8px;
+        }
+        .add-phrase h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        .input-group {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .form-input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .btn-add {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .btn-add:hover {
+            background-color: #0056b3;
+        }
+        .message {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .message.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .message.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .no-phrases {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+            font-style: italic;
+        }
+        .loading {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 Interfejs Oznaczania Fraz</h1>
+        
+        {% if error %}
+        <div class="message error">
+            Błąd: {{ error }}
+        </div>
+        {% endif %}
+        
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-number">{{ total_phrases }}</div>
+                <div class="stat-label">Łącznie fraz</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">{{ guest_count }}</div>
+                <div class="stat-label">Osoby (GUEST)</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">{{ no_count }}</div>
+                <div class="stat-label">Nie osoby (NO)</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">{{ maybe_count }}</div>
+                <div class="stat-label">Do oznaczenia (MAYBE)</div>
+            </div>
+        </div>
+        
+        <div class="add-phrase">
+            <h3>➕ Dodaj nową frazę</h3>
+            <div class="input-group">
+                <input type="text" id="newPhrase" class="form-input" placeholder="Wprowadź frazę do oznaczenia...">
+                <button onclick="addPhrase()" class="btn-add">Dodaj</button>
+            </div>
+        </div>
+        
+        <div class="phrase-list">
+            <h3>📝 Frazy do oznaczenia</h3>
+            
+            {% if phrases %}
+                {% for phrase in phrases %}
+                <div class="phrase-item" id="phrase-{{ loop.index }}">
+                    <div class="phrase-text">{{ phrase }}</div>
+                    <div class="button-group">
+                        <button onclick="updatePhrase('{{ phrase }}', 'GUEST')" class="btn btn-guest">
+                            ✅ GUEST (osoba)
+                        </button>
+                        <button onclick="updatePhrase('{{ phrase }}', 'NO')" class="btn btn-no">
+                            ❌ NO (nie osoba)
+                        </button>
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+                <div class="no-phrases">
+                    <h3>🎉 Brak fraz do oznaczenia!</h3>
+                    <p>Wszystkie frazy zostały już oznaczone lub dodaj nowe frazy powyżej.</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <script>
+        function updatePhrase(phrase, value) {
+            const formData = new FormData();
+            formData.append('phrase', phrase);
+            formData.append('value', value);
+            
+            // Pokaż loading
+            const phraseElement = document.querySelector(`[onclick*="${phrase}"]`).closest('.phrase-item');
+            phraseElement.classList.add('loading');
+            
+            fetch('/annotate/update', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Usuń element z listy
+                    phraseElement.remove();
+                    
+                    // Odśwież statystyki
+                    refreshStats();
+                    
+                    // Pokaż komunikat sukcesu
+                    showMessage(data.message, 'success');
+                } else {
+                    showMessage(data.error, 'error');
+                }
+            })
+            .catch(error => {
+                showMessage('Błąd podczas aktualizacji: ' + error, 'error');
+            })
+            .finally(() => {
+                phraseElement.classList.remove('loading');
+            });
+        }
+        
+        function addPhrase() {
+            const input = document.getElementById('newPhrase');
+            const phrase = input.value.trim();
+            
+            if (!phrase) {
+                showMessage('Wprowadź frazę przed dodaniem', 'error');
+                return;
+            }
+            
+            const formData = new FormData();
+            formData.append('phrase', phrase);
+            
+            fetch('/annotate/add', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    showMessage(data.message, 'success');
+                    input.value = '';
+                    // Odśwież stronę aby pokazać nową frazę
+                    setTimeout(() => location.reload(), 1000);
+                } else {
+                    showMessage(data.error, 'error');
+                }
+            })
+            .catch(error => {
+                showMessage('Błąd podczas dodawania: ' + error, 'error');
+            });
+        }
+        
+        function refreshStats() {
+            fetch('/annotate/stats')
+            .then(response => response.json())
+            .then(data => {
+                if (!data.error) {
+                    // Aktualizuj statystyki na stronie
+                    const statsElements = document.querySelectorAll('.stat-number');
+                    if (statsElements.length >= 4) {
+                        statsElements[0].textContent = data.total;
+                        statsElements[1].textContent = data.guest;
+                        statsElements[2].textContent = data.no;
+                        statsElements[3].textContent = data.maybe;
+                    }
+                }
+            })
+            .catch(error => console.error('Błąd podczas odświeżania statystyk:', error));
+        }
+        
+        function showMessage(message, type) {
+            // Usuń istniejące komunikaty
+            const existingMessages = document.querySelectorAll('.message');
+            existingMessages.forEach(msg => msg.remove());
+            
+            // Utwórz nowy komunikat
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${type}`;
+            messageDiv.textContent = message;
+            
+            // Dodaj na górę strony
+            const container = document.querySelector('.container');
+            container.insertBefore(messageDiv, container.firstChild);
+            
+            // Usuń po 5 sekundach
+            setTimeout(() => {
+                if (messageDiv.parentNode) {
+                    messageDiv.remove();
+                }
+            }, 5000);
+        }
+        
+        // Obsługa Enter w polu dodawania frazy
+        document.getElementById('newPhrase').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                addPhrase();
+            }
+        });
+    </script>
+</body>
+</html> 

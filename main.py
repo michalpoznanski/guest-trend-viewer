@@ -1,11 +1,44 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
+from fastapi.responses import HTMLResponse
+from fastapi.staticfiles import StaticFiles
+from fastapi.templating import Jinja2Templates
 import uvicorn
 import os
+import json
 
 app = FastAPI()
 
-@app.get("/")
-def root():
+# Konfiguracja szablonów i plików statycznych
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+templates = Jinja2Templates(directory=os.path.join(BASE_DIR, "templates"))
+app.mount("/static", StaticFiles(directory=os.path.join(BASE_DIR, "static")), name="static")
+
+def load_guest_data():
+    """Ładuje dane gości z pliku guest_trend_summary.json"""
+    try:
+        file_path = os.path.join(BASE_DIR, "data", "guest_trend_summary.json")
+        if os.path.exists(file_path):
+            with open(file_path, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        else:
+            return []
+    except Exception as e:
+        print(f"Błąd podczas ładowania danych: {e}")
+        return []
+
+@app.get("/", response_class=HTMLResponse)
+async def root(request: Request):
+    """Główna strona z tabelą gości"""
+    guests = load_guest_data()
+    
+    return templates.TemplateResponse("index.html", {
+        "request": request,
+        "guests": guests
+    })
+
+@app.get("/api/status")
+def status():
+    """Endpoint API zwracający status aplikacji"""
     return {"message": "Guest Trend Viewer is working!"}
 
 if __name__ == "__main__":

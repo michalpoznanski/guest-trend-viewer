@@ -3,51 +3,66 @@
 <head>
     <title>Guest Trend Viewer</title>
     <link rel="stylesheet" href="/static/style.css">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .no-data {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <h1>👋 Witaj w Guest Trend Viewer</h1>
-        
-        {% if error %}
-        <div class="error">
-            <strong>Błąd:</strong> {{ error }}
-        </div>
-        {% endif %}
-        
-        <div class="stats">
-            <div class="stat-item">
-                <div class="stat-number">{{ stats.total_guests }}</div>
-                <div class="stat-label">Łącznie gości</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">{{ "{:,}".format(stats.total_views | default(0) | int) }}</div>
-                <div class="stat-label">Łącznie wyświetleń</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">{{ "{:,}".format(stats.total_mentions | default(0) | int) }}</div>
-                <div class="stat-label">Łącznie wzmianek</div>
-            </div>
-        </div>
+        <h1>👋 Guest Trend Viewer</h1>
         
         {% if guests %}
-        <div class="guests-section">
-            <h2>🏆 Top 10 Gości</h2>
-            <div class="guests-grid">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Appearances</th>
+                    <th>Total Views</th>
+                    <th>Strength</th>
+                </tr>
+            </thead>
+            <tbody>
                 {% for guest in guests %}
-                <div class="guest-card">
-                    <div class="guest-name">{{ guest.name }}</div>
-                    <div class="guest-stats">
-                        <div class="strength-badge">{{ "%.2f"|format(guest.total_strength) }} strength</div>
-                        <div class="views-badge">{{ "{:,}".format(guest.total_views | int) }} views</div>
-                    </div>
-                    <div class="guest-details">
-                        <strong>Wzmianki:</strong> {{ guest.total_mentions }}<br>
-                        <strong>Aktywne dni:</strong> {{ guest.active_days }}
-                    </div>
-                </div>
+                <tr>
+                    <td>{{ guest.name }}</td>
+                    <td>Guest</td>
+                    <td>{{ guest.total_mentions }}</td>
+                    <td>{{ "{:,}".format(guest.total_views | int) }}</td>
+                    <td>{{ "%.2f"|format(guest.total_strength) }}</td>
+                </tr>
                 {% endfor %}
-            </div>
-        </div>
+            </tbody>
+        </table>
         {% else %}
         <div class="no-data">
             <h3>Brak danych</h3>

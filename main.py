@@ -5,6 +5,7 @@ from fastapi.templating import Jinja2Templates
 import uvicorn
 import os
 import json
+from analysis.guest_trend_generator import generate_guest_summary_from_latest_report
 
 app = FastAPI()
 
@@ -42,5 +43,17 @@ def status():
     return {"message": "Guest Trend Viewer is working!"}
 
 if __name__ == "__main__":
+    # Generuj dane gości przed uruchomieniem serwera
+    try:
+        print("Generowanie danych gości z najnowszego raportu...")
+        generate_guest_summary_from_latest_report(
+            report_dir="/mnt/volume/reports/",
+            output_path="data/guest_trend_summary.json"
+        )
+        print("Dane gości zostały wygenerowane pomyślnie!")
+    except Exception as e:
+        print(f"Błąd podczas generowania danych gości: {e}")
+        print("Aplikacja uruchomi się z istniejącymi danymi (jeśli istnieją)")
+    
     port = int(os.environ.get("PORT", 8000))  # Railway ustawia PORT jako zmienną środowiskową
     uvicorn.run(app, host="0.0.0.0", port=port) 

@@ -56,9 +56,9 @@
                 <tr>
                     <td>{{ guest.name }}</td>
                     <td>Guest</td>
-                    <td>{{ guest.total_mentions }}</td>
+                    <td>{{ guest.appearances }}</td>
                     <td>{{ "{:,}".format(guest.total_views | int) }}</td>
-                    <td>{{ "%.2f"|format(guest.total_strength) }}</td>
+                    <td>{{ "%.2f"|format(guest.strength) }}</td>
                 </tr>
                 {% endfor %}
             </tbody>

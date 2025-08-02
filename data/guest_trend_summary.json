@@ -1,23 +1,1472 @@
 [
   {
-    "name": "Jan Kowalski",
+    "name": "Jakuba Szewczyka",
     "type": "Guest",
-    "appearances": 12,
-    "total_views": 98765,
-    "strength": 1185180.0
+    "appearances": 9,
+    "total_views": 401757,
+    "strength": 3615813
   },
   {
-    "name": "Anna Nowak",
+    "name": "Mateusza Szymkowiaka",
     "type": "Guest",
-    "appearances": 8,
-    "total_views": 54321,
-    "strength": 434568.0
+    "appearances": 9,
+    "total_views": 401757,
+    "strength": 3615813
   },
   {
-    "name": "Piotr Wiśniewski",
+    "name": "Ethos Warsaw",
+    "type": "Guest",
+    "appearances": 9,
+    "total_views": 401757,
+    "strength": 3615813
+  },
+  {
+    "name": "Świat Gwiazd",
+    "type": "Guest",
+    "appearances": 9,
+    "total_views": 401757,
+    "strength": 3615813
+  },
+  {
+    "name": "Klaudii Lewandowskiej",
+    "type": "Guest",
+    "appearances": 9,
+    "total_views": 401757,
+    "strength": 3615813
+  },
+  {
+    "name": "Piotr Pająk",
     "type": "Guest",
     "appearances": 5,
-    "total_views": 32109,
-    "strength": 160545.0
+    "total_views": 181438,
+    "strength": 907190
+  },
+  {
+    "name": "Dariusz Kamys",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 827584,
+    "strength": 827584
+  },
+  {
+    "name": "Olga Szomańska",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 827584,
+    "strength": 827584
+  },
+  {
+    "name": "Krzysztof Kołaczkowski",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 827584,
+    "strength": 827584
+  },
+  {
+    "name": "Pogrzeb Joanny",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 827584,
+    "strength": 827584
+  },
+  {
+    "name": "Edyta Bartosiewicz",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 827584,
+    "strength": 827584
+  },
+  {
+    "name": "Pogrzeb Joanny Kołaczkowskiej",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 827584,
+    "strength": 827584
+  },
+  {
+    "name": "Piotr Polo",
+    "type": "Guest",
+    "appearances": 9,
+    "total_views": 82685,
+    "strength": 744165
+  },
+  {
+    "name": "Piotr Polo Przywarski",
+    "type": "Guest",
+    "appearances": 9,
+    "total_views": 82685,
+    "strength": 744165
+  },
+  {
+    "name": "Apple Podcast",
+    "type": "Guest",
+    "appearances": 3,
+    "total_views": 124542,
+    "strength": 373626
+  },
+  {
+    "name": "Krzysztof Bosak",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 267153,
+    "strength": 267153
+  },
+  {
+    "name": "Młodzieży Wszechpolskiej",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 267153,
+    "strength": 267153
+  },
+  {
+    "name": "Lidze Polskich",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 267153,
+    "strength": 267153
+  },
+  {
+    "name": "Romanem Giertychem",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 267153,
+    "strength": 267153
+  },
+  {
+    "name": "Ruchu Narodowego",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 267153,
+    "strength": 267153
+  },
+  {
+    "name": "Lidze Polskich Rodzin",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 267153,
+    "strength": 267153
+  },
+  {
+    "name": "Zielonej Górze",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 267153,
+    "strength": 267153
+  },
+  {
+    "name": "Reagują Na",
+    "type": "Guest",
+    "appearances": 2,
+    "total_views": 115702,
+    "strength": 231404
+  },
+  {
+    "name": "Jak Rosjanie",
+    "type": "Guest",
+    "appearances": 2,
+    "total_views": 115702,
+    "strength": 231404
+  },
+  {
+    "name": "Jak Rosjanie Reagują",
+    "type": "Guest",
+    "appearances": 2,
+    "total_views": 115702,
+    "strength": 231404
+  },
+  {
+    "name": "Kamil Prabucki",
+    "type": "Guest",
+    "appearances": 3,
+    "total_views": 72883,
+    "strength": 218649
+  },
+  {
+    "name": "Korei Północnej",
+    "type": "Guest",
+    "appearances": 2,
+    "total_views": 98441,
+    "strength": 196882
+  },
+  {
+    "name": "Pauliną Fok",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 143993,
+    "strength": 143993
+  },
+  {
+    "name": "Paulina Fok",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 143993,
+    "strength": 143993
+  },
+  {
+    "name": "Pawłem Lisickim",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 113122,
+    "strength": 113122
+  },
+  {
+    "name": "Do Rzeczy",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 113122,
+    "strength": 113122
+  },
+  {
+    "name": "Rafał Ziemkiewicz",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 113122,
+    "strength": 113122
+  },
+  {
+    "name": "Na Rymanowski Live",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 113122,
+    "strength": 113122
+  },
+  {
+    "name": "Unią Europejską",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 113122,
+    "strength": 113122
+  },
+  {
+    "name": "Jakubem Dymkiem",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 113122,
+    "strength": 113122
+  },
+  {
+    "name": "Do Rzeczy Polska",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 113122,
+    "strength": 113122
+  },
+  {
+    "name": "Na Rymanowski",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 113122,
+    "strength": 113122
+  },
+  {
+    "name": "Marcin Giełzak",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 113122,
+    "strength": 113122
+  },
+  {
+    "name": "Robert Krasowski",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 113122,
+    "strength": 113122
+  },
+  {
+    "name": "Włodzimierz Czarzasty",
+    "type": "Guest",
+    "appearances": 4,
+    "total_views": 24573,
+    "strength": 98292
+  },
+  {
+    "name": "Bez Tajemnic",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 91015,
+    "strength": 91015
+  },
+  {
+    "name": "Gabrielem Hyodo",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 91015,
+    "strength": 91015
+  },
+  {
+    "name": "Joanny Kołaczkowskiej",
+    "type": "Guest",
+    "appearances": 2,
+    "total_views": 41213,
+    "strength": 82426
+  },
+  {
+    "name": "Jakubem Szewczykiem",
+    "type": "Guest",
+    "appearances": 2,
+    "total_views": 40195,
+    "strength": 80390
+  },
+  {
+    "name": "Joannę Kołaczkowską",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 78399,
+    "strength": 78399
+  },
+  {
+    "name": "Artur Andrus",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 78399,
+    "strength": 78399
+  },
+  {
+    "name": "Marzeny Kipiel",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 73127,
+    "strength": 73127
+  },
+  {
+    "name": "Ula Kiepska",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 73127,
+    "strength": 73127
+  },
+  {
+    "name": "Barbara Mularczyk",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 73127,
+    "strength": 73127
+  },
+  {
+    "name": "Halinki Kiepskiej",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 73127,
+    "strength": 73127
+  },
+  {
+    "name": "Serialowa Mariolka",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 73127,
+    "strength": 73127
+  },
+  {
+    "name": "Robert Rutkowski",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 59982,
+    "strength": 59982
+  },
+  {
+    "name": "Floral Bugs",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 59982,
+    "strength": 59982
+  },
+  {
+    "name": "Jakub Wiech",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 59982,
+    "strength": 59982
+  },
+  {
+    "name": "Marcin Ziopaja",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 59982,
+    "strength": 59982
+  },
+  {
+    "name": "Piotr Dyczek",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 59982,
+    "strength": 59982
+  },
+  {
+    "name": "Filip Taterka",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 59982,
+    "strength": 59982
+  },
+  {
+    "name": "Marek Zmysłowski",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 59982,
+    "strength": 59982
+  },
+  {
+    "name": "Podróże Wojownika",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 59982,
+    "strength": 59982
+  },
+  {
+    "name": "Marcin Modrzewski",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 59982,
+    "strength": 59982
+  },
+  {
+    "name": "Przemek Górczyk",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 59982,
+    "strength": 59982
+  },
+  {
+    "name": "Dawid Fazowski",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 59982,
+    "strength": 59982
+  },
+  {
+    "name": "Tomasz Mazur",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 59982,
+    "strength": 59982
+  },
+  {
+    "name": "Filip Kosior",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 59982,
+    "strength": 59982
+  },
+  {
+    "name": "Wygląda Życie",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 59982,
+    "strength": 59982
+  },
+  {
+    "name": "Mateusz Gola",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 59982,
+    "strength": 59982
+  },
+  {
+    "name": "Agnieszka Kozak",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 59982,
+    "strength": 59982
+  },
+  {
+    "name": "Piotr Paja",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 59982,
+    "strength": 59982
+  },
+  {
+    "name": "Korea Północna",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 59982,
+    "strength": 59982
+  },
+  {
+    "name": "Polskiej Agencji",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 59982,
+    "strength": 59982
+  },
+  {
+    "name": "Bartosz Majewski",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 59982,
+    "strength": 59982
+  },
+  {
+    "name": "Wojciech Glac",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 59982,
+    "strength": 59982
+  },
+  {
+    "name": "Jak Naprawdę",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 59982,
+    "strength": 59982
+  },
+  {
+    "name": "Monika Witkowska",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 59982,
+    "strength": 59982
+  },
+  {
+    "name": "Magdalena Socha",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 59982,
+    "strength": 59982
+  },
+  {
+    "name": "Paweł Kozak",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 59982,
+    "strength": 59982
+  },
+  {
+    "name": "Jak Naprawdę Wygląda",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 59982,
+    "strength": 59982
+  },
+  {
+    "name": "Michał Trollsky",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 59982,
+    "strength": 59982
+  },
+  {
+    "name": "Twins Real Estate",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 59982,
+    "strength": 59982
+  },
+  {
+    "name": "Marcin Majewski",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 59982,
+    "strength": 59982
+  },
+  {
+    "name": "Andrzej Kobyliński",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 59982,
+    "strength": 59982
+  },
+  {
+    "name": "Kamil Zachert",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 59982,
+    "strength": 59982
+  },
+  {
+    "name": "Przemek Górczyk Podcast",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 59982,
+    "strength": 59982
+  },
+  {
+    "name": "Łukasz Bukowiecki",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 59982,
+    "strength": 59982
+  },
+  {
+    "name": "Polskiej Agencji Nieruchomości",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 59982,
+    "strength": 59982
+  },
+  {
+    "name": "Piotr Mosak",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 59982,
+    "strength": 59982
+  },
+  {
+    "name": "Estate Phuket",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 59982,
+    "strength": 59982
+  },
+  {
+    "name": "Michał Pater",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 59982,
+    "strength": 59982
+  },
+  {
+    "name": "Twins Real",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 59982,
+    "strength": 59982
+  },
+  {
+    "name": "Szymon Negacz",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 59982,
+    "strength": 59982
+  },
+  {
+    "name": "Katarzyna Pachniak",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 59982,
+    "strength": 59982
+  },
+  {
+    "name": "Eska Rock",
+    "type": "Guest",
+    "appearances": 6,
+    "total_views": 9368,
+    "strength": 56208
+  },
+  {
+    "name": "Krytyka Rafała Zaorskiej",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 55573,
+    "strength": 55573
+  },
+  {
+    "name": "Inteligentny Inwestor",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 55573,
+    "strength": 55573
+  },
+  {
+    "name": "Cezary Głuch",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 55573,
+    "strength": 55573
+  },
+  {
+    "name": "Blog Roku",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 55573,
+    "strength": 55573
+  },
+  {
+    "name": "Solve Labs",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 55573,
+    "strength": 55573
+  },
+  {
+    "name": "Krytyka Rafała",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 55573,
+    "strength": 55573
+  },
+  {
+    "name": "Jak Dariusz",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 54521,
+    "strength": 54521
+  },
+  {
+    "name": "This Is",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 54521,
+    "strength": 54521
+  },
+  {
+    "name": "Polskiej Akademii",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 54521,
+    "strength": 54521
+  },
+  {
+    "name": "Maciej Kawecki",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 54521,
+    "strength": 54521
+  },
+  {
+    "name": "Polskiej Akademii Nauk",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 54521,
+    "strength": 54521
+  },
+  {
+    "name": "Open Source",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 54521,
+    "strength": 54521
+  },
+  {
+    "name": "Polska Akademia Nauk",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 54521,
+    "strength": 54521
+  },
+  {
+    "name": "Dariusz Jemielniak",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 54521,
+    "strength": 54521
+  },
+  {
+    "name": "Polska Akademia",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 54521,
+    "strength": 54521
+  },
+  {
+    "name": "Gosia Ohme",
+    "type": "Guest",
+    "appearances": 3,
+    "total_views": 17695,
+    "strength": 53085
+  },
+  {
+    "name": "Bielenda Outdoor Challenge",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 38459,
+    "strength": 38459
+  },
+  {
+    "name": "Bielenda Outdoor",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 38459,
+    "strength": 38459
+  },
+  {
+    "name": "Promują Ideologie",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 37522,
+    "strength": 37522
+  },
+  {
+    "name": "Seksualizują Dzieci",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 37522,
+    "strength": 37522
+  },
+  {
+    "name": "Że To Postęp",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 37522,
+    "strength": 37522
+  },
+  {
+    "name": "Że To",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 37522,
+    "strength": 37522
+  },
+  {
+    "name": "Czy Zachód",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 35378,
+    "strength": 35378
+  },
+  {
+    "name": "Czy Polska",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 35378,
+    "strength": 35378
+  },
+  {
+    "name": "Arlety Bojke",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 35378,
+    "strength": 35378
+  },
+  {
+    "name": "Donalda Trumpa",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 35378,
+    "strength": 35378
+  },
+  {
+    "name": "Arleta Bojke",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 35378,
+    "strength": 35378
+  },
+  {
+    "name": "Dlaczego Zachód",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 35378,
+    "strength": 35378
+  },
+  {
+    "name": "Negocjacje Rosja",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 35378,
+    "strength": 35378
+  },
+  {
+    "name": "Jak Polacy",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 35378,
+    "strength": 35378
+  },
+  {
+    "name": "Śmierć Joanny",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 33755,
+    "strength": 33755
+  },
+  {
+    "name": "Edward Miszczak",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 33755,
+    "strength": 33755
+  },
+  {
+    "name": "Edwardzie Miszczaku",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 33755,
+    "strength": 33755
+  },
+  {
+    "name": "Śmierć Joanny Kołaczkowskiej",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 33755,
+    "strength": 33755
+  },
+  {
+    "name": "Huberta Urbańskiego",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 33755,
+    "strength": 33755
+  },
+  {
+    "name": "Zawinęło Mnie",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 31771,
+    "strength": 31771
+  },
+  {
+    "name": "Chińskie Wojsko",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 31771,
+    "strength": 31771
+  },
+  {
+    "name": "Zawinęło Mnie Chińskie",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 31771,
+    "strength": 31771
+  },
+  {
+    "name": "Gazeta Wyborcza",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 31447,
+    "strength": 31447
+  },
+  {
+    "name": "Leszek Żebrowski",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 31447,
+    "strength": 31447
+  },
+  {
+    "name": "Kłamstwo Gazety Wyborczej",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 31447,
+    "strength": 31447
+  },
+  {
+    "name": "Powstaniu Warszawskim",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 31447,
+    "strength": 31447
+  },
+  {
+    "name": "Leszka Żebrowskiego",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 31447,
+    "strength": 31447
+  },
+  {
+    "name": "Powstańców Warszawskich",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 31447,
+    "strength": 31447
+  },
+  {
+    "name": "Powstanie Warszawskie",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 31447,
+    "strength": 31447
+  },
+  {
+    "name": "Kłamstwo Gazety",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 31447,
+    "strength": 31447
+  },
+  {
+    "name": "Gazety Wyborczej",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 31447,
+    "strength": 31447
+  },
+  {
+    "name": "Powstania Warszawskiego",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 31447,
+    "strength": 31447
+  },
+  {
+    "name": "Maya Ori",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 28070,
+    "strength": 28070
+  },
+  {
+    "name": "Polacy Na Syberii",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 27499,
+    "strength": 27499
+  },
+  {
+    "name": "Polacy Na",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 27499,
+    "strength": 27499
+  },
+  {
+    "name": "Elżbietę Zapendowską",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 20399,
+    "strength": 20399
+  },
+  {
+    "name": "Rozmawia Jakub Szewczyk",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 20399,
+    "strength": 20399
+  },
+  {
+    "name": "Alicja Janosz",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 20399,
+    "strength": 20399
+  },
+  {
+    "name": "Carpe Diem",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 20399,
+    "strength": 20399
+  },
+  {
+    "name": "Kubę Wojewódzkiego",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 20399,
+    "strength": 20399
+  },
+  {
+    "name": "Szymon Wydra",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 20399,
+    "strength": 20399
+  },
+  {
+    "name": "Rozmawia Jakub",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 20399,
+    "strength": 20399
+  },
+  {
+    "name": "Igor Witkowski",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 17548,
+    "strength": 17548
+  },
+  {
+    "name": "Natalia Przybysz",
+    "type": "Guest",
+    "appearances": 3,
+    "total_views": 4707,
+    "strength": 14121
+  },
+  {
+    "name": "Zdrowia Psychicznego",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 10556,
+    "strength": 10556
+  },
+  {
+    "name": "Ambasadorem Kongresu Zdrowia",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 10556,
+    "strength": 10556
+  },
+  {
+    "name": "Maciejem Klimarczykiem",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 10556,
+    "strength": 10556
+  },
+  {
+    "name": "Akopem Szostakiem",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 10556,
+    "strength": 10556
+  },
+  {
+    "name": "Pomogę Ci",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 10556,
+    "strength": 10556
+  },
+  {
+    "name": "Ambasadorem Kongresu",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 10556,
+    "strength": 10556
+  },
+  {
+    "name": "Centrum Respo",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 10556,
+    "strength": 10556
+  },
+  {
+    "name": "Cechini Muszyna",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 10556,
+    "strength": 10556
+  },
+  {
+    "name": "Marcinem Rogacewiczem",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 9534,
+    "strength": 9534
+  },
+  {
+    "name": "Agnieszka Kaczorowska",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 9534,
+    "strength": 9534
+  },
+  {
+    "name": "Klaudią Lewandowską",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 9534,
+    "strength": 9534
+  },
+  {
+    "name": "Maciejem Pelą",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 9534,
+    "strength": 9534
+  },
+  {
+    "name": "Reakcja Agnieszki",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 9534,
+    "strength": 9534
+  },
+  {
+    "name": "Zostań Patronem",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 9001,
+    "strength": 9001
+  },
+  {
+    "name": "Organizacji Współpracy",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 9001,
+    "strength": 9001
+  },
+  {
+    "name": "Migracjami Uniwersytetu",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 9001,
+    "strength": 9001
+  },
+  {
+    "name": "Migracjami Uniwersytetu Warszawskiego",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 9001,
+    "strength": 9001
+  },
+  {
+    "name": "Radio Naukowe",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 9001,
+    "strength": 9001
+  },
+  {
+    "name": "Ośrodka Badań",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 9001,
+    "strength": 9001
+  },
+  {
+    "name": "Organizacji Współpracy Gospodarczej",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 9001,
+    "strength": 9001
+  },
+  {
+    "name": "Paweł Kaczmarczyk",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 9001,
+    "strength": 9001
+  },
+  {
+    "name": "Męskie Granie",
+    "type": "Guest",
+    "appearances": 2,
+    "total_views": 3747,
+    "strength": 7494
+  },
+  {
+    "name": "Koniec Bodnara",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 6772,
+    "strength": 6772
+  },
+  {
+    "name": "Jestem Bezdomny",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 6466,
+    "strength": 6466
+  },
+  {
+    "name": "Ja Nie Jestem",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 6466,
+    "strength": 6466
+  },
+  {
+    "name": "Ja Nie",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 6466,
+    "strength": 6466
+  },
+  {
+    "name": "Joanna Kołaczkowska",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 6440,
+    "strength": 6440
+  },
+  {
+    "name": "Paweł Królikowski",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 6440,
+    "strength": 6440
+  },
+  {
+    "name": "Pawła Królikowskiego",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 6440,
+    "strength": 6440
+  },
+  {
+    "name": "Małgorzata Walewska",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 6440,
+    "strength": 6440
+  },
+  {
+    "name": "Leszek Moczulski",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 5664,
+    "strength": 5664
+  },
+  {
+    "name": "Krzysztof Gawkowski",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 5664,
+    "strength": 5664
+  },
+  {
+    "name": "Nowej Lewicy",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 5664,
+    "strength": 5664
+  },
+  {
+    "name": "Katarzyna Miller",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 4009,
+    "strength": 4009
+  },
+  {
+    "name": "Katarzyna Miller Gosia",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 4009,
+    "strength": 4009
+  },
+  {
+    "name": "One Eye Movement",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 2778,
+    "strength": 2778
+  },
+  {
+    "name": "Young Igim",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 2778,
+    "strength": 2778
+  },
+  {
+    "name": "The Returners",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 2778,
+    "strength": 2778
+  },
+  {
+    "name": "Choroba Asstera",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 2778,
+    "strength": 2778
+  },
+  {
+    "name": "One Eye",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 2778,
+    "strength": 2778
+  },
+  {
+    "name": "Czy Asster",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 2778,
+    "strength": 2778
+  },
+  {
+    "name": "Honoratą Skarbek",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 2778,
+    "strength": 2778
+  },
+  {
+    "name": "White Widow",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 2778,
+    "strength": 2778
+  },
+  {
+    "name": "Cezary Kulesza",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 2730,
+    "strength": 2730
+  },
+  {
+    "name": "Gosią Ohme",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 2222,
+    "strength": 2222
+  },
+  {
+    "name": "Alicją Długołęcką",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 2222,
+    "strength": 2222
+  },
+  {
+    "name": "Alicja Długołęcka Gosia",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 2222,
+    "strength": 2222
+  },
+  {
+    "name": "Alicja Długołęcka",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 2222,
+    "strength": 2222
+  },
+  {
+    "name": "Joanny Senyszyn",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 2207,
+    "strength": 2207
+  },
+  {
+    "name": "Jerzy Brzęczek",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 1887,
+    "strength": 1887
+  },
+  {
+    "name": "Marcinem Mellerem",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 1507,
+    "strength": 1507
+  },
+  {
+    "name": "Stand Up",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 1507,
+    "strength": 1507
+  },
+  {
+    "name": "Grzegorz Dolniak",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 1507,
+    "strength": 1507
+  },
+  {
+    "name": "Hubert Urbański",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 1337,
+    "strength": 1337
+  },
+  {
+    "name": "Kingi Rusin",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 1337,
+    "strength": 1337
+  },
+  {
+    "name": "Hubertem Urbańskim",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 1337,
+    "strength": 1337
+  },
+  {
+    "name": "Krzysztofem Ibiszem",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 1337,
+    "strength": 1337
+  },
+  {
+    "name": "Szkoła Muzyczna",
+    "type": "Guest",
+    "appearances": 1,
+    "total_views": 960,
+    "strength": 960
   }
 ]

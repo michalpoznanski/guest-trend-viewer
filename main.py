@@ -74,9 +74,10 @@ def filter_guests_by_feedback(guests, feedback_data):
 def get_maybe_phrases_count():
     """Zwraca liczbę fraz do oznaczenia (MAYBE)"""
     try:
-        from frontend.feedback_interface import get_maybe_phrases
-        maybe_phrases = get_maybe_phrases()
-        return len(maybe_phrases)
+        # Bezpośrednio wczytaj dane adnotacji i policz MAYBE
+        feedback_data = load_feedback_data()
+        maybe_count = len([v for v in feedback_data.values() if v == "MAYBE"])
+        return maybe_count
     except Exception as e:
         print(f"Błąd podczas pobierania liczby fraz do oznaczenia: {e}")
         return 0
@@ -104,10 +105,11 @@ def rebuild_guest_ranking_from_annotations():
             if guest_name in feedback_data and feedback_data[guest_name] == "GUEST":
                 filtered_guests.append(guest)
         
-        # Jeśli nie ma gości w rankingu, ale są frazy GUEST, utwórz podstawowe wpisy
-        if not filtered_guests and guest_phrases:
-            print(f"Brak gości w rankingu, ale znaleziono {len(guest_phrases)} fraz GUEST. Tworzenie podstawowych wpisów...")
-            for phrase in guest_phrases:
+        # Dodaj frazy GUEST, które nie mają odpowiedników w rankingu
+        existing_guest_names = [g.get('name', '') for g in filtered_guests]
+        for phrase in guest_phrases:
+            if phrase not in existing_guest_names:
+                print(f"Dodaję frazę GUEST do rankingu: {phrase}")
                 filtered_guests.append({
                     'name': phrase,
                     'type': 'Guest',

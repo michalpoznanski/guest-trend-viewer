@@ -264,6 +264,13 @@
             }
         `;
         document.head.appendChild(style);
+
+        // Auto-odświeżanie rankingu po adnotacji w innej zakładce
+        window.addEventListener('storage', function(event) {
+            if (event.key === 'rankingUpdate') {
+                updateRanking();
+            }
+        });
     </script>
 </body>
 </html> 

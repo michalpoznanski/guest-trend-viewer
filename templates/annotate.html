@@ -173,9 +173,14 @@
     <div class="container">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
             <h1>🎯 Interfejs Oznaczania Fraz</h1>
-            <a href="/" class="btn" style="background-color: #6c757d; color: white; text-decoration: none; padding: 10px 20px; border-radius: 5px;">
-                ← Powrót do analizy
-            </a>
+            <div>
+                <a href="/feedback/annotate/pairs-view" class="btn" style="background-color: #6f42c1; color: white; text-decoration: none; padding: 10px 20px; border-radius: 5px; margin-right: 10px;">
+                    🔍 Ocena par MAYBE
+                </a>
+                <a href="/" class="btn" style="background-color: #6c757d; color: white; text-decoration: none; padding: 10px 20px; border-radius: 5px;">
+                    ← Powrót do analizy
+                </a>
+            </div>
         </div>
         
         {% if error %}
@@ -291,6 +296,8 @@
                     if (data.force_reload && data.remaining_phrases) {
                         updatePhraseList(data.remaining_phrases);
                     }
+                    // --- NOWOŚĆ: wyślij sygnał do innych zakładek o aktualizacji rankingu ---
+                    updateRankingViaBroadcast();
                 } else {
                     showMessage(data.error, 'error');
                 }
@@ -447,6 +454,14 @@
                 addPhrase();
             }
         });
+    </script>
+    <!-- Funkcja do broadcastu sygnału o aktualizacji rankingu -->
+    <script>
+        function updateRankingViaBroadcast() {
+            try {
+                localStorage.setItem('rankingUpdate', Date.now().toString());
+            } catch (e) {}
+        }
     </script>
 </body>
 </html> 

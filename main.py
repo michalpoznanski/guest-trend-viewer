@@ -7,6 +7,7 @@ import os
 import json
 from analysis.guest_trend_generator import generate_guest_summary_from_latest_report
 from frontend.feedback_interface import router as feedback_router
+from datetime import datetime
 
 # Import funkcji do automatycznego wyłapywania fraz
 try:
@@ -80,21 +81,76 @@ def get_maybe_phrases_count():
         print(f"Błąd podczas pobierania liczby fraz do oznaczenia: {e}")
         return 0
 
+
+def rebuild_guest_ranking_from_annotations():
+    """
+    Przebudowuje ranking gości na podstawie aktualnych adnotacji.
+    Filtruje i generuje ranking wyłącznie na podstawie fraz z oznaczeniem GUEST.
+    """
+    try:
+        # Wczytaj aktualne dane adnotacji
+        feedback_data = load_feedback_data()
+        
+        # Znajdź wszystkie frazy oznaczone jako GUEST
+        guest_phrases = [phrase for phrase, value in feedback_data.items() if value == "GUEST"]
+        
+        # Wczytaj istniejące dane gości
+        existing_guests = load_guest_data()
+        
+        # Filtruj tylko gości oznaczone jako GUEST
+        filtered_guests = []
+        for guest in existing_guests:
+            guest_name = guest.get('name', '')
+            if guest_name in feedback_data and feedback_data[guest_name] == "GUEST":
+                filtered_guests.append(guest)
+        
+        # Jeśli nie ma gości w rankingu, ale są frazy GUEST, utwórz podstawowe wpisy
+        if not filtered_guests and guest_phrases:
+            print(f"Brak gości w rankingu, ale znaleziono {len(guest_phrases)} fraz GUEST. Tworzenie podstawowych wpisów...")
+            for phrase in guest_phrases:
+                filtered_guests.append({
+                    'name': phrase,
+                    'type': 'Guest',
+                    'appearances': 1,
+                    'total_views': 1000,  # Domyślna wartość
+                    'strength': 1000
+                })
+        
+        # Posortuj malejąco po strength
+        filtered_guests.sort(key=lambda x: x.get('strength', 0), reverse=True)
+        
+        # Zapisz do pliku
+        output_path = "data/guest_trend_summary.json"
+        with open(output_path, 'w', encoding='utf-8') as f:
+            json.dump(filtered_guests, f, ensure_ascii=False, indent=2)
+        
+        # Wyświetl log
+        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        print(f"[{timestamp}] Przebudowano ranking gości:")
+        print(f"  Ścieżka: {os.path.abspath(output_path)}")
+        print(f"  Liczba osób GUEST: {len(filtered_guests)}")
+        if filtered_guests:
+            print(f"  Top 3 goście: {', '.join([g['name'] for g in filtered_guests[:3]])}")
+        
+        return filtered_guests
+        
+    except Exception as e:
+        print(f"Błąd podczas przebudowywania rankingu gości: {e}")
+        return []
+
 @app.get("/", response_class=HTMLResponse)
 async def root(request: Request):
-    """Główna strona z tabelą gości - ranking domyślnie filtrowany tylko GUEST"""
-    guests = load_guest_data()
+    """Główna strona z tabelą gości - ranking zawsze przebudowywany na podstawie aktualnych adnotacji"""
+    # Przebuduj ranking na podstawie aktualnych adnotacji
+    guests = rebuild_guest_ranking_from_annotations()
     maybe_count = get_maybe_phrases_count()
     
-    # Załaduj dane adnotacji dla statystyk i filtrowania
+    # Załaduj dane adnotacji dla statystyk
     feedback_data = load_feedback_data()
-    
-    # Domyślnie filtruj tylko frazy oznaczone jako GUEST
-    filtered_guests = filter_guests_by_feedback(guests, feedback_data)
     
     return templates.TemplateResponse("index.html", {
         "request": request,
-        "guests": filtered_guests,
+        "guests": guests,
         "maybe_count": maybe_count,
         "total_annotated": len(feedback_data),
         "guest_count": len([v for v in feedback_data.values() if v == "GUEST"]),
@@ -110,20 +166,19 @@ def status():
 
 @app.post("/api/update-ranking")
 async def update_ranking():
-    """Aktualizuje ranking na podstawie aktualnych adnotacji - tylko GUEST"""
+    """Aktualizuje ranking na podstawie aktualnych adnotacji - przebudowuje plik rankingowy"""
     try:
-        # Załaduj dane gości i adnotacji
-        guests = load_guest_data()
-        feedback_data = load_feedback_data()
+        # Przebuduj ranking na podstawie aktualnych adnotacji
+        guests = rebuild_guest_ranking_from_annotations()
         
-        # Przefiltruj gości - tylko GUEST
-        filtered_guests = filter_guests_by_feedback(guests, feedback_data)
+        # Załaduj dane adnotacji dla statystyk
+        feedback_data = load_feedback_data()
         
         # Zwróć zaktualizowany ranking
         return {
             "success": True,
-            "guests": filtered_guests,
-            "total_guests": len(filtered_guests),
+            "guests": guests,
+            "total_guests": len(guests),
             "total_annotated": len(feedback_data),
             "guest_count": len([v for v in feedback_data.values() if v == "GUEST"]),
             "host_count": len([v for v in feedback_data.values() if v == "HOST"]),
@@ -169,16 +224,13 @@ if __name__ == "__main__":
         except Exception as e:
             print(f"Błąd podczas automatycznego wyłapywania fraz: {e}")
     
-    # Generuj dane gości przed uruchomieniem serwera
+    # Przebuduj ranking gości na podstawie aktualnych adnotacji przed uruchomieniem serwera
     try:
-        print("Generowanie danych gości z najnowszego raportu...")
-        generate_guest_summary_from_latest_report(
-            report_dir="/mnt/volume/reports/",
-            output_path="data/guest_trend_summary.json"
-        )
-        print("Dane gości zostały wygenerowane pomyślnie!")
+        print("Przebudowywanie rankingu gości na podstawie aktualnych adnotacji...")
+        rebuild_guest_ranking_from_annotations()
+        print("Ranking gości został przebudowany pomyślnie!")
     except Exception as e:
-        print(f"Błąd podczas generowania danych gości: {e}")
+        print(f"Błąd podczas przebudowywania rankingu gości: {e}")
         print("Aplikacja uruchomi się z istniejącymi danymi (jeśli istnieją)")
     
     port = int(os.environ.get("PORT", 8000))  # Railway ustawia PORT jako zmienną środowiskową

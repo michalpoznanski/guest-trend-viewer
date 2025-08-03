@@ -82,16 +82,19 @@ def get_maybe_phrases_count():
 
 @app.get("/", response_class=HTMLResponse)
 async def root(request: Request):
-    """Główna strona z tabelą gości - ranking nie jest filtrowany domyślnie"""
+    """Główna strona z tabelą gości - ranking domyślnie filtrowany tylko GUEST"""
     guests = load_guest_data()
     maybe_count = get_maybe_phrases_count()
     
-    # Załaduj dane adnotacji dla statystyk
+    # Załaduj dane adnotacji dla statystyk i filtrowania
     feedback_data = load_feedback_data()
+    
+    # Domyślnie filtruj tylko frazy oznaczone jako GUEST
+    filtered_guests = filter_guests_by_feedback(guests, feedback_data)
     
     return templates.TemplateResponse("index.html", {
         "request": request,
-        "guests": guests,
+        "guests": filtered_guests,
         "maybe_count": maybe_count,
         "total_annotated": len(feedback_data),
         "guest_count": len([v for v in feedback_data.values() if v == "GUEST"]),

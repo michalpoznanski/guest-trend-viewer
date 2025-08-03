@@ -420,7 +420,7 @@
   "Że To Postęp": "MAYBE",
   "Żebym Przetrwał": "MAYBE",
   "Żebym Przetrwał Do": "MAYBE",
-  "Test": "GUEST",
+  "Test": "MAYBE",
   "Test HOST": "HOST",
   "TEST_GUEST_FRAZA": "GUEST",
   "TEST_HOST_FRAZA": "HOST",
@@ -429,5 +429,6 @@
   "Piotr PajÄk": "MAYBE",
   "Olga SzomaÅska": "HOST",
   "KaczyÅski": "GUEST",
-  "Test Guest": "GUEST"
+  "Test Guest": "GUEST",
+  "Adam": "MAYBE"
 }

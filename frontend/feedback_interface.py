@@ -221,14 +221,23 @@ def get_maybe_pairs() -> List[Dict[str, str]]:
 def check_similar_phrases(phrase: str) -> List[str]:
     """
     Sprawdza czy istnieją podobne frazy w systemie.
-    Zwraca listę fraz, które mogą być powiązane z daną frazą.
+    Teraz działa tylko na pojedynczych słowach.
     """
     data = load_training_data()
     similar_phrases = []
     
+    # Sprawdź czy fraza to pojedyncze słowo
+    if ' ' in phrase:
+        # Jeśli to nie pojedyncze słowo, nie paruj z innymi
+        return []
+    
     # Sprawdź czy fraza zawiera się w innych frazach lub inne frazy zawierają się w niej
     for existing_phrase, value in data.items():
         if existing_phrase != phrase:
+            # Sprawdź czy inna fraza to też pojedyncze słowo
+            if ' ' in existing_phrase:
+                continue
+                
             # Sprawdź czy frazy mają wspólne słowa
             phrase_words = set(normalize_phrase(phrase).split())
             existing_words = set(normalize_phrase(existing_phrase).split())
@@ -329,7 +338,6 @@ async def update_annotation(phrase: str = Form(...), value: str = Form(...)):
             # Automatycznie aktualizuj ranking po każdej adnotacji
             try:
                 import sys
-                import os
                 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
                 from main import rebuild_guest_ranking_from_annotations
                 rebuild_guest_ranking_from_annotations()
@@ -492,7 +500,6 @@ async def evaluate_pair(phrase1: str = Form(...), phrase2: str = Form(...), deci
             if decision == "GUEST":
                 try:
                     import sys
-                    import os
                     sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
                     from main import rebuild_guest_ranking_from_annotations
                     rebuild_guest_ranking_from_annotations()

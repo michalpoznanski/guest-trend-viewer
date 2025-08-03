@@ -87,6 +87,7 @@ def rebuild_guest_ranking_from_annotations():
     """
     Przebudowuje ranking gości na podstawie aktualnych adnotacji.
     Filtruje i generuje ranking wyłącznie na podstawie fraz z oznaczeniem GUEST.
+    Usuwa duplikaty po normalizacji.
     """
     try:
         # Wczytaj aktualne dane adnotacji
@@ -118,23 +119,36 @@ def rebuild_guest_ranking_from_annotations():
                     'strength': 1000
                 })
         
+        # Usuń duplikaty po normalizacji
+        from frontend.feedback_interface import normalize_phrase
+        normalized_names = set()
+        unique_guests = []
+        
+        for guest in filtered_guests:
+            normalized_name = normalize_phrase(guest.get('name', ''))
+            if normalized_name not in normalized_names:
+                normalized_names.add(normalized_name)
+                unique_guests.append(guest)
+            else:
+                print(f"Usunięto duplikat: {guest.get('name', '')} (znormalizowane: {normalized_name})")
+        
         # Posortuj malejąco po strength
-        filtered_guests.sort(key=lambda x: x.get('strength', 0), reverse=True)
+        unique_guests.sort(key=lambda x: x.get('strength', 0), reverse=True)
         
         # Zapisz do pliku
         output_path = "data/guest_trend_summary.json"
         with open(output_path, 'w', encoding='utf-8') as f:
-            json.dump(filtered_guests, f, ensure_ascii=False, indent=2)
+            json.dump(unique_guests, f, ensure_ascii=False, indent=2)
         
         # Wyświetl log
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         print(f"[{timestamp}] Przebudowano ranking gości:")
         print(f"  Ścieżka: {os.path.abspath(output_path)}")
-        print(f"  Liczba osób GUEST: {len(filtered_guests)}")
-        if filtered_guests:
-            print(f"  Top 3 goście: {', '.join([g['name'] for g in filtered_guests[:3]])}")
+        print(f"  Liczba osób GUEST: {len(unique_guests)}")
+        if unique_guests:
+            print(f"  Top 3 goście: {', '.join([g['name'] for g in unique_guests[:3]])}")
         
-        return filtered_guests
+        return unique_guests
         
     except Exception as e:
         print(f"Błąd podczas przebudowywania rankingu gości: {e}")

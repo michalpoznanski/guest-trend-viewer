@@ -45,14 +45,49 @@
     <div class="container">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
             <h1>👋 Guest Trend Viewer</h1>
-            <a href="/feedback/annotate" class="btn" style="background-color: #007bff; color: white; text-decoration: none; padding: 12px 24px; border-radius: 8px; font-weight: bold; box-shadow: 0 2px 4px rgba(0,0,0,0.1); position: relative;">
-                🔎 Oznacz frazy: uruchom panel ręcznej adnotacji nazwisk
-                {% if maybe_count > 0 %}
-                <span style="position: absolute; top: -8px; right: -8px; background-color: #dc3545; color: white; border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: bold;">
-                    {{ maybe_count }}
-                </span>
-                {% endif %}
-            </a>
+            <div style="display: flex; gap: 10px; align-items: center;">
+                <button onclick="updateRanking()" class="btn" style="background-color: #28a745; color: white; border: none; padding: 12px 24px; border-radius: 8px; font-weight: bold; box-shadow: 0 2px 4px rgba(0,0,0,0.1); cursor: pointer;">
+                    🔄 Aktualizuj ranking
+                </button>
+                <a href="/api/export-annotations" class="btn" style="background-color: #17a2b8; color: white; text-decoration: none; padding: 12px 24px; border-radius: 8px; font-weight: bold; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    📥 Eksportuj adnotacje
+                </a>
+                <a href="/feedback/annotate" class="btn" style="background-color: #007bff; color: white; text-decoration: none; padding: 12px 24px; border-radius: 8px; font-weight: bold; box-shadow: 0 2px 4px rgba(0,0,0,0.1); position: relative;">
+                    🔎 Oznacz frazy: uruchom panel ręcznej adnotacji nazwisk
+                    {% if maybe_count > 0 %}
+                    <span style="position: absolute; top: -8px; right: -8px; background-color: #dc3545; color: white; border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: bold;">
+                        {{ maybe_count }}
+                    </span>
+                    {% endif %}
+                </a>
+            </div>
+        </div>
+        
+        <!-- Statystyki adnotacji -->
+        <div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+            <h3 style="margin-top: 0; color: #495057;">📊 Statystyki adnotacji</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px;">
+                <div style="text-align: center; padding: 10px; background-color: white; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                    <div style="font-size: 24px; font-weight: bold; color: #28a745;">{{ guest_count }}</div>
+                    <div style="font-size: 12px; color: #6c757d;">Osoby (GUEST)</div>
+                </div>
+                <div style="text-align: center; padding: 10px; background-color: white; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                    <div style="font-size: 24px; font-weight: bold; color: #007bff;">{{ host_count }}</div>
+                    <div style="font-size: 12px; color: #6c757d;">Prowadzący (HOST)</div>
+                </div>
+                <div style="text-align: center; padding: 10px; background-color: white; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                    <div style="font-size: 24px; font-weight: bold; color: #dc3545;">{{ no_count }}</div>
+                    <div style="font-size: 12px; color: #6c757d;">Nie osoby (NO)</div>
+                </div>
+                <div style="text-align: center; padding: 10px; background-color: white; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                    <div style="font-size: 24px; font-weight: bold; color: #ffc107;">{{ maybe_count_annotated }}</div>
+                    <div style="font-size: 12px; color: #6c757d;">Do oznaczenia (MAYBE)</div>
+                </div>
+                <div style="text-align: center; padding: 10px; background-color: white; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                    <div style="font-size: 24px; font-weight: bold; color: #6c757d;">{{ total_annotated }}</div>
+                    <div style="font-size: 12px; color: #6c757d;">Łącznie oznaczonych</div>
+                </div>
+            </div>
         </div>
         
         {% if guests %}
@@ -85,5 +120,150 @@
         </div>
         {% endif %}
     </div>
+
+    <script>
+        function updateRanking() {
+            // Pokaż loading na przycisku
+            const button = event.target;
+            const originalText = button.innerHTML;
+            button.innerHTML = '⏳ Aktualizuję...';
+            button.disabled = true;
+            
+            fetch('/api/update-ranking', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Zaktualizuj tabelę
+                    updateTable(data.guests);
+                    
+                    // Zaktualizuj statystyki
+                    updateStats(data);
+                    
+                    // Pokaż komunikat sukcesu
+                    showMessage(`Ranking zaktualizowany! Wyświetlono ${data.total_guests} gości oznaczonych jako GUEST.`, 'success');
+                } else {
+                    showMessage('Błąd podczas aktualizacji rankingu: ' + data.error, 'error');
+                }
+            })
+            .catch(error => {
+                console.error('Błąd:', error);
+                showMessage('Błąd podczas aktualizacji rankingu: ' + error, 'error');
+            })
+            .finally(() => {
+                // Przywróć przycisk
+                button.innerHTML = originalText;
+                button.disabled = false;
+            });
+        }
+        
+        function updateTable(guests) {
+            const tbody = document.querySelector('tbody');
+            if (!tbody) return;
+            
+            // Wyczyść tabelę
+            tbody.innerHTML = '';
+            
+            if (guests.length === 0) {
+                tbody.innerHTML = `
+                    <tr>
+                        <td colspan="5" style="text-align: center; padding: 40px; color: #666;">
+                            <h3>Brak gości oznaczonych jako GUEST</h3>
+                            <p>Użyj panelu adnotacji, aby oznaczyć frazy jako GUEST, a następnie zaktualizuj ranking.</p>
+                        </td>
+                    </tr>
+                `;
+                return;
+            }
+            
+            // Dodaj nowe wiersze
+            guests.forEach(guest => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${guest.name}</td>
+                    <td>Guest</td>
+                    <td>${guest.appearances}</td>
+                    <td>${parseInt(guest.total_views).toLocaleString()}</td>
+                    <td>${parseFloat(guest.strength).toFixed(2)}</td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+        
+        function updateStats(data) {
+            // Zaktualizuj statystyki w sekcji adnotacji
+            const statsContainer = document.querySelector('.container > div:nth-child(3)');
+            if (statsContainer) {
+                const guestCountElement = statsContainer.querySelector('div:nth-child(1) div:first-child');
+                const hostCountElement = statsContainer.querySelector('div:nth-child(2) div:first-child');
+                const noCountElement = statsContainer.querySelector('div:nth-child(3) div:first-child');
+                const maybeCountElement = statsContainer.querySelector('div:nth-child(4) div:first-child');
+                const totalElement = statsContainer.querySelector('div:nth-child(5) div:first-child');
+                
+                if (guestCountElement) guestCountElement.textContent = data.guest_count;
+                if (hostCountElement) hostCountElement.textContent = data.host_count;
+                if (noCountElement) noCountElement.textContent = data.no_count;
+                if (maybeCountElement) maybeCountElement.textContent = data.maybe_count;
+                if (totalElement) totalElement.textContent = data.total_annotated;
+            }
+        }
+        
+        function showMessage(message, type) {
+            // Usuń poprzednie komunikaty
+            const existingMessage = document.querySelector('.message');
+            if (existingMessage) {
+                existingMessage.remove();
+            }
+            
+            // Utwórz nowy komunikat
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${type}`;
+            messageDiv.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                padding: 15px 20px;
+                border-radius: 6px;
+                color: white;
+                font-weight: bold;
+                z-index: 1000;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                animation: slideIn 0.3s ease-out;
+            `;
+            
+            if (type === 'success') {
+                messageDiv.style.backgroundColor = '#28a745';
+            } else {
+                messageDiv.style.backgroundColor = '#dc3545';
+            }
+            
+            messageDiv.textContent = message;
+            document.body.appendChild(messageDiv);
+            
+            // Usuń komunikat po 5 sekundach
+            setTimeout(() => {
+                messageDiv.style.animation = 'slideOut 0.3s ease-in';
+                setTimeout(() => messageDiv.remove(), 300);
+            }, 5000);
+        }
+        
+        // Dodaj style animacji
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            @keyframes slideOut {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(100%); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
 </body>
 </html> 

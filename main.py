@@ -38,6 +38,37 @@ def load_guest_data():
         print(f"Błąd podczas ładowania danych: {e}")
         return []
 
+def load_feedback_data():
+    """Ładuje dane adnotacji z pliku name_training_set.json"""
+    try:
+        file_path = os.path.join(BASE_DIR, "data", "name_training_set.json")
+        if os.path.exists(file_path):
+            with open(file_path, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        else:
+            return {}
+    except Exception as e:
+        print(f"Błąd podczas ładowania danych adnotacji: {e}")
+        return {}
+
+def filter_guests_by_feedback(guests, feedback_data):
+    """Filtruje listę gości na podstawie adnotacji - tylko GUEST"""
+    if not feedback_data:
+        return guests
+    
+    filtered_guests = []
+    for guest in guests:
+        guest_name = guest.get('name', '')
+        if guest_name in feedback_data:
+            # Tylko frazy oznaczone jako GUEST przechodzą przez filtr
+            if feedback_data[guest_name] == "GUEST":
+                filtered_guests.append(guest)
+        else:
+            # Frazy bez adnotacji są pomijane (nie są w rankingu)
+            continue
+    
+    return filtered_guests
+
 
 def get_maybe_phrases_count():
     """Zwraca liczbę fraz do oznaczenia (MAYBE)"""
@@ -51,20 +82,76 @@ def get_maybe_phrases_count():
 
 @app.get("/", response_class=HTMLResponse)
 async def root(request: Request):
-    """Główna strona z tabelą gości"""
+    """Główna strona z tabelą gości - ranking nie jest filtrowany domyślnie"""
     guests = load_guest_data()
     maybe_count = get_maybe_phrases_count()
+    
+    # Załaduj dane adnotacji dla statystyk
+    feedback_data = load_feedback_data()
     
     return templates.TemplateResponse("index.html", {
         "request": request,
         "guests": guests,
-        "maybe_count": maybe_count
+        "maybe_count": maybe_count,
+        "total_annotated": len(feedback_data),
+        "guest_count": len([v for v in feedback_data.values() if v == "GUEST"]),
+        "host_count": len([v for v in feedback_data.values() if v == "HOST"]),
+        "no_count": len([v for v in feedback_data.values() if v == "NO"]),
+        "maybe_count_annotated": len([v for v in feedback_data.values() if v == "MAYBE"])
     })
 
 @app.get("/api/status")
 def status():
     """Endpoint API zwracający status aplikacji"""
     return {"message": "Guest Trend Viewer is working!"}
+
+@app.post("/api/update-ranking")
+async def update_ranking():
+    """Aktualizuje ranking na podstawie aktualnych adnotacji - tylko GUEST"""
+    try:
+        # Załaduj dane gości i adnotacji
+        guests = load_guest_data()
+        feedback_data = load_feedback_data()
+        
+        # Przefiltruj gości - tylko GUEST
+        filtered_guests = filter_guests_by_feedback(guests, feedback_data)
+        
+        # Zwróć zaktualizowany ranking
+        return {
+            "success": True,
+            "guests": filtered_guests,
+            "total_guests": len(filtered_guests),
+            "total_annotated": len(feedback_data),
+            "guest_count": len([v for v in feedback_data.values() if v == "GUEST"]),
+            "host_count": len([v for v in feedback_data.values() if v == "HOST"]),
+            "no_count": len([v for v in feedback_data.values() if v == "NO"]),
+            "maybe_count": len([v for v in feedback_data.values() if v == "MAYBE"])
+        }
+    except Exception as e:
+        return {"success": False, "error": str(e)}
+
+@app.get("/api/export-annotations")
+async def export_annotations():
+    """Eksportuje dane adnotacji do pobrania"""
+    try:
+        from fastapi.responses import FileResponse
+        import tempfile
+        
+        feedback_data = load_feedback_data()
+        
+        # Utwórz tymczasowy plik z adnotacjami
+        with tempfile.NamedTemporaryFile(mode='w', suffix='.json', delete=False, encoding='utf-8') as f:
+            json.dump(feedback_data, f, ensure_ascii=False, indent=2)
+            temp_file_path = f.name
+        
+        # Zwróć plik do pobrania
+        return FileResponse(
+            path=temp_file_path,
+            filename="annotations_export.json",
+            media_type="application/json"
+        )
+    except Exception as e:
+        return {"success": False, "error": str(e)}
 
 
 

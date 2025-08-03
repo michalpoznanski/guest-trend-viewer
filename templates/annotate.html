@@ -93,6 +93,13 @@
         .btn-maybe:hover {
             background-color: #e0a800;
         }
+        .btn-host {
+            background-color: #007bff;
+            color: white;
+        }
+        .btn-host:hover {
+            background-color: #0056b3;
+        }
         .add-phrase {
             margin-top: 30px;
             padding: 20px;
@@ -193,6 +200,10 @@
                 <div class="stat-label">Osoby (GUEST)</div>
             </div>
             <div class="stat-item">
+                <div class="stat-number">{{ host_count }}</div>
+                <div class="stat-label">Prowadzący (HOST)</div>
+            </div>
+            <div class="stat-item">
                 <div class="stat-number">{{ no_count }}</div>
                 <div class="stat-label">Nie osoby (NO)</div>
             </div>
@@ -220,6 +231,9 @@
                     <div class="button-group">
                         <button onclick="updatePhrase('{{ phrase }}', 'GUEST')" class="btn btn-guest">
                             ✅ GUEST (osoba)
+                        </button>
+                        <button onclick="updatePhrase('{{ phrase }}', 'HOST')" class="btn btn-host">
+                            🎤 HOST (prowadzący)
                         </button>
                         <button onclick="updatePhrase('{{ phrase }}', 'NO')" class="btn btn-no">
                             ❌ NO (nie osoba)
@@ -319,11 +333,12 @@
         
         function updateStats(stats) {
             const statsElements = document.querySelectorAll('.stat-number');
-            if (statsElements.length >= 4) {
+            if (statsElements.length >= 5) {
                 statsElements[0].textContent = stats.total_phrases || stats.total || 0;
                 statsElements[1].textContent = stats.guest_count || stats.guest || 0;
-                statsElements[2].textContent = stats.no_count || stats.no || 0;
-                statsElements[3].textContent = stats.maybe_count || stats.maybe || 0;
+                statsElements[2].textContent = stats.host_count || stats.host || 0;
+                statsElements[3].textContent = stats.no_count || stats.no || 0;
+                statsElements[4].textContent = stats.maybe_count || stats.maybe || 0;
             }
         }
         
@@ -352,11 +367,12 @@
                 if (!data.error) {
                     // Aktualizuj statystyki na stronie
                     const statsElements = document.querySelectorAll('.stat-number');
-                    if (statsElements.length >= 4) {
+                    if (statsElements.length >= 5) {
                         statsElements[0].textContent = data.total;
                         statsElements[1].textContent = data.guest;
-                        statsElements[2].textContent = data.no;
-                        statsElements[3].textContent = data.maybe;
+                        statsElements[2].textContent = data.host;
+                        statsElements[3].textContent = data.no;
+                        statsElements[4].textContent = data.maybe;
                     }
                 }
             })

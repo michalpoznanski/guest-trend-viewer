@@ -108,6 +108,7 @@ async def annotate_interface(request: Request):
         data = load_training_data()
         total_phrases = len(data)
         guest_count = len([v for v in data.values() if v == "GUEST"])
+        host_count = len([v for v in data.values() if v == "HOST"])
         no_count = len([v for v in data.values() if v == "NO"])
         maybe_count = len(maybe_phrases)
         
@@ -121,6 +122,7 @@ async def annotate_interface(request: Request):
             "phrases": maybe_phrases,
             "total_phrases": total_phrases,
             "guest_count": guest_count,
+            "host_count": host_count,
             "no_count": no_count,
             "maybe_count": maybe_count,
             "new_phrases_info": new_phrases_info
@@ -132,6 +134,7 @@ async def annotate_interface(request: Request):
             "error": str(e),
             "total_phrases": 0,
             "guest_count": 0,
+            "host_count": 0,
             "no_count": 0,
             "maybe_count": 0,
             "new_phrases_info": ""
@@ -146,7 +149,7 @@ async def update_annotation(phrase: str = Form(...), value: str = Form(...)):
     """
     try:
         # Walidacja wartości
-        if value not in ["GUEST", "NO", "MAYBE"]:
+        if value not in ["GUEST", "HOST", "NO", "MAYBE"]:
             return {"success": False, "error": "Nieprawidłowa wartość"}
         
         # Wczytaj aktualne dane
@@ -162,6 +165,7 @@ async def update_annotation(phrase: str = Form(...), value: str = Form(...)):
             updated_stats = {
                 "total_phrases": len(data),
                 "guest_count": len([v for v in data.values() if v == "GUEST"]),
+                "host_count": len([v for v in data.values() if v == "HOST"]),
                 "no_count": len([v for v in data.values() if v == "NO"]),
                 "maybe_count": len(updated_maybe_phrases)
             }
@@ -189,6 +193,7 @@ async def get_annotation_stats():
         stats = {
             "total": len(data),
             "guest": len([v for v in data.values() if v == "GUEST"]),
+            "host": len([v for v in data.values() if v == "HOST"]),
             "no": len([v for v in data.values() if v == "NO"]),
             "maybe": len([v for v in data.values() if v == "MAYBE"])
         }

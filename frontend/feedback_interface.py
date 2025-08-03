@@ -1,7 +1,8 @@
 import json
 import os
 import sys
-from typing import Dict, List
+import unicodedata
+from typing import Dict, List, Set
 from fastapi import APIRouter, Request, Form
 from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.templating import Jinja2Templates
@@ -25,6 +26,32 @@ templates = Jinja2Templates(directory=os.path.join(BASE_DIR, "templates"))
 
 # Ścieżka do pliku z danymi treningowymi
 TRAINING_DATA_PATH = os.path.join(BASE_DIR, "data", "name_training_set.json")
+
+
+def normalize_phrase(phrase: str) -> str:
+    """
+    Normalizuje frazę do porównywania:
+    - usuwa białe znaki z początku i końca
+    - zamienia na małe litery
+    - normalizuje znaki Unicode
+    """
+    if not phrase:
+        return ""
+    
+    # Usuń białe znaki i zamień na małe litery
+    normalized = phrase.strip().lower()
+    
+    # Normalizuj znaki Unicode (NFD -> NFC)
+    normalized = unicodedata.normalize('NFC', normalized)
+    
+    return normalized
+
+
+def get_normalized_phrases(data: Dict[str, str]) -> Set[str]:
+    """
+    Zwraca zbiór znormalizowanych fraz z danych treningowych.
+    """
+    return {normalize_phrase(phrase) for phrase in data.keys()}
 
 
 def load_training_data() -> Dict[str, str]:
@@ -69,10 +96,25 @@ def save_training_data(data: Dict[str, str]) -> bool:
 
 def get_maybe_phrases() -> List[str]:
     """
-    Zwraca listę fraz z wartością "MAYBE".
+    Zwraca listę fraz z wartością "MAYBE", wykluczając frazy już oznaczone jako GUEST, HOST lub NO.
     """
     data = load_training_data()
-    return [phrase for phrase, value in data.items() if value == "MAYBE"]
+    maybe_phrases = []
+    normalized_excluded = set()
+    
+    # Zbierz znormalizowane frazy już oznaczone (GUEST, HOST, NO)
+    for phrase, value in data.items():
+        if value in ["GUEST", "HOST", "NO"]:
+            normalized_excluded.add(normalize_phrase(phrase))
+    
+    # Dodaj tylko frazy MAYBE, które nie są duplikatami już oznaczonych fraz
+    for phrase, value in data.items():
+        if value == "MAYBE":
+            normalized_phrase = normalize_phrase(phrase)
+            if normalized_phrase not in normalized_excluded:
+                maybe_phrases.append(phrase)
+    
+    return maybe_phrases
 
 
 def auto_discover_new_phrases():
@@ -160,7 +202,7 @@ async def update_annotation(phrase: str = Form(...), value: str = Form(...)):
         
         # Zapisz dane
         if save_training_data(data):
-            # Pobierz zaktualizowane statystyki
+            # Pobierz zaktualizowane statystyki i listę fraz do oznaczenia
             updated_maybe_phrases = get_maybe_phrases()
             updated_stats = {
                 "total_phrases": len(data),
@@ -174,7 +216,8 @@ async def update_annotation(phrase: str = Form(...), value: str = Form(...)):
                 "success": True, 
                 "message": f"Zaktualizowano '{phrase}' na '{value}'",
                 "stats": updated_stats,
-                "remaining_phrases": updated_maybe_phrases
+                "remaining_phrases": updated_maybe_phrases,
+                "force_reload": True  # Wymuś reload kolejki na frontendzie
             }
         else:
             return {"success": False, "error": "Błąd podczas zapisywania"}
@@ -208,7 +251,7 @@ async def get_annotation_stats():
 @router.post("/annotate/add")
 async def add_phrase(phrase: str = Form(...)):
     """
-    Dodaje nową frazę do oznaczenia.
+    Dodaje nową frazę do oznaczenia, sprawdzając duplikaty.
     """
     try:
         if not phrase.strip():
@@ -217,12 +260,19 @@ async def add_phrase(phrase: str = Form(...)):
         # Wczytaj aktualne dane
         data = load_training_data()
         
+        # Sprawdź czy fraza już istnieje (po normalizacji)
+        normalized_new_phrase = normalize_phrase(phrase.strip())
+        normalized_existing = get_normalized_phrases(data)
+        
+        if normalized_new_phrase in normalized_existing:
+            return {"success": False, "error": f"Fraza '{phrase.strip()}' już istnieje w systemie"}
+        
         # Dodaj frazę z wartością MAYBE
         data[phrase.strip()] = "MAYBE"
         
         # Zapisz dane
         if save_training_data(data):
-            return {"success": True, "message": f"Dodano frazę '{phrase}'"}
+            return {"success": True, "message": f"Dodano frazę '{phrase.strip()}'"}
         else:
             return {"success": False, "error": "Błąd podczas zapisywania"}
             

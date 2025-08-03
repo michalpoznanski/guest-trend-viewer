@@ -286,6 +286,11 @@
                     
                     // Odśwież statystyki
                     updateStats(data.stats);
+                    
+                    // Jeśli backend wymaga reload kolejki, zaktualizuj listę fraz
+                    if (data.force_reload && data.remaining_phrases) {
+                        updatePhraseList(data.remaining_phrases);
+                    }
                 } else {
                     showMessage(data.error, 'error');
                 }
@@ -358,6 +363,41 @@
             if (remainingPhrases.length === 0) {
                 showEmptyState();
             }
+        }
+        
+        function updatePhraseList(phrases) {
+            const phraseList = document.querySelector('.phrase-list');
+            
+            if (phrases.length === 0) {
+                showEmptyState();
+                return;
+            }
+            
+            // Zbuduj nową listę fraz
+            let phrasesHtml = '<h3>📝 Frazy do oznaczenia</h3>';
+            phrases.forEach((phrase, index) => {
+                phrasesHtml += `
+                    <div class="phrase-item" id="phrase-${index + 1}">
+                        <div class="phrase-text">${phrase}</div>
+                        <div class="button-group">
+                            <button onclick="updatePhrase('${phrase}', 'GUEST')" class="btn btn-guest">
+                                ✅ GUEST (osoba)
+                            </button>
+                            <button onclick="updatePhrase('${phrase}', 'HOST')" class="btn btn-host">
+                                🎤 HOST (prowadzący)
+                            </button>
+                            <button onclick="updatePhrase('${phrase}', 'NO')" class="btn btn-no">
+                                ❌ NO (nie osoba)
+                            </button>
+                            <button onclick="updatePhrase('${phrase}', 'MAYBE')" class="btn btn-maybe">
+                                🤔 MAYBE (może / nie wiem)
+                            </button>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            phraseList.innerHTML = phrasesHtml;
         }
         
         function refreshStats() {

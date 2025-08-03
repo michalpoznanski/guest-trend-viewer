@@ -2,6 +2,7 @@ import json
 import os
 import csv
 import shutil
+import unicodedata
 from typing import Dict, List, Set
 from datetime import datetime
 
@@ -20,6 +21,24 @@ class PhraseDiscovery:
         
         # Utwórz katalog backup jeśli nie istnieje
         os.makedirs(self.backup_dir, exist_ok=True)
+    
+    def _normalize_phrase(self, phrase: str) -> str:
+        """
+        Normalizuje frazę do porównywania:
+        - usuwa białe znaki z początku i końca
+        - zamienia na małe litery
+        - normalizuje znaki Unicode
+        """
+        if not phrase:
+            return ""
+        
+        # Usuń białe znaki i zamień na małe litery
+        normalized = phrase.strip().lower()
+        
+        # Normalizuj znaki Unicode (NFD -> NFC)
+        normalized = unicodedata.normalize('NFC', normalized)
+        
+        return normalized
     
     def _create_backup(self) -> str:
         """
@@ -128,7 +147,14 @@ class PhraseDiscovery:
         
         # Wczytaj obecne dane treningowe
         training_data = self._load_training_data()
+        
+        # Zbierz znormalizowane frazy już oznaczone (GUEST, HOST, NO) i istniejące frazy
         existing_phrases = set(training_data.keys())
+        normalized_excluded = set()
+        
+        for phrase, value in training_data.items():
+            if value in ["GUEST", "HOST", "NO"]:
+                normalized_excluded.add(self._normalize_phrase(phrase))
         
         # Zbierz wszystkie frazy z raportów
         all_phrases = set()
@@ -152,8 +178,12 @@ class PhraseDiscovery:
                 all_phrases.update(file_phrases)
                 files_processed += 1
         
-        # Znajdź nowe frazy
-        new_phrases = all_phrases - existing_phrases
+        # Znajdź nowe frazy (wykluczając duplikaty już oznaczonych fraz)
+        new_phrases = set()
+        for phrase in all_phrases:
+            normalized_phrase = self._normalize_phrase(phrase)
+            if phrase not in existing_phrases and normalized_phrase not in normalized_excluded:
+                new_phrases.add(phrase)
         
         # Dodaj nowe frazy do danych treningowych ze statusem "MAYBE"
         if new_phrases:

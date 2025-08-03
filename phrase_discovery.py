@@ -27,16 +27,31 @@ class PhraseDiscovery:
         Normalizuje frazę do porównywania:
         - usuwa białe znaki z początku i końca
         - zamienia na małe litery
-        - normalizuje znaki Unicode
+        - zamienia wszelkie niewidoczne znaki (w tym zero-width space, soft hyphen)
+        - normalizuje Unicode (unicodedata.normalize('NFC'))
+        - zamienia powtarzające się spacje w środku na pojedynczą spację
         """
         if not phrase:
             return ""
         
-        # Usuń białe znaki i zamień na małe litery
-        normalized = phrase.strip().lower()
+        # Usuń białe znaki z początku i końca
+        normalized = phrase.strip()
+        
+        # Zamień na małe litery
+        normalized = normalized.lower()
+        
+        # Zamień niewidoczne znaki na spacje
+        import re
+        normalized = re.sub(r'[\u200B\u200C\u200D\uFEFF\u00AD\u200E\u200F]', ' ', normalized)
         
         # Normalizuj znaki Unicode (NFD -> NFC)
         normalized = unicodedata.normalize('NFC', normalized)
+        
+        # Zamień powtarzające się spacje na pojedynczą spację
+        normalized = re.sub(r'\s+', ' ', normalized)
+        
+        # Usuń białe znaki z początku i końca ponownie
+        normalized = normalized.strip()
         
         return normalized
     
@@ -123,6 +138,7 @@ class PhraseDiscovery:
                                 for phrase in raw_phrases.split(','):
                                     cleaned_phrase = phrase.strip().strip('"').strip("'")
                                     if cleaned_phrase and len(cleaned_phrase) > 1:  # Ignoruj pojedyncze znaki
+                                        # Użyj oryginalnej frazy (nie znormalizowanej) do dodania do zbioru
                                         phrases.add(cleaned_phrase)
         
         except Exception as e:
@@ -182,8 +198,11 @@ class PhraseDiscovery:
         new_phrases = set()
         for phrase in all_phrases:
             normalized_phrase = self._normalize_phrase(phrase)
+            # Sprawdź czy fraza nie istnieje w oryginalnej formie i czy nie jest duplikatem już oznaczonych fraz
             if phrase not in existing_phrases and normalized_phrase not in normalized_excluded:
                 new_phrases.add(phrase)
+            else:
+                print(f"Pominięto frazę '{phrase}' (znormalizowana: '{normalized_phrase}') - już istnieje lub jest duplikatem")
         
         # Dodaj nowe frazy do danych treningowych ze statusem "MAYBE"
         if new_phrases:

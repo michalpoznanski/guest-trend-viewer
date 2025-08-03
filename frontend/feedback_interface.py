@@ -33,16 +33,31 @@ def normalize_phrase(phrase: str) -> str:
     Normalizuje frazę do porównywania:
     - usuwa białe znaki z początku i końca
     - zamienia na małe litery
-    - normalizuje znaki Unicode
+    - zamienia wszelkie niewidoczne znaki (w tym zero-width space, soft hyphen)
+    - normalizuje Unicode (unicodedata.normalize('NFC'))
+    - zamienia powtarzające się spacje w środku na pojedynczą spację
     """
     if not phrase:
         return ""
     
-    # Usuń białe znaki i zamień na małe litery
-    normalized = phrase.strip().lower()
+    # Usuń białe znaki z początku i końca
+    normalized = phrase.strip()
+    
+    # Zamień na małe litery
+    normalized = normalized.lower()
+    
+    # Zamień niewidoczne znaki na spacje
+    import re
+    normalized = re.sub(r'[\u200B\u200C\u200D\uFEFF\u00AD\u200E\u200F]', ' ', normalized)
     
     # Normalizuj znaki Unicode (NFD -> NFC)
     normalized = unicodedata.normalize('NFC', normalized)
+    
+    # Zamień powtarzające się spacje na pojedynczą spację
+    normalized = re.sub(r'\s+', ' ', normalized)
+    
+    # Usuń białe znaki z początku i końca ponownie
+    normalized = normalized.strip()
     
     return normalized
 
@@ -114,7 +129,47 @@ def get_maybe_phrases() -> List[str]:
             if normalized_phrase not in normalized_excluded:
                 maybe_phrases.append(phrase)
     
+    # Debug: wypisz wszystkie warianty frazy "Kaczyński"
+    debug_kaczynski_variants(data, maybe_phrases)
+    
     return maybe_phrases
+
+
+def debug_kaczynski_variants(data: Dict[str, str], maybe_phrases: List[str]):
+    """
+    Debug: wypisuje wszystkie warianty frazy "Kaczyński" w pliku feedback i kolejce do oznaczenia.
+    """
+    print("\n=== DEBUG: Warianty frazy 'Kaczyński' ===")
+    
+    # Znajdź wszystkie frazy zawierające "kaczy" (case insensitive)
+    kaczynski_variants = []
+    for phrase, value in data.items():
+        if 'kaczy' in phrase.lower():
+            normalized = normalize_phrase(phrase)
+            kaczynski_variants.append({
+                'original': phrase,
+                'normalized': normalized,
+                'value': value,
+                'in_maybe_queue': phrase in maybe_phrases
+            })
+    
+    print(f"Znaleziono {len(kaczynski_variants)} wariantów frazy 'Kaczyński':")
+    for i, variant in enumerate(kaczynski_variants, 1):
+        print(f"  {i}. Oryginalna: '{variant['original']}'")
+        print(f"     Znormalizowana: '{variant['normalized']}'")
+        print(f"     Status: {variant['value']}")
+        print(f"     W kolejce MAYBE: {variant['in_maybe_queue']}")
+        print()
+    
+    # Sprawdź czy są duplikaty po normalizacji
+    normalized_versions = [v['normalized'] for v in kaczynski_variants]
+    duplicates = set([x for x in normalized_versions if normalized_versions.count(x) > 1])
+    if duplicates:
+        print(f"DUPLIKATY po normalizacji: {duplicates}")
+    else:
+        print("Brak duplikatów po normalizacji")
+    
+    print("=== KONIEC DEBUG ===\n")
 
 
 def auto_discover_new_phrases():
@@ -265,7 +320,7 @@ async def add_phrase(phrase: str = Form(...)):
         normalized_existing = get_normalized_phrases(data)
         
         if normalized_new_phrase in normalized_existing:
-            return {"success": False, "error": f"Fraza '{phrase.strip()}' już istnieje w systemie"}
+            return {"success": False, "error": f"Fraza '{phrase.strip()}' już istnieje w systemie (znormalizowana: '{normalized_new_phrase}')"}
         
         # Dodaj frazę z wartością MAYBE
         data[phrase.strip()] = "MAYBE"

@@ -143,23 +143,39 @@ def rebuild_guest_ranking_from_annotations():
 @app.get("/", response_class=HTMLResponse)
 async def root(request: Request):
     """Główna strona z tabelą gości - ranking zawsze przebudowywany na podstawie aktualnych adnotacji"""
-    # Przebuduj ranking na podstawie aktualnych adnotacji
-    guests = rebuild_guest_ranking_from_annotations()
-    maybe_count = get_maybe_phrases_count()
-    
-    # Załaduj dane adnotacji dla statystyk
-    feedback_data = load_feedback_data()
-    
-    return templates.TemplateResponse("index.html", {
-        "request": request,
-        "guests": guests,
-        "maybe_count": maybe_count,
-        "total_annotated": len(feedback_data),
-        "guest_count": len([v for v in feedback_data.values() if v == "GUEST"]),
-        "host_count": len([v for v in feedback_data.values() if v == "HOST"]),
-        "no_count": len([v for v in feedback_data.values() if v == "NO"]),
-        "maybe_count_annotated": len([v for v in feedback_data.values() if v == "MAYBE"])
-    })
+    try:
+        # Przebuduj ranking na podstawie aktualnych adnotacji
+        guests = rebuild_guest_ranking_from_annotations()
+        maybe_count = get_maybe_phrases_count()
+        
+        # Załaduj dane adnotacji dla statystyk
+        feedback_data = load_feedback_data()
+        
+        print(f"DEBUG: Główna strona - liczba gości: {len(guests)}")
+        print(f"DEBUG: Główna strona - nazwy gości: {[g['name'] for g in guests]}")
+        
+        return templates.TemplateResponse("index.html", {
+            "request": request,
+            "guests": guests,
+            "maybe_count": maybe_count,
+            "total_annotated": len(feedback_data),
+            "guest_count": len([v for v in feedback_data.values() if v == "GUEST"]),
+            "host_count": len([v for v in feedback_data.values() if v == "HOST"]),
+            "no_count": len([v for v in feedback_data.values() if v == "NO"]),
+            "maybe_count_annotated": len([v for v in feedback_data.values() if v == "MAYBE"])
+        })
+    except Exception as e:
+        print(f"Błąd w głównej stronie: {e}")
+        return templates.TemplateResponse("index.html", {
+            "request": request,
+            "guests": [],
+            "maybe_count": 0,
+            "total_annotated": 0,
+            "guest_count": 0,
+            "host_count": 0,
+            "no_count": 0,
+            "maybe_count_annotated": 0
+        })
 
 @app.get("/api/status")
 def status():

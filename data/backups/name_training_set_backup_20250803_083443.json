@@ -1,5 +1,5 @@
 {
-  "Kaczyński": "GUEST",
+  "Kaczyński": "MAYBE",
   "Jarosław Kaczyński": "GUEST",
   "Podcast Show": "NO",
   "Anna Nowak": "GUEST",
@@ -152,7 +152,7 @@
   "Jakim Kierunku": "MAYBE",
   "Jakim Kierunku Idzie": "MAYBE",
   "Jakub Wiech": "MAYBE",
-  "Jakuba Szewczyka": "GUEST",
+  "Jakuba Szewczyka": "MAYBE",
   "Jakubem Dymkiem": "MAYBE",
   "Jakubem Szewczykiem": "MAYBE",
   "Jennifer Lopez": "MAYBE",
@@ -426,8 +426,6 @@
   "TEST_HOST_FRAZA": "HOST",
   "TEST_NO_FRAZA": "NO",
   "TEST_FRAZA_DO_UKRYCIA": "NO",
-  "Piotr PajÄk": "MAYBE",
-  "Olga SzomaÅska": "HOST",
-  "KaczyÅski": "GUEST",
-  "Test Guest": "GUEST"
+  "Piotr PajÄk": "GUEST",
+  "Olga SzomaÅska": "HOST"
 }

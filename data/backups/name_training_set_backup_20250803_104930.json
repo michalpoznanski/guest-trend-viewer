@@ -1,5 +1,5 @@
 {
-  "Kaczyński": "GUEST",
+  "Kaczyński": "MAYBE",
   "Jarosław Kaczyński": "GUEST",
   "Podcast Show": "NO",
   "Anna Nowak": "GUEST",
@@ -428,6 +428,5 @@
   "TEST_FRAZA_DO_UKRYCIA": "NO",
   "Piotr PajÄk": "MAYBE",
   "Olga SzomaÅska": "HOST",
-  "KaczyÅski": "GUEST",
-  "Test Guest": "GUEST"
+  "KaczyÅski": "GUEST"
 }

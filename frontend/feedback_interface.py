@@ -362,6 +362,34 @@ async def update_annotation(phrase: str = Form(...), value: str = Form(...)):
                 # Zapisz zaktualizowane pary
                 with open(pairs_path, "w", encoding="utf-8") as f:
                     json.dump(pairs_data, f, ensure_ascii=False, indent=2)
+            
+            # --- NOWA LOGIKA: automatyczne parowanie dla fraz MAYBE ---
+            elif value == "MAYBE":
+                print(f"DEBUG: Automatyczne parowanie dla MAYBE: {phrase}")
+                similar = check_similar_phrases(phrase)
+                # Zapisz pary do pliku (np. data/maybe_pairs.json)
+                pairs_path = os.path.join(BASE_DIR, "data", "maybe_pairs.json")
+                try:
+                    if os.path.exists(pairs_path):
+                        with open(pairs_path, "r", encoding="utf-8") as f:
+                            pairs_data = json.load(f)
+                    else:
+                        pairs_data = []
+                except Exception:
+                    pairs_data = []
+                # Zbierz już istniejące pary (jako set frozenset)
+                existing_pairs = set(frozenset((p["phrase1"], p["phrase2"])) for p in pairs_data)
+                # Dodaj nowe pary dla fraz MAYBE z podobnymi frazami MAYBE
+                for sim in similar:
+                    if data.get(sim) == "MAYBE":
+                        print(f"DEBUG: Dodaję parę MAYBE: {phrase} + {sim}")
+                        pair = frozenset((phrase, sim))
+                        if pair not in existing_pairs:
+                            pairs_data.append({"phrase1": phrase, "phrase2": sim})
+                            existing_pairs.add(pair)
+                # Zapisz zaktualizowane pary
+                with open(pairs_path, "w", encoding="utf-8") as f:
+                    json.dump(pairs_data, f, ensure_ascii=False, indent=2)
 
             # Pobierz zaktualizowane statystyki i listę fraz do oznaczenia
             updated_maybe_phrases = get_maybe_phrases()

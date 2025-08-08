@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Podcast Trend</title>
+</head>
+<body>
+    <h1>Podcast Trend – Top nazwisk</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nazwisko</th>
+                <th>Wyświetlenia</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i, item in enumerate(data.top, start=1) %}
+            <tr>
+                <td>{{i}}</td>
+                <td>{{item.name}}</td>
+                <td>{{"{:,}".format(item.views).replace(",", " ")}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

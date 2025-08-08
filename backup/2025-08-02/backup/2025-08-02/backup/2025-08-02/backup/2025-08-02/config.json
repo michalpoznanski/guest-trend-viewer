@@ -1,5 +1,0 @@
-{
-  "reports_folder": "./data/raw_reports/",
-  "results_folder": "./data/analysis_results/",
-  "feedback_file": "./data/feedback.json"
-} 
